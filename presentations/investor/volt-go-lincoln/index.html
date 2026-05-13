@@ -7,6 +7,21 @@
 <link rel="stylesheet" href="/Users/jyang21/.claude/skills/html-ppt-skill/assets/base.css">
 <link rel="stylesheet" href="/Users/jyang21/.claude/skills/html-ppt-skill/assets/animations/animations.css">
 <link rel="stylesheet" href="style.css">
+<style>
+  /* deck-local overrides for the embedded map + sources slides */
+  .tpl-pitch-deck .slide.map-slide{padding:0;overflow:hidden}
+  .tpl-pitch-deck .slide.map-slide .map-frame{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+  .tpl-pitch-deck .slide.map-slide .map-caption{position:absolute;top:24px;left:32px;right:32px;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;z-index:5;pointer-events:none}
+  .tpl-pitch-deck .slide.map-slide .map-caption .tag{background:rgba(13,17,48,.82);color:#fff;padding:10px 14px;border-radius:10px;backdrop-filter:blur(6px);font-size:14px;font-weight:700;letter-spacing:.04em;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  .tpl-pitch-deck .slide.map-slide .map-caption .tag small{display:block;font-weight:500;color:rgba(255,255,255,.78);font-size:11px;margin-top:3px;letter-spacing:.06em}
+  .tpl-pitch-deck .slide.sources-slide a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(59,91,255,.4);word-break:break-all}
+  .tpl-pitch-deck .slide.sources-slide a:hover{color:var(--accent-2);border-bottom-color:var(--accent-2)}
+  .tpl-pitch-deck .slide.sources-slide .src-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 36px;margin-top:24px;font-size:13px;line-height:1.45;color:var(--text-2)}
+  .tpl-pitch-deck .slide.sources-slide .src-grid h4{margin:0 0 6px;font-size:12px;letter-spacing:.12em;color:var(--accent-3);text-transform:uppercase}
+  .tpl-pitch-deck .slide.sources-slide .src-grid ul{margin:0;padding:0;list-style:none}
+  .tpl-pitch-deck .slide.sources-slide .src-grid li{margin:0 0 6px;padding-left:14px;position:relative}
+  .tpl-pitch-deck .slide.sources-slide .src-grid li::before{content:"›";position:absolute;left:0;color:var(--text-3)}
+</style>
 </head>
 <body class="tpl-pitch-deck">
 <div class="deck">
@@ -19,7 +34,7 @@
     <p class="kicker">Seed / SBA round · 2026</p>
     <h1 class="h1 anim-fade-up" data-anim="fade-up">Powering the<br><span class="gradient-text">I-80 corridor</span>.</h1>
     <p class="lede mt-m">A 10-stall public EV charging station at Lincoln's I-80 / high-end apartment nexus — pay-per-kWh revenue, federal &amp; state grant support, $1M total project.</p>
-    <div class="deck-footer"><span>Owner / Founder · DRAFT v0.2 · 2026-05-13</span><span class="slide-number" data-current="1" data-total="12"></span></div>
+<div class="deck-footer"><span>Owner / Founder · DRAFT v0.2 · 2026-05-13</span><span class="slide-number" data-current="1" data-total="13"></span></div>
     <div class="notes">Audience: Angel investors, SBA lenders, regional impact funds. Decision requested today: term sheet interest at the proposed ask. Flag this is a draft — assumptions still awaiting human review.</div>
   </section>
 
@@ -106,7 +121,17 @@
         <p class="dim mt-m" style="font-size:12px">Sources: PlugShare, ChargeHub, AFDC, Tesla/EA locators (May 2026). 16 of 18 Lincoln DCFC ports are Tesla-first; only 1 open-network DCFC site exists today.</p>
       </div>
     </div>
-    <div class="notes">Open `map.html` alongside this slide for the interactive view. AADT for I-80 through Lincoln is in the 30–45k vehicles/day range per NDOT — exact mile-marker count must be confirmed from the AADT viewer before quoting. ~1,500 Class A units within 1 mi is a planning estimate; CoStar pull needed for hard count.</div>
+    <div class="notes">The embedded interactive map follows on the next slide. AADT for I-80 through Lincoln is in the 30–45k vehicles/day range per NDOT — exact mile-marker count must be confirmed from the AADT viewer before quoting. ~1,500 Class A units within 1 mi is a planning estimate; CoStar pull needed for hard count.</div>
+  </section>
+
+  <!-- 5c. Map (embedded) -->
+  <section class="slide map-slide" data-title="Map">
+    <iframe class="map-frame" src="map.html" title="Volt &amp; Go Lincoln · Site &amp; Competitor Map" loading="lazy"></iframe>
+    <div class="map-caption">
+      <div class="tag">★ Candidate site: Fallbrook / Tallgrass<small>~7300 Tallgrass Pkwy · 1.5 mi from I-80 Exit 401</small></div>
+      <div class="tag">Interactive — click pins for details<small>Tesla SC · Electrify America · L2 · apartments · exits</small></div>
+    </div>
+    <div class="notes">Click any pin. Map shows: (★) candidate site, both Tesla Superchargers (5020 N 27th + 610 W O), Electrify America at Casey's, six representative L2 stations, three Class A apartment clusters, five I-80 interchanges, the I-80 corridor, and a 1-mile service-radius ring. Tiles © OpenStreetMap / CARTO. Open `map.html` standalone for full-screen view.</div>
   </section>
 
   <!-- 6. Competition -->
@@ -194,6 +219,58 @@
       </div>
     </div>
     <div class="notes">HUMAN DECISION REQUIRED: exact investor terms, expected return, ownership structure, and exit timeline. The numbers shown are placeholder ranges from FINANCIAL_MODEL_NOTES.md — owner must approve before presenting.</div>
+  </section>
+
+  <!-- 12. Sources & References -->
+  <section class="slide sources-slide" data-title="Sources">
+    <p class="num-tag">SOURCES &amp; REFERENCES</p>
+    <h2 class="h2 mt-s" style="font-size:46px">Every number above is traceable.</h2>
+    <p class="dim mt-s" style="max-width:80ch">All Lincoln charging-station counts, EV registrations, traffic data, and apartment information shown in this deck come from the public sources below. Numbers are marked DRAFT pending owner verification.</p>
+
+    <div class="src-grid">
+      <div>
+        <h4>Charging station data</h4>
+        <ul>
+          <li><a href="https://www.plugshare.com/directory/us/nebraska/lincoln" target="_blank" rel="noopener">PlugShare · Lincoln NE directory</a></li>
+          <li><a href="https://chargehub.com/en/countries/united-states/nebraska/lincoln.html" target="_blank" rel="noopener">ChargeHub · Lincoln NE</a></li>
+          <li><a href="https://afdc.energy.gov/stations" target="_blank" rel="noopener">AFDC station locator (DOE)</a></li>
+          <li><a href="https://www.electrifyamerica.com/locate-charger/" target="_blank" rel="noopener">Electrify America locator</a></li>
+          <li><a href="https://www.tesla.com/findus/" target="_blank" rel="noopener">Tesla Supercharger locator</a></li>
+          <li><a href="https://electrly.com/ev-charging-network/electrify-america/lincoln-ne" target="_blank" rel="noopener">Electrly · EA stations in Lincoln</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Traffic &amp; corridor</h4>
+        <ul>
+          <li><a href="https://www.nebraskamap.gov/datasets/annual-average-daily-traffic-counts" target="_blank" rel="noopener">NDOT AADT viewer</a></li>
+          <li><a href="https://www.lincoln.ne.gov/files/sharedassets/public/v/1/ltu/transportation/traffic-engineering/adtv/2024-list.pdf" target="_blank" rel="noopener">City of Lincoln 2024 ADT list (PDF)</a></li>
+          <li><a href="https://dot.nebraska.gov/media/yisimxqi/annual-traffic-count-data.pdf" target="_blank" rel="noopener">NDOT annual traffic count data (PDF)</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Interstate_80_in_Nebraska" target="_blank" rel="noopener">I-80 in Nebraska · exit list</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Market &amp; policy</h4>
+        <ul>
+          <li><a href="https://www.lincoln.ne.gov/files/sharedassets/public/v/2/projects-programs-amp-initiatives/resilient-lincoln/documents/lincoln-evrp.pdf" target="_blank" rel="noopener">Lincoln EV Readiness Plan (PDF)</a></li>
+          <li><a href="https://www.lincoln.ne.gov/News/2025/1/13b" target="_blank" rel="noopener">City of Lincoln 2025 USDOT EV grant</a></li>
+          <li><a href="https://dot.nebraska.gov/business-center/environment/nevi/" target="_blank" rel="noopener">NDOT NEVI program</a></li>
+          <li><a href="https://afdc.energy.gov/laws/all?state=NE" target="_blank" rel="noopener">AFDC · Nebraska laws &amp; incentives</a></li>
+          <li><a href="https://www.les.com/sustainability/electric-vehicles" target="_blank" rel="noopener">Lincoln Electric System · EV info</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Apartment cluster</h4>
+        <ul>
+          <li><a href="https://www.brooksidelincoln.com/" target="_blank" rel="noopener">Brookside Apartments at Fallbrook</a></li>
+          <li><a href="https://www.apartments.com/brookside-apartments-at-fallbrook-lincoln-ne/yv4d1nr/" target="_blank" rel="noopener">Brookside · Apartments.com listing</a></li>
+          <li><a href="https://fallbrookusa.com/" target="_blank" rel="noopener">Fallbrook development (master plan)</a></li>
+          <li><a href="https://www.rentcip.com/apartments/ne/lincoln/the-northbrook-apartment-homes/" target="_blank" rel="noopener">Northbrook Apartment Homes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="dim mt-l" style="font-size:12px;color:var(--text-3)">Live interactive map: <a href="map.html" target="_blank" style="color:var(--accent)">map.html</a> · Repository: <a href="https://github.com/yangjl/EVstation" target="_blank" style="color:var(--accent)">github.com/yangjl/EVstation</a></p>
+    <div class="notes">This slide is the citation appendix. Every "real" number elsewhere in the deck — Lincoln port counts, the 16-of-18 Tesla-DCFC ratio, Nebraska EV registrations, I-80 AADT range, Class A apartment unit counts — comes from one of these sources. If any number changes during owner review, update the docs in `doc/` first, then re-render.</div>
   </section>
 
 </div>

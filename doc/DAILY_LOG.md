@@ -14,6 +14,14 @@ Each entry should include:
 - result or impact
 - next concrete step
 
+## 2026-05-13 - Deck v0.2.1: embed map slide + sources slide in investor deck
+
+- Commit: (pending)
+- Summary: Embedded the interactive Leaflet map as a dedicated slide (iframe) inside the investor deck and added a final Sources slide with categorized, clickable links to every public dataset cited (charging stations, traffic, market/policy, apartment cluster).
+- Files: `presentations/investor/volt-go-lincoln/index.html`
+- Result: Deck is now 13 slides. Map renders inline; sources slide gives investors a one-click trail back to every primary source. Tiles served from OpenStreetMap / CARTO CDN, Leaflet from unpkg CDN — needs network to render the map slide.
+- Next concrete step: Owner review and replacement of any DRAFT numbers with verified equivalents before sharing externally.
+
 ## 2026-05-13 - Second-pass: candidate site, competitor data, interactive map (v0.2 DRAFT)
 
 - Commit: `1dde39c`
