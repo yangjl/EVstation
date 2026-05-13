@@ -15,3 +15,4 @@ Keep short dated notes so a business planner or AI assistant can resume work qui
 - Ran `python3 scripts/doctor.py`; validation passed with zero failures and zero warnings.
 - Reviewed the Volt & Go Lincoln EV charging station plan and created `reports/revised_ev_charging_station_business_plan_report.md`.
 - Key revision from the report: treat the concept as a site-validation and incentive-eligibility plan, not a ready-to-fund plan. Owner must decide whether to keep the 8 L2 + 2 DCFC mixed-use design or redesign around 4+ DCFC ports for stronger corridor/NEVI fit.
+- Improved the investor HTML deck with a candidate Volt&Go wordmark, removed seed-investment language, added formula-backed demand sizing, clarified NEVI/Section 30C requirements, added Fallbrook site-selection rationale, added membership-projection math, and expanded the map with highway labels plus a draft peak-hour traffic heat overlay.

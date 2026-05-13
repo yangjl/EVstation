@@ -39,6 +39,7 @@
   .leaflet-popup-content small{color:var(--text-3)}
   .leaflet-popup-tip{background:#fff}
   .pin-volt{background:var(--grad);width:30px;height:30px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 4px rgba(122,70,255,.28),0 6px 16px rgba(20,25,60,.25);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:15px}
+  .road-label{background:rgba(255,255,255,.9);border:1px solid var(--border);border-radius:6px;color:var(--text-1);font-size:11px;font-weight:900;padding:3px 7px;box-shadow:0 2px 8px rgba(20,25,60,.12);white-space:nowrap}
   footer{padding:14px 28px;border-top:1px solid var(--border);font-size:11px;color:var(--text-3);background:#fff}
   @media (max-width:980px){.layout{grid-template-columns:1fr;height:auto}#map{height:60vh}aside{max-height:none}}
 </style>
@@ -61,6 +62,7 @@
     <div class="num"><div class="n">3.5 mi</div><div class="l">drive to nearest non-Tesla DCFC (Casey's EA at NW 20th)</div></div>
     <div class="num"><div class="n">~1,500</div><div class="l">Class A apartment units within 1 mile (Fallbrook + Northbrook + Brookside)</div></div>
     <div class="num"><div class="n">≈30–45k</div><div class="l">I-80 AADT through Lincoln (NDOT, draft estimate)</div></div>
+    <div class="num"><div class="n">6–19/hr</div><div class="l">estimated average EV flow on I-80 near Lincoln before capture</div></div>
 
     <h2>Lincoln EV Market</h2>
     <table>
@@ -82,6 +84,7 @@
       <div><span style="background:#7a46ff"></span> Public L2 / destination charger</div>
       <div><span style="background:#ffb547"></span> Class A apartment cluster</div>
       <div><span style="background:#4ea0ff"></span> I-80 interchange</div>
+      <div><span style="background:#ff4d4d"></span> Peak-hour traffic heat overlay (planning estimate)</div>
     </div>
 
     <h2>Open questions</h2>
@@ -173,12 +176,26 @@
       .bindPopup(`<b>${e.n}</b><br><small>I-80 interchange</small>`);
   });
 
-  // I-80 approximate corridor through Lincoln
-  L.polyline([
+  // I-80 approximate corridor through Lincoln + peak-hour heat overlay.
+  const i80Path = [
     [40.886, -96.800],[40.886, -96.762],[40.888, -96.736],
     [40.891, -96.707],[40.892, -96.685],[40.892, -96.660],
     [40.890, -96.620]
-  ], { color:'#2a6fc9', weight:7, opacity:.55 }).addTo(map);
+  ];
+  L.polyline(i80Path, { color:'#2a6fc9', weight:7, opacity:.55 }).addTo(map).bindPopup('<b>I-80 corridor</b><br><small>Approx. 30-45k AADT through Lincoln; verify exact segment in NDOT AADT viewer.</small>');
+  L.polyline(i80Path.slice(1,6), { color:'#ff4d4d', weight:18, opacity:.24 }).addTo(map).bindPopup('<b>Peak-hour heat overlay</b><br><small>Planning visualization only: weekday commute peaks roughly 7-9am and 4-6pm; not live traffic.</small>');
+  L.polyline([[40.881,-96.780],[40.880,-96.744],[40.881,-96.728],[40.883,-96.707]], { color:'#f4a261', weight:5, opacity:.65, dashArray:'8 6' }).addTo(map).bindPopup('<b>US-34 / Fallbrook access</b><br><small>Candidate access corridor from I-80 Exit 401 toward Fallbrook/Tallgrass.</small>');
+  L.polyline([[40.891,-96.707],[40.860,-96.707],[40.820,-96.707],[40.812,-96.707]], { color:'#4ea0ff', weight:5, opacity:.55, dashArray:'6 6' }).addTo(map).bindPopup('<b>I-180 / US-34</b><br><small>Downtown connector and I-80 access route.</small>');
+  L.polyline([[40.886,-96.762],[40.850,-96.762],[40.812,-96.762]], { color:'#7a46ff', weight:4, opacity:.45, dashArray:'5 5' }).addTo(map).bindPopup('<b>US-77 / north-south access</b><br><small>Regional north-south route west of the candidate site.</small>');
+
+  const label = (ll, text) => L.marker(ll, {
+    icon: L.divIcon({ className:'', html:`<div class="road-label">${text}</div>`, iconSize:null }),
+    interactive: false
+  }).addTo(map);
+  label([40.894, -96.695], 'I-80');
+  label([40.884, -96.742], 'US-34 / Fallbrook Blvd');
+  label([40.856, -96.708], 'I-180 / US-34');
+  label([40.853, -96.763], 'US-77');
 
   // 1-mile service radius around candidate site
   L.circle([40.881, -96.728], { radius: 1609, color:'#7a46ff', weight:1.8, fillColor:'#7a46ff', fillOpacity:.10, dashArray:'5 6' }).addTo(map);

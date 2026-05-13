@@ -30,76 +30,93 @@
   <section class="slide" data-title="Cover">
     <div class="cover-bg"></div>
     <div class="cover-blob"></div>
-    <div style="position:absolute;top:56px;left:112px"><span class="brand-dot"></span><span class="brand">Volt &amp; Go Lincoln</span></div>
-    <p class="kicker">Seed / SBA round · 2026</p>
-    <h1 class="h1 anim-fade-up" data-anim="fade-up">Powering the<br><span class="gradient-text">I-80 corridor</span>.</h1>
-    <p class="lede mt-m">A 10-stall public EV charging station at Lincoln's I-80 / high-end apartment nexus — pay-per-kWh revenue, federal &amp; state grant support, $1M total project.</p>
+    <div style="position:absolute;top:52px;left:112px" class="wordmark-logo"><span class="logo-mark">V</span><span class="logo-text">Volt&amp;Go<small>Lincoln candidate brand</small></span></div>
+    <p class="kicker">Owner/SBA diligence · not a seed raise · 2026</p>
+    <h1 class="h1 anim-fade-up" data-anim="fade-up">A candidate EV hub<br><span class="gradient-text">for north Lincoln.</span></h1>
+    <p class="lede mt-m">A 10-stall public EV charging station concept at the Fallbrook / I-80 access corridor — designed for local apartment demand first, with highway DCFC upside if site economics and incentives validate.</p>
 <div class="deck-footer"><span>Owner / Founder · DRAFT v0.2 · 2026-05-13</span><span class="slide-number" data-current="1" data-total="13"></span></div>
-    <div class="notes">Audience: Angel investors, SBA lenders, regional impact funds. Decision requested today: term sheet interest at the proposed ask. Flag this is a draft — assumptions still awaiting human review.</div>
+    <div class="notes">Audience: owner, SBA lender, site partners, and grant reviewers. This is not a seed-investment ask. Decision requested: whether to continue site diligence at Fallbrook/Tallgrass. All assumptions remain draft pending human review.</div>
   </section>
 
   <!-- 2. Problem -->
   <section class="slide" data-title="Problem">
     <span class="section-num">01</span>
-    <p class="num-tag">THE GAP</p>
-    <h2 class="h2 mt-s">Nebraska's EV infrastructure<br>is behind the curve.</h2>
-    <div class="grid g3 mt-l">
-      <div class="card"><h4>Highway desert</h4><p class="dim">I-80 is the nation's busiest east-west corridor — yet Lincoln has only a handful of public DCFC stalls, and most are tied to a single retailer.</p></div>
-      <div class="card"><h4>No home charging</h4><p class="dim">High-end apartment residents bought EVs but can't install a wall charger. They drive to a fast charger nightly — and resent it.</p></div>
-      <div class="card"><h4>Federal money waiting</h4><p class="dim">NEVI dollars are allocated to Nebraska, but private operators in Lincoln have been slow to claim them.</p></div>
+    <p class="num-tag">THE EVIDENCE GAP</p>
+    <h2 class="h2 mt-s">Demand exists, but funding<br>requires the right design.</h2>
+    <div class="data-strip mt-m">
+      <div class="data-cell"><strong>~155</strong><span>Lincoln public charging ports across ~32 sites</span></div>
+      <div class="data-cell"><strong>~18</strong><span>Lincoln DC fast ports; 16 are Tesla-first</span></div>
+      <div class="data-cell"><strong>1</strong><span>open-network DCFC site identified today</span></div>
+      <div class="data-cell"><strong>$30M</strong><span>Nebraska NEVI allocation, focused on I-80 buildout</span></div>
     </div>
-    <div class="notes">Cite AFDC station map + Nebraska NEVI allocation. Frame as solvable gap, not market failure. Slide 2 in PITCH_DECK_PLAN.md.</div>
+    <div class="grid g2 mt-l">
+      <div class="card compact"><h4>Federal money is real, but gated</h4><p class="dim">NDOT describes first-phase NEVI sites as 30-35 DCFC sites with a minimum of four chargers. Nebraska RFP language requires four 150 kW ports, 600 kW simultaneous charging, and location within one mile of I-80 ramp access.</p><p class="source-note">Source: <a href="https://dot.nebraska.gov/projects/environment/nevi/" target="_blank" rel="noopener">NDOT NEVI</a>; NDOT R231-24 NEVI Formula Program PDF.</p></div>
+      <div class="card compact"><h4>The current concept is a local-station design</h4><p class="dim">The 8 L2 + 2 DCFC mix is useful for apartment demand and backup highway top-ups, but it should not assume NEVI eligibility until NDOT confirms whether a 2-DCFC mixed-use site can qualify.</p><p class="formula">Conclusion supported by: port-count gap + NEVI requirements + site-specific customer validation still pending.</p></div>
+    </div>
+    <div class="notes">This slide adds the federal-money requirement. Critical owner decision: keep local-station design or redesign as 4+ DCFC for NEVI corridor fit. Numbers are draft from PlugShare/ChargeHub/AFDC and NDOT; verify before external use.</div>
   </section>
 
   <!-- 3. Solution -->
   <section class="slide" data-title="Solution">
     <span class="section-num">02</span>
-    <p class="num-tag">THE STATION</p>
-    <h2 class="h2 mt-s">One site. <span class="gradient-text">Two customers.</span><br>Ten stalls.</h2>
-    <p class="lede mt-m">A single Lincoln charging station purpose-built for both highway throughput and overnight apartment dwell-time — open-standard hardware, locally operated, no walled garden.</p>
-    <div class="row mt-l">
+    <p class="num-tag">THE STATION + DEMAND MODEL</p>
+    <h2 class="h2 mt-s">One site. <span class="gradient-text">Two demand pools.</span></h2>
+    <p class="lede mt-m">The concept works only if local recurring demand carries early utilization while highway DCFC traffic adds higher-ticket sessions.</p>
+    <div class="row mt-m">
       <span class="pill pill-accent">8 × Level 2 (7.2 kW)</span>
       <span class="pill pill-accent">2 × DC Fast (100 kW)</span>
-      <span class="pill pill-accent">CCS + CHAdeMO</span>
+      <span class="pill pill-accent">CCS + NACS/J3400-ready</span>
       <span class="pill pill-accent">PlugShare + AFDC listed</span>
       <span class="pill pill-accent">Canopy &amp; security cameras</span>
     </div>
-    <div class="notes">Emphasize differentiation: dual-positioning is the whole thesis. Most stations pick one segment. We serve both because the load profiles are complementary (daytime DCFC, overnight L2).</div>
+    <div class="funnel">
+      <div class="step"><strong>150-450</strong><span>estimated EVs/day on nearby I-80 segment<br>AADT 30-45k × 0.5-1.0% EV share</span></div>
+      <div class="step"><strong>21-63</strong><span>estimated current resident EVs in 1-mile apartment catchment<br>~1,500 units × 1.4 vehicles/unit × 1-3% EV share</span></div>
+      <div class="step"><strong>15-40</strong><span>target paid members by Year 2, pending resident survey and property-manager MOU</span></div>
+    </div>
+    <p class="source-note">These are planning estimates, not traffic counts. Required validation: NDOT/City traffic count, DMV/Lancaster EV registrations, and apartment resident survey.</p>
+    <div class="notes">Shows the formula behind potential demand. The model does not claim all I-80 EVs are addressable; it gives a screening range for whether the site deserves diligence.</div>
   </section>
 
   <!-- 4. Customers -->
   <section class="slide" data-title="Customers">
     <span class="section-num">03</span>
-    <p class="num-tag">CUSTOMERS</p>
-    <h2 class="h2 mt-s">Two overlapping segments.</h2>
-    <div class="grid g2 mt-l">
-      <div class="card card-hover"><h4>I-80 travelers</h4><p class="dim">Out-of-state EV drivers crossing Nebraska. Need: 20-minute DCFC top-up + clean restroom + safe lighting. Price-insensitive when stranded.</p></div>
-      <div class="card card-hover"><h4>Class A apartment residents</h4><p class="dim">EV owners in Wilderness Hills / Fallbrook / South 27th. No garage. Need: overnight L2 within 5 min of home. Will pay membership pass for guaranteed access.</p></div>
-      <div class="card card-hover"><h4>Local commuters (overflow)</h4><p class="dim">Lincoln EV drivers without home charging. Use the site as a backup. Stickiness through the membership program.</p></div>
-      <div class="card card-hover"><h4>Why dual-positioning works</h4><p class="dim">DCFC peaks at midday (travelers). L2 peaks 7pm – 8am (residents). Same canopy, same site, complementary utilization curves.</p></div>
+    <p class="num-tag">CUSTOMERS BY THE NUMBERS</p>
+    <h2 class="h2 mt-s">Start with the customers<br>who can repeat.</h2>
+    <div class="grid g2 mt-m">
+      <div class="card card-hover"><h4>Apartment residents</h4><p class="dim">Primary recurring segment. Planning catchment: ~1,500 apartment units within roughly one mile of Fallbrook/Tallgrass. At 1-3% EV penetration, that implies 21-63 current EV households before future adoption.</p></div>
+      <div class="card card-hover"><h4>I-80 travelers</h4><p class="dim">Higher-ticket DCFC sessions. Planning range: 150-450 EVs/day through the corridor using 30-45k AADT and 0.5-1.0% EV share; only a small fraction needs to stop to matter.</p></div>
+      <div class="card card-hover"><h4>Local traffic</h4><p class="dim">Nearby north Lincoln arterials show meaningful daily flow: N 27th near I-80 ramps ranges from ~9k to ~33k ADT in the 2024 City traffic list, depending on segment.</p></div>
+      <div class="card card-hover"><h4>Load-shape logic</h4><p class="dim">DCFC peaks during daytime travel windows. L2 demand should concentrate after work and overnight. The site must prove both patterns with actual usage or pre-launch commitments.</p></div>
     </div>
-    <div class="notes">Customer hypotheses — NOT validated yet. Discovery work is item #1 on the next-steps list. Cite CUSTOMER_DISCOVERY.md.</div>
+    <p class="source-note">Sources: City of Lincoln 2024 ADT list; NDOT AADT viewer; apartment listings; PlugShare/ChargeHub/AFDC. All customer conversion rates remain human-review assumptions.</p>
+    <div class="notes">Adds actual customer sizing formulas. Survey 20-30 apartment residents and interview 3-5 property managers before using membership conversion externally.</div>
   </section>
 
   <!-- 5. Market -->
   <section class="slide" data-title="Market">
     <span class="section-num">04</span>
-    <p class="num-tag">MARKET</p>
-    <h2 class="h2 mt-s">A small market growing fast.</h2>
-    <div class="grid g3 mt-l">
-      <div class="metric"><div class="n">20-30%</div><div class="l">annual EV growth · regional benchmark</div></div>
-      <div class="metric"><div class="n">$150K</div><div class="l">est. NEVI grant available · Nebraska</div></div>
-      <div class="metric"><div class="n">I-80</div><div class="l">busiest east-west US corridor</div></div>
+    <p class="num-tag">MARKET MATH</p>
+    <h2 class="h2 mt-s">A small EV market can still<br>support a focused station.</h2>
+    <div class="grid g3 mt-m">
+      <div class="metric"><div class="n">~9.5k</div><div class="l">Nebraska EVs cited in current project research; source needs final state confirmation</div></div>
+      <div class="metric"><div class="n">~1.2-1.5k</div><div class="l">estimated Lincoln EVs; planning range, not DMV count</div></div>
+      <div class="metric"><div class="n">6-19/hr</div><div class="l">average I-80 EV flow estimate near Lincoln before capture rate</div></div>
     </div>
-    <p class="lede mt-l">Nebraska EV adoption is early but inflecting. The federal NEVI program guarantees one DC fast station every 50 miles along I-80 — Lincoln is on that map, and capacity is still being built.</p>
-    <div class="notes">Numbers are draft — must validate Nebraska EV registration data with the state DMV before showing investors. Flag low-confidence assumption.</div>
+    <div class="bar-list">
+      <div class="bar-row"><span>Current resident EV base</span><div class="bar-track"><div class="bar-fill" style="width:38%"></div></div><b>21-63</b></div>
+      <div class="bar-row"><span>Year 3 resident EV base</span><div class="bar-track"><div class="bar-fill" style="width:78%"></div></div><b>105-168</b></div>
+      <div class="bar-row"><span>Target members Y2</span><div class="bar-track"><div class="bar-fill" style="width:26%"></div></div><b>15-40</b></div>
+    </div>
+    <p class="formula mt-m">Resident model: ~1,500 units × 1.4 vehicles/unit × EV share. Highway model: 30-45k AADT × 0.5-1.0% EV share ÷ 24 hours. Both require local validation.</p>
+    <div class="notes">This slide turns market sizing into formulas. It should be shown as a diligence model, not a validated forecast.</div>
   </section>
 
   <!-- 5b. Site & Competitors -->
   <section class="slide" data-title="Site &amp; Competitors">
     <span class="section-num">04b</span>
-    <p class="num-tag">SITE &amp; COMPETITORS</p>
-    <h2 class="h2 mt-s">Fallbrook · 1.5 mi from I-80 Exit 401.</h2>
+    <p class="num-tag">WHY FALLBROOK</p>
+    <h2 class="h2 mt-s">Fallbrook screens best<br>for local recurring demand.</h2>
     <div class="grid g2 mt-l" style="gap:32px">
       <div>
         <p class="lede" style="margin-top:0">Candidate parcel at <b>7300 Tallgrass Pkwy / Fallbrook Blvd</b> — adjacent to Brookside Apartments, Northbrook, and the Fallbrook master-planned development.</p>
@@ -108,9 +125,17 @@
           <span class="pill pill-accent">1.5 mi to I-80</span>
           <span class="pill pill-accent">3.5 mi to nearest open DCFC</span>
         </div>
-        <p class="dim mt-m" style="font-size:14px">An interactive map (<code>map.html</code>) plots the candidate site, every Lincoln charging competitor, the I-80 interchanges, and the Class A apartment clusters.</p>
+        <div class="bar-list">
+          <div class="bar-row"><span>Apartment density</span><div class="bar-track"><div class="bar-fill" style="width:86%"></div></div><b>High</b></div>
+          <div class="bar-row"><span>Open DCFC gap</span><div class="bar-track"><div class="bar-fill" style="width:70%"></div></div><b>3.5 mi</b></div>
+          <div class="bar-row"><span>I-80 access</span><div class="bar-track"><div class="bar-fill" style="width:58%"></div></div><b>1.5 mi</b></div>
+        </div>
       </div>
       <div>
+        <h4 style="margin:0 0 12px;color:var(--text-1)">Screening logic</h4>
+        <div class="mini-metric"><span class="n">1</span><span class="l">Only one open-network DCFC site identified in Lincoln today: Electrify America at Casey's.</span></div>
+        <div class="mini-metric"><span class="n">16/18</span><span class="l">Most Lincoln DCFC ports are Tesla-first, which leaves a broader all-brand reliability opportunity.</span></div>
+        <div class="mini-metric"><span class="n">TBD</span><span class="l">Parcel lease cost, LES demand charges, and property-manager partnership terms remain the go/no-go items.</span></div>
         <table style="width:100%;border-collapse:collapse;font-size:13px;color:var(--text-2)">
           <tr style="border-bottom:1px solid var(--border)"><th style="text-align:left;padding:6px 4px;color:var(--text-3)">Lincoln DCFC today</th><th style="text-align:right;padding:6px 4px;color:var(--text-3)">Ports</th></tr>
           <tr style="border-bottom:1px solid var(--border)"><td style="padding:8px 4px">Tesla SC · Hy-Vee 27th</td><td style="text-align:right;padding:8px 4px">8</td></tr>
@@ -121,7 +146,7 @@
         <p class="dim mt-m" style="font-size:12px">Sources: PlugShare, ChargeHub, AFDC, Tesla/EA locators (May 2026). 16 of 18 Lincoln DCFC ports are Tesla-first; only 1 open-network DCFC site exists today.</p>
       </div>
     </div>
-    <div class="notes">The embedded interactive map follows on the next slide. AADT for I-80 through Lincoln is in the 30–45k vehicles/day range per NDOT — exact mile-marker count must be confirmed from the AADT viewer before quoting. ~1,500 Class A units within 1 mi is a planning estimate; CoStar pull needed for hard count.</div>
+    <div class="notes">This slide answers why Fallbrook: local apartment density + all-brand DCFC gap + workable I-80 access. The site is not selected until lease and utility economics are known.</div>
   </section>
 
   <!-- 5c. Map (embedded) -->
@@ -131,7 +156,7 @@
       <div class="tag">★ Candidate site: Fallbrook / Tallgrass<small>~7300 Tallgrass Pkwy · 1.5 mi from I-80 Exit 401</small></div>
       <div class="tag">Interactive — click pins for details<small>Tesla SC · Electrify America · L2 · apartments · exits</small></div>
     </div>
-    <div class="notes">Click any pin. Map shows: (★) candidate site, both Tesla Superchargers (5020 N 27th + 610 W O), Electrify America at Casey's, six representative L2 stations, three Class A apartment clusters, five I-80 interchanges, the I-80 corridor, and a 1-mile service-radius ring. Tiles © OpenStreetMap / CARTO. Open `map.html` standalone for full-screen view.</div>
+    <div class="notes">Click any pin. Map shows: (★) candidate site, both Tesla Superchargers, Electrify America, representative L2 stations, apartment clusters, I-80/US-34/I-180/US-77 labels, I-80 peak-hour heat overlay, and a 1-mile service-radius ring. Traffic heat is a planning visualization based on AADT ranges, not live data.</div>
   </section>
 
   <!-- 6. Competition -->
@@ -158,8 +183,11 @@
       <div class="card card-accent"><h4>DC Fast</h4><div class="metric mt-s"><div class="n" style="font-size:56px">$0.49</div><div class="l">/ kWh · highway top-ups</div></div></div>
       <div class="card"><h4>Membership</h4><div class="metric mt-s"><div class="n" style="font-size:56px">$29</div><div class="l">/ month · apartment resident pass</div></div></div>
     </div>
-    <p class="dim mt-l">Future upside: advertising / retail co-tenancy on canopy + site signage. Not modeled in base case.</p>
-    <div class="notes">Pricing is a market benchmark — HUMAN REVIEW REQUIRED before quoting to investors. See FINANCIAL_MODEL_NOTES.md key-assumptions table.</div>
+    <div class="grid g2 mt-l">
+      <p class="dim" style="margin:0">Membership is not a top-down guess. It is derived from the Fallbrook catchment: ~1,500 units × 1.4 vehicles/unit × EV adoption × capture rate. The deck uses 15-40 members by Year 2 until resident surveys prove a higher number.</p>
+      <p class="formula" style="margin:0">Y2 member target: 21-63 current resident EVs × 35-65% capture = ~7-41 members. Rounded planning range: 15-40 paid members after property-manager outreach.</p>
+    </div>
+    <div class="notes">Pricing is a market benchmark and membership conversion is not validated. HUMAN REVIEW REQUIRED before quoting to lenders or investors. See FINANCIAL_MODEL_NOTES.md key-assumptions table.</div>
   </section>
 
   <!-- 8. Financials -->
@@ -182,14 +210,15 @@
   <section class="slide" data-title="Capital Plan">
     <span class="section-num">08</span>
     <p class="num-tag">CAPITAL PLAN</p>
-    <h2 class="h2 mt-s">$1M total. Grants offset 25-40%.</h2>
+    <h2 class="h2 mt-s">$1M total. Grants are upside,<br>not assumed cash.</h2>
     <div class="grid g3 mt-l">
       <div class="metric"><div class="n">$1.0M</div><div class="l">gross project cost · hardware + install + site</div></div>
-      <div class="metric"><div class="n">$150K</div><div class="l">est. NEVI grant · 80% of DCFC eligible costs</div></div>
+      <div class="metric"><div class="n">4×150</div><div class="l">NEVI corridor requirement: four 150 kW DCFC ports, 600 kW simultaneous</div></div>
       <div class="metric"><div class="n">$30-100K</div><div class="l">IRA §30C federal tax credit</div></div>
     </div>
-    <p class="lede mt-l">Capital stack: owner equity ($600–800K) + SBA 7(a)/504 loan ($200–400K) + NEVI &amp; state grants + IRA tax credit. Net owner capital after grants: ~$800K.</p>
-    <div class="notes">Grant eligibility NOT verified with Nebraska DOT yet — listed as a next step. Don't present as committed financing. See FINANCIAL_MODEL_NOTES.md capital-stack table.</div>
+    <p class="lede mt-l">Base plan should be financeable without counting grant reimbursement. NEVI may require redesigning from 2 DCFC to 4+ DCFC; Section 30C depends on eligible census tract, placed-in-service timing, and labor compliance.</p>
+    <p class="source-note">Sources: <a href="https://dot.nebraska.gov/projects/environment/nevi/" target="_blank" rel="noopener">NDOT NEVI program</a>; NDOT R231-24 NEVI Formula Program PDF; <a href="https://www.irs.gov/credits-deductions/alternative-fuel-vehicle-refueling-property-credit" target="_blank" rel="noopener">IRS Section 30C credit</a>.</p>
+    <div class="notes">Grant eligibility NOT verified with Nebraska DOT yet. Do not present grants as committed financing. This slide now states requirements instead of implying easy offset.</div>
   </section>
 
   <!-- 10. Roadmap -->
@@ -208,17 +237,17 @@
 
   <!-- 11. The Ask -->
   <section class="slide" data-title="The Ask">
-    <p class="num-tag">THE ASK</p>
+    <p class="num-tag">OWNER DECISION</p>
     <div class="ask-box mt-m">
-      <h2 class="h2">$1M to break ground.</h2>
-      <p class="lede" style="color:rgba(255,255,255,.9);max-width:60ch">Capital to secure site control, complete permitting, build the station, and reach commercial operation within 12 months. Combined equity + SBA debt + grant offset.</p>
+      <h2 class="h2">Approve the 90-day diligence sprint.</h2>
+      <p class="lede" style="color:rgba(255,255,255,.9);max-width:64ch">This deck is no longer asking for seed capital. The next decision is whether to spend time and modest pre-development budget on Fallbrook site control, LES utility quote, NEVI feedback, and apartment customer validation.</p>
       <div class="row mt-l" style="gap:40px">
-        <div><div style="font-size:44px;font-weight:900">$600–800K</div><div class="dim">owner / investor equity</div></div>
-        <div><div style="font-size:44px;font-weight:900">$200–400K</div><div class="dim">SBA 7(a) / 504</div></div>
-        <div><div style="font-size:44px;font-weight:900">12 mo</div><div class="dim">to revenue</div></div>
+        <div><div style="font-size:44px;font-weight:900">3</div><div class="dim">hard quotes: land, utility, equipment</div></div>
+        <div><div style="font-size:44px;font-weight:900">30</div><div class="dim">resident survey target</div></div>
+        <div><div style="font-size:44px;font-weight:900">90</div><div class="dim">days to go/no-go</div></div>
       </div>
     </div>
-    <div class="notes">HUMAN DECISION REQUIRED: exact investor terms, expected return, ownership structure, and exit timeline. The numbers shown are placeholder ranges from FINANCIAL_MODEL_NOTES.md — owner must approve before presenting.</div>
+    <div class="notes">Replaces seed ask with diligence ask. Human decisions required: land strategy, design path (2 DCFC vs 4+ DCFC), network platform, ownership structure, and grant posture.</div>
   </section>
 
   <!-- 12. Sources & References -->
@@ -254,6 +283,8 @@
           <li><a href="https://www.lincoln.ne.gov/files/sharedassets/public/v/2/projects-programs-amp-initiatives/resilient-lincoln/documents/lincoln-evrp.pdf" target="_blank" rel="noopener">Lincoln EV Readiness Plan (PDF)</a></li>
           <li><a href="https://www.lincoln.ne.gov/News/2025/1/13b" target="_blank" rel="noopener">City of Lincoln 2025 USDOT EV grant</a></li>
           <li><a href="https://dot.nebraska.gov/business-center/environment/nevi/" target="_blank" rel="noopener">NDOT NEVI program</a></li>
+          <li><a href="https://dot.nebraska.gov/media/ucgdo2tl/r231-24-nevi-formula-program.pdf" target="_blank" rel="noopener">NDOT R231-24 NEVI Formula Program PDF</a></li>
+          <li><a href="https://www.irs.gov/credits-deductions/alternative-fuel-vehicle-refueling-property-credit" target="_blank" rel="noopener">IRS · Alternative Fuel Vehicle Refueling Property Credit</a></li>
           <li><a href="https://afdc.energy.gov/laws/all?state=NE" target="_blank" rel="noopener">AFDC · Nebraska laws &amp; incentives</a></li>
           <li><a href="https://www.les.com/sustainability/electric-vehicles" target="_blank" rel="noopener">Lincoln Electric System · EV info</a></li>
         </ul>
