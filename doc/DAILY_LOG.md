@@ -60,3 +60,11 @@ Each entry should include:
 - Files: `README.md`, `MEMORY.md`, `AGENTS.md`, `CLAUDE.md`, `.github/copilot-instructions.md`, `.gitignore`, `doc/`, `assets/`, `inputs/`, `models/`, `presentations/`, `scripts/doctor.py`
 - Results or impact: The repository now uses business-plan memory files, presentation-oriented reporting, parallel investor/internal deck folders with slide-by-slide starter sources, and business-template validation checks. `python3 scripts/doctor.py` passes 0 failures, 0 warnings.
 - Next: Start the first real business plan project by filling README metadata and the six business-plan memory docs, then author the investor and internal decks using the `html-ppt-skill`.
+
+## 2026-05-13 - make investor deck deployable on Vercel
+
+- Commit: `e0bf880`
+- Summary: Made the Volt & Go Lincoln investor HTML deck self-contained for Vercel by replacing local HTML-PPT asset paths with vendored relative assets and adding explicit Vercel static routing.
+- Files: `presentations/investor/volt-go-lincoln/README.md`, `presentations/investor/volt-go-lincoln/index.html`, `presentations/investor/volt-go-lincoln/vendor/html-ppt/animations/animations.css`, `presentations/investor/volt-go-lincoln/vendor/html-ppt/base.css`, `presentations/investor/volt-go-lincoln/vendor/html-ppt/fonts.css`, `presentations/investor/volt-go-lincoln/vendor/html-ppt/runtime.js`, `presentations/investor/volt-go-lincoln/vercel.json`
+- Results or impact: The full deck can now be deployed from presentations/investor/volt-go-lincoln as a static Vercel site, with / serving index.html and /map serving the standalone map.
+- Next: Redeploy the Vercel project from the latest main branch and verify the bare deployment URL shows the full deck.
