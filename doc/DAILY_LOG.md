@@ -16,7 +16,7 @@ Each entry should include:
 
 ## 2026-05-13 - Second-pass: candidate site, competitor data, interactive map (v0.2 DRAFT)
 
-- Commit: (pending)
+- Commit: `1dde39c`
 - Summary: Researched real Lincoln-area EV charging competitors and Class A apartment clusters; recommended a candidate site at Fallbrook / Tallgrass (~7300 Tallgrass Pkwy, ~1.5 mi from I-80 Exit 401); built an interactive Leaflet map page plotting the site, all DCFC and selected L2 competitors, Class A apartment clusters, and the I-80 corridor.
 - Files: `presentations/investor/volt-go-lincoln/map.html` (new), `presentations/investor/volt-go-lincoln/index.html` (added Site & Competitors slide), `doc/MARKET_RESEARCH.md`, `doc/COMPETITIVE_LANDSCAPE.md`, `doc/DECISIONS.md`, `doc/PROJECT_STATUS.md`
 - Result: v0.2 of the deck now includes a 12th slide naming a specific site, drive-time/distance to every competitor, and the only-non-Tesla-DCFC-within-3-miles claim grounded in PlugShare/AFDC/Tesla/EA data. Map opens directly in a browser.
