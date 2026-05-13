@@ -16,7 +16,7 @@ Each entry should include:
 
 ## 2026-05-13 - First investor HTML pitch deck built (v0.1 DRAFT)
 
-- Commit: (pending)
+- Commit: `2e8cda3`
 - Summary: Generated initial 11-slide HTML investor pitch deck for Volt & Go Lincoln using the `html-ppt-skill` `pitch-deck` template. Pulled content from PITCH_DECK_PLAN.md, FINANCIAL_MODEL_NOTES.md, COMPETITIVE_LANDSCAPE.md, and CUSTOMER_DISCOVERY.md.
 - Files: `presentations/investor/volt-go-lincoln/index.html`, `presentations/investor/volt-go-lincoln/style.css`
 - Result: Browser-renderable deck with speaker notes on every slide. Marked as DRAFT v0.1 in cover footer. Slides flagged for human review: Customers (unvalidated hypotheses), Market (numbers need validation), Business Model (pricing), Financials (land-lease sensitivity), Capital Plan (grants unverified), The Ask (terms TBD).
@@ -24,7 +24,7 @@ Each entry should include:
 
 ## 2026-05-13 - Volt & Go Lincoln EV charging station business plan drafted
 
-- Commit: (pending — commit after human review)
+- Commit: `2e8cda3` (bundled with deck v0.1)
 - Summary: Drafted complete initial business plan for a Lincoln, NE EV charging station with 10 chargers (8 L2 + 2 DCFC), $1M investment, I-80 + high-end apartment dual-positioning.
 - Main files touched: `README.md`, `doc/MARKET_RESEARCH.md`, `doc/BUSINESS_ASSUMPTIONS.md`, `doc/FINANCIAL_MODEL_NOTES.md`, `doc/COMPETITIVE_LANDSCAPE.md`, `doc/CUSTOMER_DISCOVERY.md`, `doc/PITCH_DECK_PLAN.md`, `doc/PROJECT_STATUS.md`, `doc/DECISIONS.md`
 - Result: Full assumption register, 5-year financial model, competitive analysis, customer hypotheses, and investor deck plan created in draft. Key finding: land lease cost is the primary financial risk; at $4,500/month breakeven requires >5 years; at $3,000/month breakeven is achievable by Y3.
