@@ -14,6 +14,16 @@ Each entry should include:
 - result or impact
 - next concrete step
 
+## 2026-05-13 - Second-pass: candidate site, competitor data, interactive map (v0.2 DRAFT)
+
+- Commit: (pending)
+- Summary: Researched real Lincoln-area EV charging competitors and Class A apartment clusters; recommended a candidate site at Fallbrook / Tallgrass (~7300 Tallgrass Pkwy, ~1.5 mi from I-80 Exit 401); built an interactive Leaflet map page plotting the site, all DCFC and selected L2 competitors, Class A apartment clusters, and the I-80 corridor.
+- Files: `presentations/investor/volt-go-lincoln/map.html` (new), `presentations/investor/volt-go-lincoln/index.html` (added Site & Competitors slide), `doc/MARKET_RESEARCH.md`, `doc/COMPETITIVE_LANDSCAPE.md`, `doc/DECISIONS.md`, `doc/PROJECT_STATUS.md`
+- Result: v0.2 of the deck now includes a 12th slide naming a specific site, drive-time/distance to every competitor, and the only-non-Tesla-DCFC-within-3-miles claim grounded in PlugShare/AFDC/Tesla/EA data. Map opens directly in a browser.
+- Key findings: Lincoln has ~155 public ports across ~32 sites but only ~18 DCFC, of which 16 are Tesla. Only 1 open-network DCFC site exists today (Electrify America at Casey's). Nebraska statewide EVs ~9,490 (Jun 2025); Lincoln share ~1,200–1,500 (estimated, unverified).
+- Caveats: AADT (30–45k for I-80 through Lincoln) is a planning estimate; apartment unit counts and Lincoln-specific EV count remain DRAFT. Tesla Magic Dock rollout and any NEVI second-round Lincoln award are the two largest competitive risks.
+- Next concrete step: Owner pulls one current AFDC API export, drives the Fallbrook site, and gets a parcel availability check + lease quote.
+
 ## 2026-05-13 - First investor HTML pitch deck built (v0.1 DRAFT)
 
 - Commit: `2e8cda3`

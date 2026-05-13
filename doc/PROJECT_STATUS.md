@@ -6,8 +6,8 @@ Check here first to understand where the business plan stands. This file tracks 
 
 ## Current Project: Volt & Go Lincoln — EV Charging Station
 
-**As of:** 2026-05-13
-**Phase:** Initial planning — draft business plan created, awaiting human review
+**As of:** 2026-05-13 (v0.2)
+**Phase:** Initial planning — second-pass refinement; candidate site identified, competitor and market data populated; awaiting human review
 
 ## Completed
 
@@ -22,6 +22,7 @@ Check here first to understand where the business plan stands. This file tracks 
   - `doc/CUSTOMER_DISCOVERY.md` — three customer segment hypotheses; discovery priorities flagged for human action
   - `doc/PITCH_DECK_PLAN.md` — 13-slide investor deck outline with evidence needs and go-to-market detail
 - Created `reports/revised_ev_charging_station_business_plan_report.md`, a revised owner-review report that reframes the plan around site validation, NEVI/design fit, utility-rate diligence, and customer discovery.
+- **v0.2 (2026-05-13):** Pulled real Lincoln-area competitor data (PlugShare, ChargeHub, AFDC, Tesla/EA locators), identified Fallbrook/Tallgrass candidate site, built `presentations/investor/volt-go-lincoln/map.html` (interactive Leaflet map of site + competitors + apartments + I-80 exits), updated `MARKET_RESEARCH.md` and `COMPETITIVE_LANDSCAPE.md` with real numbers, added a Site & Competitors slide to the investor deck, recorded site recommendation in `DECISIONS.md`.
 
 ## In Progress
 

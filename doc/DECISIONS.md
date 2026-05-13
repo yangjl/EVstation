@@ -96,6 +96,15 @@ Record important project decisions and the reasoning behind them. Keep entries s
 - **Alternatives considered:** Tesla network partnership — rejected because it requires proprietary hardware and limits access to non-Tesla vehicles.
 - **Status:** Active.
 
+### Candidate site recommendation: Fallbrook / Tallgrass (DRAFT, owner must validate)
+
+- **Decision:** For v0.2, recommend a candidate site at ~7300 Tallgrass Pkwy / Fallbrook Blvd (north Lincoln, 40.881°N, -96.728°W) as the working assumption for the business plan and investor deck.
+- **Why:** It is the only Class A apartment cluster in Lincoln (Brookside / Northbrook / Fallbrook development, ~1,500 units within 1 mile) with no non-Tesla DCFC within 3 miles, plus direct I-80 highway access via Exit 401 (US-34) at ~1.5 mi. The Tesla Supercharger at Hy-Vee #3 (5020 N 27th) is 2.6 mi east but Tesla-first; the only open-network DCFC (Electrify America at Casey's NW 20th) is 3.5 mi southwest.
+- **Alternatives considered:** (a) Wilderness Hills / south Lincoln near US-77 — high-income but no I-80 frontage; (b) co-location at an existing Hy-Vee or Casey's — likely requires retailer partnership and gives up site control; (c) downtown / Haymarket — saturated with municipal L2 and no DCFC gap to fill.
+- **Risks:** Tesla rolling out Magic Dock at Hy-Vee #3 would shrink the DCFC gap to ~2.6 mi; Electrify America siting a second Lincoln location via NEVI would weaken the "only open DCFC nearby" claim.
+- **Next action (human):** Confirm parcel availability, lease rate, LES transformer capacity, and partnership willingness with Brookside / Northbrook property management. Verify NEVI eligibility for this off-corridor "community charging" submarket with NDOT.
+- **Status:** Draft v0.2 — owner must validate site before any investor commitment.
+
 ### NEVI and IRA §30C grants included in capital plan
 
 - **Decision:** Include potential NEVI grant ($100K–$200K) and IRA Section 30C tax credit (30% of equipment, up to $100K/item) in the capital stack model.
