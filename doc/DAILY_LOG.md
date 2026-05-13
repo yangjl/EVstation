@@ -68,3 +68,11 @@ Each entry should include:
 - Files: `presentations/investor/volt-go-lincoln/README.md`, `presentations/investor/volt-go-lincoln/index.html`, `presentations/investor/volt-go-lincoln/vendor/html-ppt/animations/animations.css`, `presentations/investor/volt-go-lincoln/vendor/html-ppt/base.css`, `presentations/investor/volt-go-lincoln/vendor/html-ppt/fonts.css`, `presentations/investor/volt-go-lincoln/vendor/html-ppt/runtime.js`, `presentations/investor/volt-go-lincoln/vercel.json`
 - Results or impact: The full deck can now be deployed from presentations/investor/volt-go-lincoln as a static Vercel site, with / serving index.html and /map serving the standalone map.
 - Next: Redeploy the Vercel project from the latest main branch and verify the bare deployment URL shows the full deck.
+
+## 2026-05-13 - improve investor deck evidence and site story
+
+- Commit: `d10b964`
+- Summary: Improved the Volt & Go Lincoln investor deck with a candidate wordmark, diligence-not-seed framing, formula-backed market/customer estimates, NEVI and Section 30C requirement notes, Fallbrook site rationale, membership math, and map traffic/highway overlays.
+- Files: `doc/WORKLOG.md`, `presentations/investor/volt-go-lincoln/index.html`, `presentations/investor/volt-go-lincoln/map.html`, `presentations/investor/volt-go-lincoln/style.css`
+- Results or impact: The deck now better supports its conclusions with visible assumptions and source notes while keeping the Fallbrook recommendation in human-review/diligence status.
+- Next: Redeploy Vercel from main and review the live deck for slide fit, map rendering, and source wording before external sharing.
