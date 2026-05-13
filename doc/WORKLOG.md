@@ -13,3 +13,5 @@ Keep short dated notes so a business planner or AI assistant can resume work qui
 - Rewrote README, MEMORY, assistant instructions, environment notes, checklist, status, ignore rules, and validation checks for the business-plan workflow.
 - Removed the old research-analysis and local web-dashboard scaffold from the active template structure.
 - Ran `python3 scripts/doctor.py`; validation passed with zero failures and zero warnings.
+- Reviewed the Volt & Go Lincoln EV charging station plan and created `reports/revised_ev_charging_station_business_plan_report.md`.
+- Key revision from the report: treat the concept as a site-validation and incentive-eligibility plan, not a ready-to-fund plan. Owner must decide whether to keep the 8 L2 + 2 DCFC mixed-use design or redesign around 4+ DCFC ports for stronger corridor/NEVI fit.

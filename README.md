@@ -1,32 +1,29 @@
-# Human-In-The-Loop Business Plan Template
+# Volt & Go — EV Charging Station Business Plan
+## Lincoln, Nebraska
 
-Use this repository as a portable template for developing business plans with humans and AI assistants working from the same durable project memory.
-
-This template is designed for business planning, customer discovery, market research, financial assumptions, and HTML presentation reporting. Humans remain responsible for strategy, interpretation, forecasts, and external-facing claims.
+A public EV charging station positioned near the I-80 corridor and Lincoln's high-end apartment communities, offering 10 charging ports (8 Level 2 + 2 DC Fast Chargers) with a $1M total investment.
 
 ## Business Plan Snapshot
 
-- Business or venture name:
-- Target customer:
-- Market or sector:
-- Business model:
-- Primary evidence sources:
-- Main outputs: HTML-PPT deck, business plan notes, assumptions log, financial model notes
-- Current phase: concept / discovery / validation / planning / fundraising / operating
+- **Business name:** Volt & Go Lincoln (placeholder — pending brand decision)
+- **Target customer:** Highway travelers on I-80, EV-owning residents of high-end apartments, and local commuters without home charging access
+- **Market / sector:** Electric vehicle (EV) charging infrastructure, Lincoln NE
+- **Business model:** Pay-per-use charging revenue ($/kWh), optional monthly membership passes, ancillary retail/advertising revenue
+- **Primary evidence sources:** AFDC station locator, Nebraska EV registration data, NEVI program allocations, Lincoln city EV plans, comparable station financial benchmarks
+- **Main outputs:** Business plan docs, financial model, investor pitch deck (HTML-PPT)
+- **Current phase:** Planning
 
 ## Required Project Metadata
 
-Fill these in when a new business plan starts. They are the minimum shared context expected by humans and AI assistants.
-
-- Project lead:
-- Business or venture name:
-- Target customer or buyer:
-- Market or sector:
-- Business model:
-- Data or source steward:
-- Planning stage:
-- Expected deliverables:
-- Review status: planning / human reviewed / ready to present / archived
+- Project lead: [Owner name — human to fill in]
+- Business or venture name: Volt & Go Lincoln (working title)
+- Target customer or buyer: Highway travelers on I-80, high-end apartment EV owners, local commuters
+- Market or sector: EV charging infrastructure — Lincoln, NE MSA
+- Business model: Pay-per-use ($/kWh) + optional monthly membership; possible advertising/retail co-tenancy
+- Data or source steward: [Owner name — human to fill in]
+- Planning stage: Initial planning — assumptions drafted, awaiting human review
+- Expected deliverables: Business plan docs, 5-year financial model, investor pitch deck
+- Review status: Draft — human review needed before investor use
 
 ## Human Review Checkpoints
 

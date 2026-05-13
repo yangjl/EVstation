@@ -72,12 +72,38 @@ Record important project decisions and the reasoning behind them. Keep entries s
 - Why: this improves reproducibility, debugging, and handoff between local and cluster execution.
 - Status: superseded by the 2026-05-13 business planning workflow.
 
-## 2026-04-01
+## 2026-05-13 — Volt & Go Lincoln EV Charging Station
 
-### Slurm jobs must self-check runtime and avoid head-node compute
+### Business plan initiated for Lincoln, NE EV charging station
 
-- Decision: add a starter Slurm template that reports whether it is running locally or in a remote Slurm job, refuses to do compute work without a Slurm allocation, and verifies module setup before execution.
-- Why: this makes the "do not run heavy work on the HCC head/login node" rule executable rather than just documented, while giving future projects a safer default job wrapper.
+- **Decision:** Start a business plan for a public EV charging station in Lincoln, Nebraska, targeting a site near I-80 and high-end apartment communities, with 10 chargers (8 L2 + 2 DCFC) and $1M total investment.
+- **Why:** Owner provided core parameters (location type, charger count, investment ceiling). This is sufficient to draft assumptions, financial model, competitive landscape, customer hypotheses, and pitch deck plan.
+- **Alternatives considered:** Waiting for site identification before drafting — rejected because early financial modeling helps determine feasibility before committing to site costs.
+- **Status:** Active — all documents in draft, human review in progress.
+
+### Land lease identified as primary financial risk
+
+- **Decision:** Flag land lease cost as the single most sensitive assumption in the financial model. At $4,500/month, the station does not reach EBITDA breakeven within 5 years. At $3,000/month or less, breakeven is achievable by Year 3.
+- **Why:** The financial model makes clear that at a standard Lincoln commercial lease rate, operating costs permanently exceed projected revenues in the base scenario.
+- **Alternatives considered:** (a) Assume land ownership — too speculative at this stage; (b) Assume below-market city partnership — possible but unvalidated.
+- **Next action (human):** Determine whether a site can be secured at or below $3,000/month, or whether a land purchase or developer partnership is feasible.
+- **Status:** Active — awaiting human decision on land strategy.
+
+### Station brands as open-standard, all-EV-brands welcome
+
+- **Decision:** Station will support CCS, CHAdeMO, and J1772 standards rather than joining a single proprietary network.
+- **Why:** Non-Tesla EVs are the majority of the market and growing; open-standard positioning maximizes addressable customer base.
+- **Alternatives considered:** Tesla network partnership — rejected because it requires proprietary hardware and limits access to non-Tesla vehicles.
+- **Status:** Active.
+
+### NEVI and IRA §30C grants included in capital plan
+
+- **Decision:** Include potential NEVI grant ($100K–$200K) and IRA Section 30C tax credit (30% of equipment, up to $100K/item) in the capital stack model.
+- **Why:** These are substantial offsets to the capital requirement and are accessible to this type of station.
+- **Next action (human):** Confirm Nebraska NEVI application timeline with Nebraska DOT before relying on grant in investor deck.
+- **Status:** Draft — requires human verification before including in investor materials.
+
+
 - Alternatives considered: documenting the rule only in Markdown, but that leaves too much room for accidental misuse.
 - Status: superseded by the 2026-05-13 business planning workflow.
 
