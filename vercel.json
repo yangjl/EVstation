@@ -1,0 +1,12 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/north", "destination": "/presentations/investor/volt-go-lincoln/index.html" },
+    { "source": "/north/map", "destination": "/presentations/investor/volt-go-lincoln/map.html" },
+    { "source": "/north/(.*)", "destination": "/presentations/investor/volt-go-lincoln/$1" },
+    { "source": "/south", "destination": "/presentations/investor/volt-go-south-lincoln/index.html" },
+    { "source": "/south/map", "destination": "/presentations/investor/volt-go-south-lincoln/map.html" },
+    { "source": "/south/(.*)", "destination": "/presentations/investor/volt-go-south-lincoln/$1" }
+  ]
+}

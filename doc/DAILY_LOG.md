@@ -14,6 +14,14 @@ Each entry should include:
 - result or impact
 - next concrete step
 
+## 2026-05-14 - Root-level Vercel landing page for site scenarios
+
+- Commit: (pending)
+- Summary: Added a top-level `index.html` landing page that lists every site-scenario deck as a card, and a root `vercel.json` that rewrites clean URLs (`/north`, `/north/map`, `/south`, `/south/map`) onto the per-deck folders. Both active scenarios (Fallbrook v0.2 and SouthPointe v0.3.1) get fully-populated cards with build/capex/5y-EBITDA/I-80-access stats; three `.placeholder` cards sit below ready to be filled when the owner picks the next site (suggested: East 84th/O, West Haymarket/Pioneers, plus one open slot).
+- Files: `index.html` (new), `vercel.json` (new), `README.md` (added Hosted Landing Page section with Vercel project settings + "Adding a new site scenario" four-step recipe)
+- Result: Owner can deploy the repo root to Vercel with default settings. Browser shows landing at `/` with two scenario cards and three placeholders. Per-deck Vercel configs under each presentation folder are unaffected — they remain valid for standalone subfolder deployments.
+- Next concrete step: Owner connects a Vercel project to the repo root (or moves the existing deck Vercel projects under a single root project), verifies `/north` and `/south` load the right decks, and decides which placeholder card to fill next.
+
 ## 2026-05-14 - South Lincoln deck v0.3.1: data audit + 3 new evidence slides
 
 - Commit: `8e16925`

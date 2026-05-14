@@ -59,6 +59,35 @@ When authoring decks:
 
 The pitch deck plan lives in `doc/PITCH_DECK_PLAN.md`.
 
+## Hosted Landing Page (Vercel)
+
+The repository root contains a landing page (`index.html`) that links to every site-scenario deck. It is deployed from the repo root on Vercel using `vercel.json` for clean URL rewrites.
+
+| URL | Serves |
+|---|---|
+| `/` | Landing page · cards for each scenario |
+| `/north` | Fallbrook / North Lincoln deck (`presentations/investor/volt-go-lincoln/`) |
+| `/north/map` | Fallbrook site map |
+| `/south` | SouthPointe / South Lincoln deck (`presentations/investor/volt-go-south-lincoln/`) |
+| `/south/map` | SouthPointe site map |
+
+### Vercel project settings
+
+- **Root Directory:** repository root (leave default)
+- **Framework Preset:** Other
+- **Build Command:** leave empty
+- **Output Directory:** `.`
+- **Install Command:** leave empty
+
+### Adding a new site scenario
+
+1. Create a new deck folder under `presentations/investor/volt-go-<site>/` with its own `index.html` and optional `map.html` (copy one of the existing decks as a starting point).
+2. Add a rewrite block to the root `vercel.json` for the new path prefix (e.g. `/east` → `presentations/investor/volt-go-east-lincoln/`).
+3. Replace one of the `.scenario.placeholder` cards in `index.html` with a fully-populated scenario card pointing at the new path.
+4. Commit and Vercel will redeploy automatically.
+
+The per-deck `vercel.json` files inside each deck folder are unused by the root deployment; they exist so a single deck folder can also be deployed standalone if needed.
+
 ## Project Memory
 
 Review these files before substantial work:

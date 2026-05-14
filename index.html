@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Volt &amp; Go Lincoln · Site Scenarios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;--bg-soft:#f6f7fb;--surface:#ffffff;--surface-2:#f2f4fa;
+    --border:rgba(20,25,60,.10);--border-strong:rgba(20,25,60,.20);
+    --text-1:#0d1130;--text-2:#4a5070;--text-3:#8a90ad;
+    --accent:#3b5bff;--accent-2:#7a46ff;--accent-3:#d94cff;
+    --ok:#1faa6a;--warn:#c87a00;--danger:#dc2626;
+    --grad:linear-gradient(135deg,#3b5bff 0%,#7a46ff 55%,#d94cff 100%);
+    --grad-soft:linear-gradient(135deg,#eef1ff,#f4edff 55%,#fbedff);
+    --shadow:0 14px 40px rgba(20,25,60,.08),0 2px 8px rgba(20,25,60,.04);
+    --shadow-lg:0 24px 60px rgba(20,25,60,.12),0 4px 12px rgba(20,25,60,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--text-1);font-family:'Inter',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+
+  /* hero */
+  .hero{position:relative;padding:88px 56px 56px;overflow:hidden;border-bottom:1px solid var(--border)}
+  .hero::before{content:'';position:absolute;inset:0;background:var(--grad-soft);z-index:-2}
+  .hero::after{content:'';position:absolute;right:-160px;top:-160px;width:640px;height:640px;border-radius:50%;background:var(--grad);filter:blur(10px);opacity:.22;z-index:-1}
+  .wordmark{display:inline-flex;align-items:center;gap:12px;padding:10px 14px;border:1px solid var(--border-strong);border-radius:10px;background:rgba(255,255,255,.72);box-shadow:var(--shadow);backdrop-filter:blur(8px)}
+  .logo-mark{width:34px;height:34px;border-radius:8px;background:var(--grad);display:grid;place-items:center;color:#fff;font-size:19px;font-weight:900;letter-spacing:-.06em}
+  .logo-text{font-size:22px;font-weight:900;letter-spacing:-.025em;color:var(--text-1)}
+  .logo-text small{display:block;font-size:10px;font-weight:800;letter-spacing:.16em;color:var(--text-3);text-transform:uppercase;margin-top:2px}
+  .hero h1{font-size:64px;font-weight:900;letter-spacing:-.03em;line-height:1.02;margin:28px 0 14px;max-width:18ch}
+  .hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lede{font-size:20px;color:var(--text-2);max-width:62ch;line-height:1.5;margin:0 0 20px}
+  .hero .kicker{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent);text-transform:uppercase;margin-bottom:14px}
+  .draft-banner{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:#fff5e0;border:1px solid #f3d896;border-radius:8px;color:var(--warn);font-size:13px;font-weight:700;margin-top:14px}
+  .draft-banner::before{content:'⚠';font-size:14px}
+
+  /* main grid */
+  main{padding:56px 56px 80px;max-width:1320px;margin:0 auto}
+  .section-tag{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent-2);text-transform:uppercase;margin:0 0 6px}
+  .section-title{font-size:32px;font-weight:900;letter-spacing:-.02em;margin:0 0 28px}
+
+  .scenario-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:24px}
+
+  /* scenario card */
+  .scenario{position:relative;background:#fff;border:1px solid var(--border);border-radius:20px;padding:28px 26px 24px;box-shadow:var(--shadow);transition:transform .15s ease, box-shadow .15s ease;display:flex;flex-direction:column;gap:14px;min-height:420px}
+  .scenario:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+  .scenario .badge{position:absolute;top:18px;right:20px;font-size:10px;font-weight:800;letter-spacing:.12em;padding:5px 9px;border-radius:6px;text-transform:uppercase}
+  .scenario .badge.active{background:#e8f7ef;color:var(--ok);border:1px solid #b8e5cc}
+  .scenario .badge.research{background:#fff5e0;color:var(--warn);border:1px solid #f3d896}
+
+  .scenario .scenario-header{display:flex;align-items:flex-start;gap:14px}
+  .scenario .pin{width:42px;height:42px;border-radius:11px;background:var(--grad);color:#fff;font-weight:900;font-size:18px;display:grid;place-items:center;letter-spacing:-.04em;flex-shrink:0;box-shadow:0 6px 16px rgba(122,70,255,.25)}
+  .scenario h3{margin:0 0 4px;font-size:22px;font-weight:900;letter-spacing:-.02em;line-height:1.15}
+  .scenario .scenario-sub{margin:0;color:var(--text-2);font-size:13px;line-height:1.35}
+
+  .scenario .scenario-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;padding:14px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .scenario .stat{display:flex;flex-direction:column;gap:2px}
+  .scenario .stat .l{font-size:10px;font-weight:700;letter-spacing:.10em;color:var(--text-3);text-transform:uppercase}
+  .scenario .stat .v{font-size:17px;font-weight:900;color:var(--text-1);letter-spacing:-.01em}
+  .scenario .stat .v.pos{color:var(--ok)}
+  .scenario .stat .v.neg{color:var(--danger)}
+
+  .scenario p.summary{margin:0;color:var(--text-2);font-size:13.5px;line-height:1.5;flex-grow:1}
+
+  .scenario .actions{display:flex;gap:10px;margin-top:4px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:10px;font-size:13.5px;font-weight:700;text-decoration:none;letter-spacing:-.005em;transition:transform .12s ease,box-shadow .12s ease}
+  .btn-primary{background:var(--grad);color:#fff;box-shadow:0 8px 20px rgba(122,70,255,.25)}
+  .btn-primary:hover{transform:translateY(-1px);box-shadow:0 12px 24px rgba(122,70,255,.32)}
+  .btn-ghost{background:#fff;color:var(--text-1);border:1px solid var(--border-strong)}
+  .btn-ghost:hover{background:var(--surface-2)}
+
+  /* placeholder card */
+  .scenario.placeholder{background:transparent;border:2px dashed var(--border-strong);box-shadow:none;display:flex;align-items:center;justify-content:center;text-align:center;padding:32px}
+  .scenario.placeholder:hover{transform:none;box-shadow:none}
+  .scenario.placeholder .plus{font-size:48px;font-weight:300;color:var(--text-3);line-height:1;margin-bottom:8px}
+  .scenario.placeholder h3{color:var(--text-2);font-size:18px;margin-bottom:6px}
+  .scenario.placeholder .scenario-sub{color:var(--text-3);font-size:12.5px;max-width:24ch;margin:0 auto;line-height:1.45}
+
+  /* summary strip */
+  .summary-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:36px 0 56px;padding:24px;background:var(--surface-2);border:1px solid var(--border);border-radius:16px}
+  .summary-strip .cell{display:flex;flex-direction:column;gap:3px}
+  .summary-strip .cell .n{font-size:30px;font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.02em;line-height:1}
+  .summary-strip .cell .l{font-size:12px;color:var(--text-2);line-height:1.35;margin-top:2px}
+
+  /* footer */
+  footer{padding:36px 56px;border-top:1px solid var(--border);background:var(--surface-2);color:var(--text-2);font-size:13px}
+  footer .footer-grid{max-width:1320px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+  footer a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(59,91,255,.3)}
+  footer a:hover{color:var(--accent-2)}
+
+  @media (max-width:780px){
+    .hero{padding:56px 28px 36px}
+    .hero h1{font-size:42px}
+    .hero p.lede{font-size:17px}
+    main{padding:36px 28px 56px}
+    footer{padding:28px}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wordmark"><span class="logo-mark">V</span><span class="logo-text">Volt&amp;Go<small>Lincoln · site scenarios</small></span></div>
+  <p class="kicker">Owner / SBA diligence · last updated 2026-05-14</p>
+  <h1>An EV charging hub<br>for <span class="grad">Lincoln, Nebraska.</span></h1>
+  <p class="lede">Two site scenarios are under active diligence — a Fallbrook / I-80 access concept on the north side and a SouthPointe / Pine Lake retail-host concept on the south. Pick a scenario below to open its investor deck and interactive site map.</p>
+  <span class="draft-banner">All scenarios are DRAFT. Owner review required before external use.</span>
+</header>
+
+<main>
+
+  <p class="section-tag">Scenarios under diligence</p>
+  <h2 class="section-title">Pick a site scenario</h2>
+
+  <div class="scenario-grid">
+
+    <!-- North / Fallbrook -->
+    <article class="scenario">
+      <span class="badge active">v0.2 · active</span>
+      <div class="scenario-header">
+        <div class="pin" style="background:linear-gradient(135deg,#3b5bff,#7a46ff)">N</div>
+        <div>
+          <h3>North · Fallbrook / Tallgrass</h3>
+          <p class="scenario-sub">~7300 Tallgrass Pkwy · 1.5 mi from I-80 Exit 401 · adjacent to Brookside / Northbrook apartments</p>
+        </div>
+      </div>
+      <div class="scenario-stats">
+        <div class="stat"><span class="l">Build</span><span class="v">8 L2 + 2 DCFC</span></div>
+        <div class="stat"><span class="l">Gross capex</span><span class="v">~$1.0M</span></div>
+        <div class="stat"><span class="l">5-yr cum EBITDA</span><span class="v neg">~−$205K</span></div>
+        <div class="stat"><span class="l">I-80 access</span><span class="v">1.5 mi</span></div>
+      </div>
+      <p class="summary">Standalone-lease concept with direct I-80 corridor visibility. Only Class A apartment cluster in Lincoln with no non-Tesla DCFC within 3 miles. Currently in the active investor deck.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/north">Open deck →</a>
+        <a class="btn btn-ghost" href="/north/map">Site map</a>
+      </div>
+    </article>
+
+    <!-- South / SouthPointe -->
+    <article class="scenario">
+      <span class="badge research">v0.3.1 · research</span>
+      <div class="scenario-header">
+        <div class="pin" style="background:linear-gradient(135deg,#7a46ff,#d94cff)">S</div>
+        <div>
+          <h3>South · SouthPointe / Pine Lake</h3>
+          <p class="scenario-sub">Pine Lake Rd &amp; S 27th retail-host pad · adjacent to SouthPointe Pavilions · Aventine + Level apartments</p>
+        </div>
+      </div>
+      <div class="scenario-stats">
+        <div class="stat"><span class="l">Build</span><span class="v">16 L2 + 3 DCFC</span></div>
+        <div class="stat"><span class="l">Gross capex</span><span class="v">~$953K</span></div>
+        <div class="stat"><span class="l">5-yr cum EBITDA</span><span class="v pos">~+$433K</span></div>
+        <div class="stat"><span class="l">I-80 access</span><span class="v">~7 mi N</span></div>
+      </div>
+      <p class="summary">Retail-host concept built around dwell-time demand. No DCFC south of I-80 today. Local-station thesis with 3 DCFC stalls assuming a confirmed gap; pays back capital around Year 8-9.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/south">Open deck →</a>
+        <a class="btn btn-ghost" href="/south/map">Site map</a>
+      </div>
+    </article>
+
+    <!-- Placeholder slots — owner will add future site decks here -->
+    <article class="scenario placeholder">
+      <div>
+        <div class="plus">+</div>
+        <h3>Next site scenario</h3>
+        <p class="scenario-sub">East Lincoln · 84th &amp; O · Highway 6 corridor · TBD</p>
+      </div>
+    </article>
+
+    <article class="scenario placeholder">
+      <div>
+        <div class="plus">+</div>
+        <h3>Next site scenario</h3>
+        <p class="scenario-sub">West Lincoln · Haymarket / Pioneers Park · TBD</p>
+      </div>
+    </article>
+
+    <article class="scenario placeholder">
+      <div>
+        <div class="plus">+</div>
+        <h3>Next site scenario</h3>
+        <p class="scenario-sub">Future candidate · pending owner selection</p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="summary-strip">
+    <div class="cell"><div class="n">2</div><div class="l">active site scenarios</div></div>
+    <div class="cell"><div class="n">~10,938</div><div class="l">Nebraska EVs (Dec 2025)</div></div>
+    <div class="cell"><div class="n">~155 / 18</div><div class="l">Lincoln public ports / DCFC ports</div></div>
+    <div class="cell"><div class="n">16 of 18</div><div class="l">Lincoln DCFC are Tesla-first</div></div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <b style="color:var(--text-1)">Volt &amp; Go Lincoln</b> · Owner / SBA diligence draft · 2026-05-14<br>
+      All scenarios are draft and require owner review before external use.
+    </div>
+    <div style="text-align:right">
+      Source: <a href="https://github.com/yangjl/EVstation" target="_blank" rel="noopener">github.com/yangjl/EVstation</a><br>
+      <a href="https://github.com/yangjl/EVstation/blob/main/reports/south_lincoln_location_optimization_report.md" target="_blank" rel="noopener">South Lincoln optimization report</a> ·
+      <a href="https://github.com/yangjl/EVstation/blob/main/reports/revised_ev_charging_station_business_plan_report.md" target="_blank" rel="noopener">Revised business plan report</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
