@@ -16,7 +16,7 @@ Each entry should include:
 
 ## 2026-05-14 - South Lincoln deck v0.3.1: data audit + 3 new evidence slides
 
-- Commit: (pending)
+- Commit: `8e16925`
 - Summary: Audited the revised South Lincoln deck (`presentations/investor/volt-go-south-lincoln/index.html`) and found three sync/data issues plus three missing evidence sections. Fixed the inconsistencies and added the new slides.
 - Issues found: (1) the Annual EBITDA slide showed 3-DCFC numbers ($164k Y5, $433k cum) but the supporting CSV in `models/` was still the 2-DCFC build; (2) the Sensitivity slide's "$50k downside" had no CSV behind it; (3) the §30C slide hedged ("research indicates") despite the deadline being firm at 2026-06-30 (47 days away).
 - New CSVs: `models/south_lincoln_revised_3dcfc_annual_ebitda.csv` (Y1-Y10 with cumulative cash by year — for the capital-recovery slide), `models/south_lincoln_revised_3dcfc_sensitivity.csv` (7-row matrix across 24%/32%/40% L2 utilization × 1.6/2.2/3.0 DCFC saturation).
