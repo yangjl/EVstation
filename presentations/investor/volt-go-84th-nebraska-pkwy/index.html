@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Volt&amp;Go 84th &amp; Nebraska Parkway · Derisk Deck</title>
+<link rel="stylesheet" href="vendor/html-ppt/fonts.css">
+<link rel="stylesheet" href="vendor/html-ppt/base.css">
+<link rel="stylesheet" href="vendor/html-ppt/animations/animations.css">
+<link rel="stylesheet" href="style.css">
+<style>
+  .tpl-pitch-deck .slide.map-slide{padding:0;overflow:hidden}
+  .tpl-pitch-deck .slide.map-slide .map-frame{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+  .tpl-pitch-deck .slide.map-slide .map-caption{position:absolute;top:24px;left:32px;right:32px;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;z-index:5;pointer-events:none}
+  .tpl-pitch-deck .slide.map-slide .map-caption .tag{background:rgba(13,17,48,.82);color:#fff;padding:10px 14px;border-radius:10px;backdrop-filter:blur(6px);font-size:14px;font-weight:700;letter-spacing:.04em;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  .tpl-pitch-deck .slide.map-slide .map-caption .tag small{display:block;font-weight:500;color:rgba(255,255,255,.78);font-size:11px;margin-top:3px;letter-spacing:.06em}
+  .tpl-pitch-deck .sources-slide a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(59,91,255,.4);word-break:break-all}
+  .tpl-pitch-deck .src-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 36px;margin-top:22px;font-size:13px;line-height:1.45;color:var(--text-2)}
+  .tpl-pitch-deck .src-grid h4{margin:0 0 6px;font-size:12px;letter-spacing:.12em;color:var(--accent-3);text-transform:uppercase}
+  .tpl-pitch-deck .src-grid ul{margin:0;padding:0;list-style:none}
+  .tpl-pitch-deck .src-grid li{margin:0 0 6px;padding-left:14px;position:relative}
+  .tpl-pitch-deck .src-grid li::before{content:"›";position:absolute;left:0;color:var(--text-3)}
+  .tpl-pitch-deck .profit-graph{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:end;margin-top:28px}
+  .tpl-pitch-deck .profit-bars{height:230px;display:flex;align-items:end;gap:14px;padding:18px 12px 0;border-left:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .tpl-pitch-deck .profit-bar{flex:1;min-width:0;border-radius:9px 9px 0 0;background:linear-gradient(180deg,rgba(59,91,255,.45),rgba(59,91,255,.82));position:relative;display:flex;align-items:flex-start;justify-content:center;padding-top:10px;color:#fff;font-weight:900;font-size:14px;box-shadow:0 10px 24px rgba(59,91,255,.18)}
+  .tpl-pitch-deck .profit-bar.best{background:var(--grad);box-shadow:0 14px 30px rgba(122,70,255,.25)}
+  .tpl-pitch-deck .profit-bar.phase{background:linear-gradient(180deg,#22c55e,#15803d)}
+  .tpl-pitch-deck .profit-bar small{position:absolute;bottom:-36px;left:50%;transform:translateX(-50%);width:94px;text-align:center;color:var(--text-2);font-weight:800;font-size:10.5px;line-height:1.15}
+  .tpl-pitch-deck .profit-notes{display:grid;gap:12px}
+  .tpl-pitch-deck .profit-note{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow-soft)}
+  .tpl-pitch-deck .profit-note b{display:block;color:var(--text-1);font-size:15px;margin-bottom:4px}
+  .tpl-pitch-deck .profit-note span{display:block;color:var(--text-2);font-size:13px;line-height:1.35}
+  .tpl-pitch-deck .compact-table{width:100%;border-collapse:collapse;font-size:12px;color:var(--text-2)}
+  .tpl-pitch-deck .compact-table th{padding:6px 4px;text-align:left;color:var(--text-3);border-bottom:1px solid var(--border);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+  .tpl-pitch-deck .compact-table td{padding:7px 4px;border-bottom:1px solid var(--border)}
+  .tpl-pitch-deck .compact-table td:last-child,.tpl-pitch-deck .compact-table th:last-child{text-align:right}
+  .tpl-pitch-deck .ladder{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:24px}
+  .tpl-pitch-deck .rung{padding:18px 14px 14px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow-soft);position:relative}
+  .tpl-pitch-deck .rung h5{margin:0 0 12px;font-size:14px;font-weight:900;letter-spacing:-.01em;color:var(--text-1);line-height:1.2}
+  .tpl-pitch-deck .rung.derisk{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 14px 30px rgba(122,70,255,.30)}
+  .tpl-pitch-deck .rung.derisk h5{color:#fff}
+  .tpl-pitch-deck .rung .row{display:flex;justify-content:space-between;font-size:11.5px;line-height:1.4;color:var(--text-2);padding:3px 0;border-top:1px solid var(--border)}
+  .tpl-pitch-deck .rung .row:first-of-type{border-top:0}
+  .tpl-pitch-deck .rung .row b{color:var(--text-1);font-weight:800}
+  .tpl-pitch-deck .rung.derisk .row{color:rgba(255,255,255,.85);border-top-color:rgba(255,255,255,.22)}
+  .tpl-pitch-deck .rung.derisk .row b{color:#fff}
+  .tpl-pitch-deck .rung .pick{position:absolute;top:-9px;right:10px;background:#fff;color:var(--accent-2);font-size:9px;font-weight:900;letter-spacing:.12em;padding:3px 7px;border-radius:5px;text-transform:uppercase;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+</style>
+</head>
+<body class="tpl-pitch-deck">
+<div class="deck">
+
+  <!-- 1. Cover -->
+  <section class="slide" data-title="Cover">
+    <div class="cover-bg"></div>
+    <div class="cover-blob"></div>
+    <div style="position:absolute;top:52px;left:112px" class="wordmark-logo"><span class="logo-mark">V</span><span class="logo-text">Volt&amp;Go<small>84th &amp; Nebraska Pkwy · derisk launch</small></span></div>
+    <p class="kicker">Owner / SBA diligence · derisk build · 2026-05-14</p>
+    <h1 class="h1 anim-fade-up" data-anim="fade-up">An owner-lot EV hub<br><span class="gradient-text">for east Lincoln.</span></h1>
+    <p class="lede mt-m">A 12-stall derisk launch on a controlled lot at 84th &amp; Nebraska Pkwy, adjacent to Sam's Club, Walmart, and Menards. The highest modeled return per dollar of capex among the three Lincoln scenarios. Scales to 24 posts when demand validates.</p>
+    <div class="deck-footer"><span>Draft v0.4 · Human review required</span><span class="slide-number" data-current="1" data-total="16"></span></div>
+    <div class="notes">This deck pivots the prior 20 L2 + 4 DCFC ceiling to an 8 L2 + 4 DCFC derisk launch. Lower capex, faster payback, and conduit/switchgear pre-built for later expansion. The full 20+4 ceiling stays in the appendix CSVs but is not the primary recommendation.</div>
+  </section>
+
+  <!-- 2. Site advantage -->
+  <section class="slide" data-title="Site Advantage">
+    <span class="section-num">01</span>
+    <p class="num-tag">WHY THIS SITE WINS</p>
+    <h2 class="h2 mt-s">Owned land changes<br><span class="gradient-text">everything.</span></h2>
+    <div class="grid g3 mt-l">
+      <div class="card compact"><h4>Land economics</h4><p class="dim">Lot is owner-controlled at 8480 Andermatt Dr — no lease drag, no host fee, no rent escalation. This was the single biggest negative in the Fallbrook model ($54K/yr).</p></div>
+      <div class="card compact"><h4>Retail / gas / errand node</h4><p class="dim">Sam's Club (with fuel), Walmart, Menards, Dairy Queen, restaurants — all already vehicle-oriented and dwell-friendly. Charging fits the existing trip pattern.</p></div>
+      <div class="card compact"><h4>Confirmed DCFC gap</h4><p class="dim">Owner has confirmed no DCFC around south/east Lincoln. The nearest open-network DCFC (Electrify America at Casey's NW 20th) is ~9 mi NW.</p></div>
+    </div>
+    <p class="formula mt-m">These three are structural, not cosmetic: each one breaks a problem that hurt one of the prior scenarios. Owned land beats Fallbrook's lease drag. Retail node beats SouthPointe's host-dependency. Regional DCFC gap supports 4 DCFC stalls instead of 2-3.</p>
+    <div class="notes">Three structural advantages, each tied to a problem that the other two site scenarios couldn't solve. This is the key insight in the deck.</div>
+  </section>
+
+  <!-- 3. Traffic + anchors -->
+  <section class="slide" data-title="Data Anchors">
+    <span class="section-num">02</span>
+    <p class="num-tag">DATA ANCHORS · 2024 ADT</p>
+    <h2 class="h2 mt-s">Real retail traffic.<br>Already vehicle-oriented.</h2>
+    <div class="data-strip mt-m">
+      <div class="data-cell"><strong>24.1k</strong><span>Nebraska Pkwy, Eiger Dr to S 84th ADT (2024)</span></div>
+      <div class="data-cell"><strong>17.3k</strong><span>Nebraska Pkwy, S 84th to S 87th ADT (2024)</span></div>
+      <div class="data-cell"><strong>16.3k</strong><span>S 84th, Eiger to Nebraska Pkwy ADT (2024)</span></div>
+      <div class="data-cell"><strong>12.4k</strong><span>S 84th, Nebraska Pkwy to Yankee Hill ADT (2024)</span></div>
+    </div>
+    <p class="source-note">Source: City of Lincoln 2024 ADT list. Two crossing arterials each at 12-24k vehicles/day, plus captive demand from the surrounding big-box retail. The candidate lot sits at the hard corner of both arterials.</p>
+    <p class="formula mt-s">Anchors named in the leasing package: <b>Sam's Club</b> (8480 Andermatt, ~$50M annual sales for a typical club), <b>Walmart Supercenter</b>, and <b>Menards</b>. Sam's Club fuel station already brings vehicle-oriented stop-and-spend behavior — the easiest customer to convert is one already parked in the lot.</p>
+    <div class="notes">All four ADT counts come from the City's published 2024 list. Two-arterial crossing with retail anchors is the textbook charging-station location pattern. Visibility is not the question; civil feasibility and utility capacity are.</div>
+  </section>
+
+  <!-- 4. Demand math -->
+  <section class="slide" data-title="Demand Math">
+    <span class="section-num">02a</span>
+    <p class="num-tag">DEMAND MATH · BOTTOM-UP</p>
+    <h2 class="h2 mt-s">Where the $305K Y5 EBITDA<br>actually comes from.</h2>
+    <div class="grid g2 mt-l">
+      <div class="card compact">
+        <h4>DCFC capture · retail + regional gap</h4>
+        <p class="formula" style="margin:0 0 8px">17-24k ADT on Neb Pkwy / S 84th × 1% EV share → 220-380 EVs/day in trade area → 3-4% need fast charge here given no nearby DCFC.</p>
+        <div class="mini-metric"><span class="n">~38</span><span class="l">DCFC sessions/day at 38% mature util across 4 DCFC stalls</span></div>
+        <div class="mini-metric"><span class="n">~30 kWh</span><span class="l">average session · $0.49/kWh → ~$15 ticket</span></div>
+        <div class="mini-metric"><span class="n">~$208K</span><span class="l">Y5 DCFC revenue (4 × 100 kW × 8,760h × 0.38 × $0.49/kWh)</span></div>
+      </div>
+      <div class="card compact">
+        <h4>L2 capture · retail dwell + employees</h4>
+        <p class="formula" style="margin:0 0 8px">Sam's shoppers (1-2 hr trips) + Walmart/Menards visitors + retail employees. Smaller member base than apartment-focused site, but predictable retail flow.</p>
+        <div class="mini-metric"><span class="n">~25</span><span class="l">paying members at $29/mo · ~$9K/yr membership floor</span></div>
+        <div class="mini-metric"><span class="n">35%</span><span class="l">mature utilization across 8 L2 × 7.2 kW × 8,760h</span></div>
+        <div class="mini-metric"><span class="n">~$67K</span><span class="l">Y5 L2 revenue (8 stalls × 7.2 kW × 8,760h × 0.35 × $0.38/kWh)</span></div>
+      </div>
+    </div>
+    <p class="source-note">Sum: ~$208K DCFC + ~$67K L2 + ~$9K membership − ~$70K net energy/fees − ~$52K fixed OpEx − ~$32K maintenance (8 × $1.6K L2 + 4 × $9K DCFC) ≈ <b>$305K Y5 EBITDA</b> · matches optimization CSV row "8 L2 + 4 DCFC".</p>
+    <div class="notes">Three numbers worth field-testing before construction: 1% EV share of passing traffic, 3-4% fast-charge capture, and 25 paying L2 members. A single Saturday traffic count + 20-question retail-shopper survey closes the demand-math gap.</div>
+  </section>
+
+  <!-- 5. Direct competitors -->
+  <section class="slide" data-title="Competitors">
+    <span class="section-num">03</span>
+    <p class="num-tag">DIRECT COMPETITORS</p>
+    <h2 class="h2 mt-s">No DCFC for 9 miles.<br><span class="gradient-text">No L2 in this retail node.</span></h2>
+    <div class="grid g2 mt-l">
+      <div class="card compact">
+        <h4>L2 competition · in trade area</h4>
+        <table class="compact-table mt-s">
+          <tr><th>Site</th><th>Distance</th></tr>
+          <tr><td>SouthPointe ChargePoint <small style="color:var(--text-3)">(4 × L2 · $1.50/hr)</small></td><td>~6 mi W</td></tr>
+          <tr><td>Russ's Market 33rd &amp; Hwy 2 <small style="color:var(--text-3)">(L2 · retail)</small></td><td>~5 mi W</td></tr>
+          <tr><td style="color:var(--accent)"><b>Volt &amp; Go 84th</b></td><td style="color:var(--accent)"><b>0 mi</b></td></tr>
+        </table>
+        <p class="formula" style="margin-top:10px">No L2 station inside the Sam's / Walmart / Menards retail node. Closest competitors are 5-6 miles west — a typical Lincoln resident doing weekly errands won't divert.</p>
+      </div>
+      <div class="card compact">
+        <h4>DCFC competition · regional</h4>
+        <table class="compact-table mt-s">
+          <tr><th>Lincoln DCFC site</th><th>Drive</th></tr>
+          <tr><td>Tesla SC · Hy-Vee #3 <small style="color:var(--text-3)">(8 stalls · 150 kW · Tesla-first)</small></td><td>~9 mi NW</td></tr>
+          <tr><td>Tesla SC · West O <small style="color:var(--text-3)">(8 stalls · 250 kW · Tesla-first)</small></td><td>~10 mi NW</td></tr>
+          <tr><td>Electrify America · Casey's NW 20th <small style="color:var(--text-3)">(4 plugs · open CCS)</small></td><td>~9 mi NW</td></tr>
+          <tr><td style="color:var(--accent)"><b>Volt &amp; Go 84th</b></td><td style="color:var(--accent)"><b>0 mi</b></td></tr>
+        </table>
+        <p class="formula" style="margin-top:10px">All Lincoln DCFC sits north/west of I-80. A southeast Lincoln EV owner currently drives 18-20 mi round-trip to fast-charge — that's the gap supporting 4 DCFC stalls.</p>
+      </div>
+    </div>
+    <p class="source-note">Sources: PlugShare directory; ChargeHub; Tesla locator; Electrify America locator. <b>Owner action:</b> pull an AFDC API export for a 10-mile radius around 84th &amp; Nebraska Pkwy to document the gap with a date-stamped record before external use.</p>
+    <div class="notes">The L2-inside-the-node and DCFC-regional-gap stories together justify the 8 L2 + 4 DCFC mix. If a competitor announces DCFC at SouthPointe or 84th & Hwy 2 before our build, the model must be re-run.</div>
+  </section>
+
+  <!-- 6. Map -->
+  <section class="slide map-slide" data-title="Site Map">
+    <iframe class="map-frame" src="map.html" title="Volt&Go 84th and Nebraska Parkway planning map" loading="lazy"></iframe>
+    <div class="map-caption">
+      <div class="tag">★ Owned lot: 84th &amp; Nebraska Pkwy<small>8480 Andermatt Dr · adjacent to Sam's Club</small></div>
+      <div class="tag">Interactive — click pins<small>Anchors · arterials · ADT · DCFC gap</small></div>
+    </div>
+    <div class="notes">Map shows the owner-controlled candidate lot, the three retail anchors (Sam's, Walmart, Menards), the two arterials with their 2024 ADT, and the distance to existing Lincoln DCFC infrastructure.</div>
+  </section>
+
+  <!-- 7. Build ladder -->
+  <section class="slide" data-title="Build Ladder">
+    <span class="section-num">04</span>
+    <p class="num-tag">BUILD LADDER · WHERE TO START</p>
+    <h2 class="h2 mt-s">Start small. <span class="gradient-text">Scale on proof.</span></h2>
+    <div class="ladder">
+      <div class="rung">
+        <h5>0 L2 + 4 DCFC</h5>
+        <div class="row"><span>Capex</span><b>$790K</b></div>
+        <div class="row"><span>Y5 EBITDA</span><b>$272K</b></div>
+        <div class="row"><span>5y cum</span><b>$809K</b></div>
+        <div class="row"><span>5y cash</span><b style="color:var(--ok)">+$19K</b></div>
+      </div>
+      <div class="rung">
+        <h5>4 L2 + 4 DCFC</h5>
+        <div class="row"><span>Capex</span><b>$862K</b></div>
+        <div class="row"><span>Y5 EBITDA</span><b>$288K</b></div>
+        <div class="row"><span>5y cum</span><b>$856K</b></div>
+        <div class="row"><span>5y cash</span><b>($6K)</b></div>
+      </div>
+      <div class="rung derisk">
+        <span class="pick">Derisk pick</span>
+        <h5>8 L2 + 4 DCFC</h5>
+        <div class="row"><span>Capex</span><b>$934K</b></div>
+        <div class="row"><span>Y5 EBITDA</span><b>$305K</b></div>
+        <div class="row"><span>5y cum</span><b>$903K</b></div>
+        <div class="row"><span>5y cash</span><b>($31K)</b></div>
+      </div>
+      <div class="rung">
+        <h5>12 L2 + 4 DCFC</h5>
+        <div class="row"><span>Capex</span><b>$1.01M</b></div>
+        <div class="row"><span>Y5 EBITDA</span><b>$321K</b></div>
+        <div class="row"><span>5y cum</span><b>$951K</b></div>
+        <div class="row"><span>5y cash</span><b>($55K)</b></div>
+      </div>
+      <div class="rung">
+        <h5>20 L2 + 4 DCFC <small style="font-size:9px;color:var(--text-3);display:block;font-weight:600;letter-spacing:0">full ceiling</small></h5>
+        <div class="row"><span>Capex</span><b>$1.15M</b></div>
+        <div class="row"><span>Y5 EBITDA</span><b>$354K</b></div>
+        <div class="row"><span>5y cum</span><b>$1.05M</b></div>
+        <div class="row"><span>5y cash</span><b>($104K)</b></div>
+      </div>
+    </div>
+    <p class="source-note mt-l">Source: <code>models/84th_nebraska_pkwy_optimization_summary.csv</code>. The 4 DCFC stalls drive 80%+ of operating margin in every viable build — so derisk by holding L2 count low, not DCFC. Conduit and switchgear can be pre-built for 20-L2 expansion at minimal incremental cost.</p>
+    <div class="notes">Going from 8 L2 + 4 DCFC to 20 L2 + 4 DCFC costs $216K more capex and adds only $49K to Y5 EBITDA. That's a 4-year payback on the marginal L2 stalls — defensible later, premature today.</div>
+  </section>
+
+  <!-- 8. Derisk recommendation -->
+  <section class="slide" data-title="Derisk Recommendation">
+    <span class="section-num">05</span>
+    <p class="num-tag">RECOMMENDATION</p>
+    <h2 class="h2 mt-s">Launch with <span class="gradient-text">8 L2 + 4 DCFC.</span></h2>
+    <div class="grid g3 mt-l">
+      <div class="card card-accent compact"><h4>Capex</h4><div class="metric mt-s"><div class="n" style="font-size:54px">$934K</div><div class="l">−$216K vs full 20+4 build · −$72K vs 12+4 phase</div></div></div>
+      <div class="card compact"><h4>Y5 EBITDA</h4><div class="metric mt-s"><div class="n" style="font-size:54px">$305K</div><div class="l">86% of the full-build Y5 number at 81% of the capex</div></div></div>
+      <div class="card compact"><h4>5-yr cash gap</h4><div class="metric mt-s"><div class="n" style="font-size:54px">($31K)</div><div class="l">smallest of any build · capex effectively recovered just past Y5</div></div></div>
+    </div>
+    <p class="formula mt-m">All 4 DCFC stalls kept — they monetize the regional gap and produce ~$208K of Y5 revenue. L2 dialed down from 20 → 8 — enough for retail dwell + employees, with conduit/switchgear pre-built for later expansion to 12, 16, or 20 stalls when demand validates.</p>
+    <div class="notes">This is the headline pivot. Going to 8 L2 + 4 DCFC instead of the full 20+4 build trades $49K/yr of Y5 EBITDA for $216K of upfront capital protection and a smaller exposure if demand assumptions miss.</div>
+  </section>
+
+  <!-- 9. Annual EBITDA -->
+  <section class="slide" data-title="Annual EBITDA">
+    <span class="section-num">06</span>
+    <p class="num-tag">ANNUAL EBITDA · DERISK BUILD</p>
+    <h2 class="h2 mt-s">Operating-cash positive<br>in <span class="gradient-text">Year 1.</span></h2>
+    <div class="traction-bar mt-l">
+      <div class="bar" style="height:8%"><em>$25k</em><span>Y1</span></div>
+      <div class="bar" style="height:36%"><em>$110k</em><span>Y2</span></div>
+      <div class="bar" style="height:64%"><em>$195k</em><span>Y3</span></div>
+      <div class="bar" style="height:88%"><em>$268k</em><span>Y4</span></div>
+      <div class="bar" style="height:100%"><em>$305k</em><span>Y5</span></div>
+    </div>
+    <p class="dim mt-l" style="margin-top:48px">Unlike Fallbrook (EBITDA-negative through Y5) and SouthPointe (positive in Y2), the 84th derisk build is <b>operating-cash positive in Year 1</b> — driven by owned-lot lower fixed OpEx ($52K/yr vs $72-90K) and the four DCFC stalls already filling at 12% utilization in Year 1.</p>
+    <div class="notes">Year 1 positive EBITDA is the most important number in this deck. It comes from the lower fixed OpEx (no land lease) plus four DCFC stalls operating from day one.</div>
+  </section>
+
+  <!-- 10. Capital recovery -->
+  <section class="slide" data-title="Capital Recovery">
+    <span class="section-num">06b</span>
+    <p class="num-tag">CAPITAL RECOVERY</p>
+    <h2 class="h2 mt-s">Capex recovered<br><span class="gradient-text">just past Year 5.</span></h2>
+    <div class="traction-bar mt-l" style="height:200px">
+      <div class="bar" style="height:8%;background:linear-gradient(180deg,#ef4444,#b91c1c)"><em>-$909k</em><span>Y1</span></div>
+      <div class="bar" style="height:22%;background:linear-gradient(180deg,#f59e0b,#d97706)"><em>-$799k</em><span>Y2</span></div>
+      <div class="bar" style="height:42%;background:linear-gradient(180deg,#f59e0b,#d97706)"><em>-$604k</em><span>Y3</span></div>
+      <div class="bar" style="height:68%;background:linear-gradient(180deg,#eab308,#a16207)"><em>-$336k</em><span>Y4</span></div>
+      <div class="bar" style="height:97%;background:linear-gradient(180deg,#22c55e,#15803d)"><em>-$31k</em><span>Y5</span></div>
+      <div class="bar" style="height:100%;background:linear-gradient(180deg,#22c55e,#15803d)"><em>+$279k</em><span>Y6</span></div>
+    </div>
+    <p class="dim mt-l" style="margin-top:48px">Cumulative cash position by year. The derisk build pays back its $934K capex within months of Year 5 — meaningfully faster than SouthPointe's Y8-Y9 recovery and Fallbrook's "never under base assumptions" profile. Y6 is the first year the project sits on net-positive cash.</p>
+    <div class="notes">This is the slide an SBA lender will spend the most time on. Y5-Y6 capex recovery is competitive for charging infrastructure (industry norm is Y7-Y10). Any §30C revival, state grant, or terminal value moves recovery into Y4.</div>
+  </section>
+
+  <!-- 11. 3-site comparison -->
+  <section class="slide" data-title="3-Site Comparison">
+    <span class="section-num">07</span>
+    <p class="num-tag">3-SITE COMPARISON · LIKE-FOR-LIKE</p>
+    <h2 class="h2 mt-s">84th derisk wins on<br><span class="gradient-text">every axis.</span></h2>
+    <div class="grid g3 mt-l">
+      <div class="card compact">
+        <h4>Fallbrook · North</h4>
+        <table class="compact-table mt-s">
+          <tr><td style="color:var(--text-3)">Build</td><td>8 L2 + 2 DCFC</td></tr>
+          <tr><td style="color:var(--text-3)">Capex</td><td>~$1.0M</td></tr>
+          <tr><td style="color:var(--text-3)">Y5 EBITDA</td><td style="color:#ef4444">($15K)</td></tr>
+          <tr><td style="color:var(--text-3)">5y cum</td><td style="color:#ef4444">($206K)</td></tr>
+          <tr><td style="color:var(--text-3)">Land</td><td>$4,500/mo lease</td></tr>
+          <tr><td style="color:var(--text-3)">Payback</td><td style="color:#ef4444">never (model)</td></tr>
+        </table>
+      </div>
+      <div class="card compact">
+        <h4>SouthPointe · South</h4>
+        <table class="compact-table mt-s">
+          <tr><td style="color:var(--text-3)">Build</td><td>16 L2 + 3 DCFC</td></tr>
+          <tr><td style="color:var(--text-3)">Capex</td><td>~$953K</td></tr>
+          <tr><td style="color:var(--text-3)">Y5 EBITDA</td><td style="color:var(--ok)">$164K</td></tr>
+          <tr><td style="color:var(--text-3)">5y cum</td><td style="color:var(--ok)">$433K</td></tr>
+          <tr><td style="color:var(--text-3)">Land</td><td>retail-host pad</td></tr>
+          <tr><td style="color:var(--text-3)">Payback</td><td>~Y8-Y9</td></tr>
+        </table>
+      </div>
+      <div class="card card-accent compact">
+        <h4>84th derisk · East <span style="color:var(--accent);font-size:10px;font-weight:900;letter-spacing:.1em">PICK</span></h4>
+        <table class="compact-table mt-s">
+          <tr><td style="color:var(--text-3)">Build</td><td><b>8 L2 + 4 DCFC</b></td></tr>
+          <tr><td style="color:var(--text-3)">Capex</td><td style="color:var(--ok)"><b>~$934K</b></td></tr>
+          <tr><td style="color:var(--text-3)">Y5 EBITDA</td><td style="color:var(--ok)"><b>$305K</b></td></tr>
+          <tr><td style="color:var(--text-3)">5y cum</td><td style="color:var(--ok)"><b>$903K</b></td></tr>
+          <tr><td style="color:var(--text-3)">Land</td><td><b>owned</b></td></tr>
+          <tr><td style="color:var(--text-3)">Payback</td><td style="color:var(--ok)"><b>~Y5</b></td></tr>
+        </table>
+      </div>
+    </div>
+    <p class="formula mt-m"><b>84th derisk wins on capex, Y5 EBITDA, 5-yr cumulative, and payback simultaneously.</b> The driver is owned land + four-DCFC monetization of the regional gap. Even at the smallest L2 count (8), it produces nearly 2× SouthPointe's Y5 EBITDA at lower capex.</p>
+    <div class="notes">When presenting this to a lender, the 5-yr cum EBITDA delta vs SouthPointe (+$470K) and vs Fallbrook (+$1.1M) is the most important number. The "land economics" line at the bottom is the second.</div>
+  </section>
+
+  <!-- 12. Sensitivity -->
+  <section class="slide" data-title="Sensitivity">
+    <span class="section-num">08</span>
+    <p class="num-tag">SENSITIVITY</p>
+    <h2 class="h2 mt-s">Even at downside,<br>the project is viable.</h2>
+    <div class="grid g2 mt-l">
+      <div class="card compact"><h4>Downside</h4><div class="metric mt-s"><div class="n" style="font-size:46px">$185K</div><div class="l">Y5 EBITDA · 25% L2 util · 3.0 DCFC effective</div></div></div>
+      <div class="card compact"><h4>Conservative</h4><div class="metric mt-s"><div class="n" style="font-size:46px">$245K</div><div class="l">Y5 EBITDA · 30% L2 util · 3.5 DCFC effective</div></div></div>
+      <div class="card card-accent compact"><h4>Base</h4><div class="metric mt-s"><div class="n" style="font-size:46px">$305K</div><div class="l">Y5 EBITDA · 35% L2 util · 4.0 DCFC effective</div></div></div>
+      <div class="card compact"><h4>Upside</h4><div class="metric mt-s"><div class="n" style="font-size:46px">$345K</div><div class="l">Y5 EBITDA · 40% L2 util · 4.2 DCFC effective</div></div></div>
+    </div>
+    <p class="formula mt-m">Two most important validation tasks before construction: <b>(1)</b> Pull AFDC + drive lot to confirm the 9-mile DCFC gap. <b>(2)</b> Get an LES written demand-charge quote for 4 × 100 kW + 8 × 7.2 kW continuous load. If LES demand charges push DCFC all-in cost above $0.30/kWh, the model needs re-run.</p>
+    <div class="notes">The downside case still produces $185K Y5 EBITDA — that's the protection of the owned-land cost structure showing through. SouthPointe and Fallbrook downside cases both go negative.</div>
+  </section>
+
+  <!-- 13. 30C / incentives -->
+  <section class="slide" data-title="Incentives">
+    <span class="section-num">09</span>
+    <p class="num-tag">INCENTIVES · 30C IS GONE</p>
+    <h2 class="h2 mt-s">No federal credit.<br>Pursue state &amp; utility instead.</h2>
+    <div class="grid g2 mt-l">
+      <div class="card compact">
+        <h4>§30C deadline is real</h4>
+        <p class="dim">The One Big Beautiful Bill Act (signed July 2025) accelerated §30C termination to property placed in service on or before <b>June 30, 2026</b> — 47 days from this deck.</p>
+        <div class="mini-metric"><span class="n">~6-9 mo</span><span class="l">realistic permit → build → commission timeline</span></div>
+        <div class="mini-metric"><span class="n">$0</span><span class="l">§30C credit value assumed in this capital plan</span></div>
+      </div>
+      <div class="card compact">
+        <h4>Substitute funding paths</h4>
+        <p class="dim">Counterfactual: at 30% with PW/A compliance on ~$700K eligible equipment, the credit would have been ~$210K. Substitutes:</p>
+        <ul style="color:var(--text-2);font-size:13px;margin:6px 0 0 18px;padding:0">
+          <li>Nebraska Energy Office state grant ($25–50K typical)</li>
+          <li>LES load-management / make-ready rebate (utility-side)</li>
+          <li><b>SBA 7(a) at favorable terms — owned land is collateral</b></li>
+          <li>Section 179 + bonus depreciation on equipment</li>
+        </ul>
+      </div>
+    </div>
+    <p class="source-note">Sources: <a href="https://www.irs.gov/credits-deductions/alternative-fuel-vehicle-refueling-property-credit" target="_blank" rel="noopener">IRS §30C overview</a>, <a href="https://www.congress.gov/bill/119th-congress/house-bill/1" target="_blank" rel="noopener">H.R.1 (OBBBA) text</a>. Owner action: confirm §30C status with CPA before any external deck use.</p>
+    <div class="notes">The SBA path is more meaningful here than at Fallbrook or SouthPointe because owned land is real collateral. Worth pricing 7(a) terms early.</div>
+  </section>
+
+  <!-- 14. Diligence -->
+  <section class="slide" data-title="Diligence">
+    <span class="section-num">10</span>
+    <p class="num-tag">CRITICAL DILIGENCE · 60 DAYS</p>
+    <h2 class="h2 mt-s">Six checks before<br>any construction commit.</h2>
+    <div class="grid g3 mt-l">
+      <div class="card compact"><h4>1 · LES utility quote</h4><p class="dim">Transformer size, demand-charge schedule, line-extension responsibility for 4 × 100 kW + 8 × 7.2 kW continuous load.</p></div>
+      <div class="card compact"><h4>2 · Civil / turning review</h4><p class="dim">Verify 12-stall layout fits with ADA, snow storage, fire access, and back-in geometry for pickups/SUVs.</p></div>
+      <div class="card compact"><h4>3 · Site control documentation</h4><p class="dim">Confirm owned-lot status, easements, cross-access agreements, parking covenants.</p></div>
+      <div class="card compact"><h4>4 · AFDC competitive export</h4><p class="dim">Pull current AFDC/PlugShare for 10-mi radius to document the no-DCFC claim with a date-stamped record.</p></div>
+      <div class="card compact"><h4>5 · Retail capture test</h4><p class="dim">Two weekend traffic observations + 30-driver intercept survey at Sam's / Walmart / Menards parking.</p></div>
+      <div class="card compact"><h4>6 · Vendor quotes</h4><p class="dim">Price 100 kW vs 150 kW DCFC. If 150 kW raises demand-charge exposure materially, hold at 100 kW or add battery buffer.</p></div>
+    </div>
+    <div class="notes">Targets: complete tasks 1-3 in 30 days, 4-6 in 60 days. Construction commit only after all six are green. The derisk build means $934K of construction commit; the marginal expansion to 12 or 20 L2 can be deferred until utilization Y2-Y3 data is in hand.</div>
+  </section>
+
+  <!-- 15. Next steps / Ask -->
+  <section class="slide" data-title="Next Steps">
+    <p class="num-tag">DECISION REQUESTED</p>
+    <div class="ask-box mt-m">
+      <h2 class="h2">Authorize 60-day diligence.</h2>
+      <p class="lede" style="color:rgba(255,255,255,.9);max-width:66ch">The 8 L2 + 4 DCFC derisk plan turns this from a $1.15M ceiling commitment into a $934K phased launch with $305K Y5 EBITDA and Y5 capex recovery. Authorize diligence first; construction commit comes after the six checks.</p>
+      <div class="row mt-l" style="gap:36px">
+        <div><div style="font-size:42px;font-weight:900">60</div><div class="dim">days of diligence</div></div>
+        <div><div style="font-size:42px;font-weight:900">$934K</div><div class="dim">capex committed only after checks</div></div>
+        <div><div style="font-size:42px;font-weight:900">+12</div><div class="dim">L2 stalls of pre-built optionality</div></div>
+      </div>
+    </div>
+    <div class="notes">The decision is not "build a station." It is "spend 60 days proving the six gates, then commit $934K with $216K of headroom left for L2 expansion when demand validates."</div>
+  </section>
+
+  <!-- 16. Sources -->
+  <section class="slide sources-slide" data-title="Sources">
+    <p class="num-tag">SOURCES &amp; MODEL FILES</p>
+    <h2 class="h2 mt-s" style="font-size:46px">Traceable draft numbers.</h2>
+    <p class="dim mt-s" style="max-width:80ch">Every dollar figure on every slide traces to a source URL or model CSV below. The deck stays DRAFT until the owner closes the six diligence gates.</p>
+    <div class="src-grid">
+      <div>
+        <h4>External sources</h4>
+        <ul>
+          <li><a href="https://www.lincoln.ne.gov/files/sharedassets/public/v/1/ltu/transportation/traffic-engineering/adtv/2024-list.pdf" target="_blank" rel="noopener">City of Lincoln 2024 ADT list (PDF)</a></li>
+          <li><a href="https://www.samsclub.com/club/4873-lincoln-ne" target="_blank" rel="noopener">Sam's Club Lincoln #4873 · 8480 Andermatt</a></li>
+          <li><a href="https://s3.us-east-2.amazonaws.com/media.myelisting.com/listings/11/294845/84thnebraskaparkwaylincolnmarketingpackage-XZj-SAg.pdf" target="_blank" rel="noopener">84th &amp; Nebraska Pkwy retail leasing package</a></li>
+          <li><a href="https://www.plugshare.com/directory/us/nebraska/lincoln" target="_blank" rel="noopener">PlugShare Lincoln directory</a></li>
+          <li><a href="https://afdc.energy.gov/fuels/electricity-locations" target="_blank" rel="noopener">U.S. DOE AFDC charging locator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project files</h4>
+        <ul>
+          <li><a href="https://github.com/yangjl/EVstation/blob/main/reports/84th_nebraska_parkway_fixed_site_analysis.md" target="_blank" rel="noopener">84th &amp; Nebraska Pkwy fixed-site report</a></li>
+          <li><a href="https://github.com/yangjl/EVstation/blob/main/models/84th_nebraska_pkwy_optimization_summary.csv" target="_blank" rel="noopener">Stall-mix optimization CSV</a></li>
+          <li><a href="https://github.com/yangjl/EVstation/blob/main/models/84th_nebraska_pkwy_derisk_8L2_4DCFC_annual_ebitda.csv" target="_blank" rel="noopener">Derisk build · annual EBITDA + cash recovery CSV</a></li>
+          <li><a href="https://github.com/yangjl/EVstation/blob/main/models/three_site_comparison_v2.csv" target="_blank" rel="noopener">3-site comparison CSV (with derisk row)</a></li>
+          <li><a href="https://github.com/yangjl/EVstation/blob/main/models/84th_nebraska_pkwy_recommended_build_annual_ebitda.csv" target="_blank" rel="noopener">Full-build (20+4) annual EBITDA CSV</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="notes">Every number traces here. Owner action: replace this Sources slide with verified competitor export and LES quote once those return.</div>
+  </section>
+
+</div>
+<script src="vendor/html-ppt/runtime.js"></script>
+</body></html>

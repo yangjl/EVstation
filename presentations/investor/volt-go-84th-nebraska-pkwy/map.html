@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Volt&amp;Go 84th &amp; Nebraska Parkway · Planning Map</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  :root{--bg:#fff;--surface:#f6f7fb;--border:rgba(20,25,60,.10);--text-1:#0d1130;--text-2:#3a4070;--text-3:#7c84ad;--accent:#3b5bff;--accent-2:#7a46ff;--accent-3:#d94cff;--ok:#1faa6a;--warn:#c87a00;--grad:linear-gradient(135deg,#3b5bff 0%,#7a46ff 55%,#d94cff 100%)}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text-1)}
+  header{padding:18px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff}
+  header h1{margin:0;font-size:20px;font-weight:800}
+  header .sub{color:var(--text-2);font-size:13px;margin-top:2px}
+  header .badge{font-size:11px;font-weight:800;letter-spacing:.1em;padding:6px 10px;border-radius:6px;background:#fff5e0;color:var(--warn);border:1px solid #f3d896}
+  .layout{display:grid;grid-template-columns:1fr 390px;height:calc(100vh - 70px)}
+  #map{height:100%;width:100%;background:#f3f5f9}
+  aside{overflow-y:auto;border-left:1px solid var(--border);background:var(--surface);padding:20px 22px}
+  aside h2{font-size:13px;font-weight:800;letter-spacing:.12em;color:var(--accent-2);margin:24px 0 10px;text-transform:uppercase}
+  aside h2:first-child{margin-top:0}
+  aside p{color:var(--text-2);font-size:14px;line-height:1.55;margin:0 0 12px}
+  .num{display:flex;flex-direction:column;gap:2px;padding:12px;background:#fff;border:1px solid var(--border);border-radius:10px;margin-bottom:10px;box-shadow:0 2px 6px rgba(20,25,60,.04)}
+  .num .n{font-size:24px;font-weight:900;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .num .l{color:var(--text-3);font-size:12px;letter-spacing:.04em}
+  .legend{display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-2)}
+  .legend span{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:8px;vertical-align:middle;border:1px solid rgba(20,25,60,.2)}
+  table{width:100%;border-collapse:collapse;font-size:12px;color:var(--text-2);margin-bottom:8px}
+  th,td{padding:6px 4px;text-align:left;border-bottom:1px solid var(--border)}
+  th{color:var(--text-3);font-weight:700;font-size:11px;letter-spacing:.05em;text-transform:uppercase}
+  .leaflet-popup-content-wrapper{background:#fff;color:var(--text-1);border-radius:10px;border:1px solid var(--border);box-shadow:0 8px 24px rgba(20,25,60,.12)}
+  .leaflet-popup-content{margin:12px 14px;font-family:'Inter',sans-serif;font-size:13px;line-height:1.4;color:var(--text-1)}
+  .leaflet-popup-content b{color:var(--accent-2)}
+  .leaflet-popup-content small{color:var(--text-3)}
+  .pin-volt{background:var(--grad);width:30px;height:30px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 4px rgba(122,70,255,.28),0 6px 16px rgba(20,25,60,.25);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:15px}
+  .road-label{background:rgba(255,255,255,.92);border:1px solid var(--border);border-radius:6px;color:var(--text-1);font-size:11px;font-weight:900;padding:3px 7px;box-shadow:0 2px 8px rgba(20,25,60,.12);white-space:nowrap}
+  footer{padding:14px 28px;border-top:1px solid var(--border);font-size:11px;color:var(--text-3);background:#fff}
+  @media (max-width:980px){.layout{grid-template-columns:1fr;height:auto}#map{height:60vh}aside{max-height:none}}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Volt&amp;Go 84th &amp; Nebraska Parkway · Planning Map</h1>
+    <div class="sub">Owner-controlled lot near Sam's Club · draft desk-research map · 2026-05-14</div>
+  </div>
+  <span class="badge">DRAFT · VERIFY FIELD DATA</span>
+</header>
+<div class="layout">
+  <div id="map"></div>
+  <aside>
+    <h2>Owner Lot</h2>
+    <p><b style="color:var(--ok)">★ Fixed owner lot</b> — working concept near Sam's Club / Andermatt / Bowman, designed around a 24-post back-in charging field.</p>
+    <h2>Planning Metrics · Derisk Launch</h2>
+    <div class="num"><div class="n">8 + 4</div><div class="l">derisk launch: L2 stalls + DCFC stalls (scales to 20+4)</div></div>
+    <div class="num"><div class="n">$934k</div><div class="l">gross capex · −$216K vs full 20+4 build</div></div>
+    <div class="num"><div class="n">$305k</div><div class="l">modeled Year 5 EBITDA</div></div>
+    <div class="num"><div class="n">$903k</div><div class="l">five-year cumulative EBITDA · capex recovered ~Y5</div></div>
+    <div class="num"><div class="n">24.1k</div><div class="l">Nebraska Pkwy, Eiger to S 84th ADT</div></div>
+    <h2>Local Data</h2>
+    <table>
+      <tr><th>Segment</th><th>ADT</th></tr>
+      <tr><td>Nebraska Pkwy west of S 84th</td><td>24,080</td></tr>
+      <tr><td>Nebraska Pkwy east of S 84th</td><td>17,280</td></tr>
+      <tr><td>S 84th north of Nebraska Pkwy</td><td>16,250</td></tr>
+      <tr><td>S 84th south of Nebraska Pkwy</td><td>12,430</td></tr>
+    </table>
+    <h2>Legend</h2>
+    <div class="legend">
+      <div><span style="background:#7a46ff"></span> Volt&amp;Go owner-lot zone</div>
+      <div><span style="background:#06d6a0"></span> Retail / fuel anchor</div>
+      <div><span style="background:#ffb547"></span> Nearby service / restaurant</div>
+      <div><span style="background:#e63946"></span> DCFC context outside submarket</div>
+      <div><span style="background:#ff4d4d"></span> High-ADT traffic heat</div>
+      <div><span style="background:#4ea0ff"></span> Major route</div>
+    </div>
+    <h2>Open Questions</h2>
+    <p>1. LES transformer and demand-charge quote<br>2. Civil turning-radius and ADA layout<br>3. Parking/cross-access covenant review<br>4. Field count of Sam's / Walmart / Menards traffic capture</p>
+  </aside>
+</div>
+<footer>
+  Map tiles © OpenStreetMap contributors. This is a draft planning map; station coordinates, traffic values, and competitor pins must be verified before external use.
+</footer>
+<script>
+  const map = L.map('map', { zoomControl: true }).setView([40.738, -96.603], 15);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd', maxZoom: 19
+  }).addTo(map);
+
+  const voltIcon = L.divIcon({ className: '', html: '<div class="pin-volt">V</div>', iconSize: [30,30], iconAnchor: [15,15] });
+  L.marker([40.73855, -96.60355], { icon: voltIcon, zIndexOffset: 1000 }).addTo(map).bindPopup(
+    '<b>★ Volt&amp;Go 84th / Nebraska Parkway</b><br>' +
+    "Owner-controlled lot near Sam's Club / Andermatt / Bowman<br>" +
+    '<i>Derisk launch: 8 L2 + 4 DCFC · ~$934K capex</i><br>' +
+    '<i style="color:#7c84ad;font-size:11px">Scales to 20 L2 + 4 DCFC when demand validates</i><br>' +
+    '<small>Exact lot boundaries and civil layout must be verified.</small>'
+  ).openPopup();
+
+  const retail = [
+    { ll:[40.73787,-96.60345], name:"Sam's Club + fuel", detail:'8480 Andermatt Dr · warehouse, fuel, cafe, auto/tires' },
+    { ll:[40.73765,-96.60020], name:'Walmart / big-box retail area', detail:'Retail anchor east of the owner-lot zone' },
+    { ll:[40.73620,-96.59910], name:'Menards retail area', detail:'Vehicle-oriented retail anchor near Nebraska Parkway' }
+  ];
+  retail.forEach(a => L.circleMarker(a.ll, { radius: 10, color:'#fff', weight:2, fillColor:'#06d6a0', fillOpacity:.86 }).addTo(map).bindPopup(`<b>${a.name}</b><br><small>${a.detail}</small>`));
+
+  const services = [
+    { ll:[40.73962,-96.60495], name:'Dairy Queen / restaurant pad', detail:'Quick-service dwell and shared traffic pattern' },
+    { ll:[40.73872,-96.60195], name:'China Wall / restaurant pad', detail:'Adjacent meal-stop traffic' },
+    { ll:[40.74045,-96.60685], name:'84th & Nebraska Pkwy retail / office', detail:"Nearby hard-corner retail listing notes Sam's, Walmart, Menards anchors" }
+  ];
+  services.forEach(a => L.circleMarker(a.ll, { radius: 8, color:'#fff', weight:1.5, fillColor:'#ffb547', fillOpacity:.78 }).addTo(map).bindPopup(`<b>${a.name}</b><br><small>${a.detail}</small>`));
+
+  const dcfc = [
+    { ll:[40.812,-96.731], name:'Tesla Supercharger · West O', detail:'Northwest DCFC context, not a southeast Lincoln substitute' },
+    { ll:[40.815,-96.734], name:"Electrify America · Casey's", detail:'Open-network DCFC context northwest of site' },
+    { ll:[40.861,-96.681], name:'Tesla Supercharger · North 27th', detail:'North Lincoln Tesla-first DCFC context' }
+  ];
+  dcfc.forEach(s => L.circleMarker(s.ll, { radius: 8, color:'#fff', weight:2, fillColor:'#e63946', fillOpacity:.86 }).addTo(map).bindPopup(`<b>${s.name}</b><br><small>${s.detail}</small>`));
+
+  const ownerLot = [[40.73922,-96.60465],[40.73903,-96.60255],[40.73805,-96.60238],[40.73742,-96.60335],[40.73762,-96.60452]];
+  L.polygon(ownerLot, { color:'#7a46ff', weight:3, fillColor:'#7a46ff', fillOpacity:.18 }).addTo(map).bindPopup('<b>Approximate owner-lot concept area</b><br><small>Planning boundary only; use survey/CAD for design.</small>');
+
+  const nePkwy = [[40.7422,-96.6170],[40.7410,-96.6110],[40.7397,-96.6060],[40.7389,-96.6028],[40.7380,-96.5980],[40.7362,-96.5920]];
+  const s84 = [[40.7500,-96.6048],[40.7440,-96.6045],[40.7400,-96.6040],[40.7360,-96.6035],[40.7305,-96.6030]];
+  const andermatt = [[40.7410,-96.6080],[40.7395,-96.6062],[40.7381,-96.6040],[40.7367,-96.6022]];
+  const bowman = [[40.7403,-96.6105],[40.7402,-96.6065],[40.7400,-96.6035],[40.7394,-96.6005]];
+
+  L.polyline(nePkwy, { color:'#ff4d4d', weight:18, opacity:.25 }).addTo(map).bindPopup('<b>Nebraska Parkway traffic heat</b><br><small>Nearby ADT segments: 24,080 west of 84th; 17,280 east of 84th.</small>');
+  L.polyline(nePkwy, { color:'#4ea0ff', weight:6, opacity:.66, dashArray:'6 6' }).addTo(map).bindPopup('<b>Nebraska Parkway</b>');
+  L.polyline(s84, { color:'#ff4d4d', weight:14, opacity:.18 }).addTo(map).bindPopup('<b>S 84th traffic heat</b><br><small>Nearby ADT segments: 16,250 north of Nebraska Pkwy; 12,430 south.</small>');
+  L.polyline(s84, { color:'#2a6fc9', weight:5, opacity:.62 }).addTo(map).bindPopup('<b>S 84th Street</b>');
+  L.polyline(andermatt, { color:'#7a46ff', weight:4, opacity:.50, dashArray:'5 5' }).addTo(map).bindPopup('<b>Andermatt Drive</b>');
+  L.polyline(bowman, { color:'#f4a261', weight:4, opacity:.55, dashArray:'5 5' }).addTo(map).bindPopup('<b>Bowman Drive</b>');
+
+  const label = (ll, text) => L.marker(ll, { icon: L.divIcon({ className:'', html:`<div class="road-label">${text}</div>`, iconSize:null }), interactive:false }).addTo(map);
+  label([40.7394,-96.6095], 'Nebraska Pkwy');
+  label([40.7450,-96.6045], 'S 84th St');
+  label([40.7378,-96.6023], 'Andermatt Dr');
+  label([40.7406,-96.6042], 'Bowman Dr');
+
+  L.circle([40.73855, -96.60355], { radius: 1609, color:'#7a46ff', weight:1.8, fillColor:'#7a46ff', fillOpacity:.10, dashArray:'5 6' }).addTo(map).bindPopup('<b>1-mile planning catchment</b><br><small>Retail, restaurant, and local commuter catchment. Field validation required.</small>');
+  map.fitBounds([[40.7300,-96.6175],[40.7460,-96.5920]], { padding:[22,22] });
+</script>
+</body>
+</html>

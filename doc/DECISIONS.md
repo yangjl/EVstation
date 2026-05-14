@@ -263,3 +263,9 @@ Record important project decisions and the reasoning behind them. Keep entries s
 - Why: owner confirmed a specific lot and ownership/control of the land. That materially changes the economics because the model no longer carries the land lease drag that weakened the Fallbrook scenario, and the site appears physically capable of a dense 24-post concept.
 - Model result: draft optimization favors 20 Level 2 stalls + 4 DCFC stalls for maximum five-year cumulative operating EBITDA, estimated at about $1.05M. A smaller 12 L2 + 4 DCFC build is the recommended phase-one fallback if the owner wants lower execution risk.
 - Status: active draft — requires LES utility quote, civil/turning review, parking/covenant check, and competitor export before becoming the active site strategy.
+
+### 84th & Nebraska Parkway deck created as separate diligence track
+
+- Decision: create a separate HTML-PPT deck for the owner-lot scenario at `presentations/investor/volt-go-84th-nebraska-pkwy/` instead of overwriting the Fallbrook or South Lincoln decks.
+- Why: the owner-lot scenario has a materially different thesis: owned land plus vehicle-oriented retail traffic, not I-80 apartment access or SouthPointe host-site economics. A separate deck keeps the site-strategy comparison reviewable.
+- Status: active draft — use for internal owner review until utility, civil, site-control, and traffic-capture assumptions are validated.

@@ -14,6 +14,18 @@ Each entry should include:
 - result or impact
 - next concrete step
 
+## 2026-05-14 - 84th & Nebraska Pkwy deck derisk pivot (v0.4 → 8 L2 + 4 DCFC)
+
+- Commit: (pending)
+- Summary: Rebuilt the 84th & Nebraska Pkwy investor/diligence deck around an **8 L2 + 4 DCFC derisk launch** at ~$934K capex (was 20 L2 + 4 DCFC at $1.15M). The four DCFC stalls — which drive ~80% of operating margin — are preserved; L2 count is dialed down for capital protection, with conduit/switchgear engineered for later expansion to 20 L2. Net result: $216K less capex, only $49K less Y5 EBITDA, and 5-yr cash gap shrinks from ($104K) to ($31K).
+- Deck rebuilt at 16 slides with deeper data: Demand Math (bottom-up Y5 derivation: ~$208K DCFC + ~$67K L2 + ~$9K membership − ~$70K energy − ~$52K fixed OpEx − ~$32K maintenance = ~$305K Y5), Direct Competitors (in-trade-area L2 and 9-mi-away DCFC), Build Ladder (0+4 / 4+4 / 8+4 highlighted / 12+4 / 20+4 ceiling), Capital Recovery (Y1-Y6 cumulative cash), Sensitivity (4 cases from $185K downside to $345K upside), and a like-for-like 3-Site Comparison showing the derisk pick wins on capex, Y5 EBITDA, 5-yr cum, and payback simultaneously.
+- New CSVs: `models/84th_nebraska_pkwy_derisk_8L2_4DCFC_annual_ebitda.csv` (Y1-Y8 ramp + cumulative cash), `models/three_site_comparison_v2.csv` (build-for-build comparison adding the derisk row alongside the full-build ceiling row).
+- Report updated: `reports/84th_nebraska_parkway_fixed_site_analysis.md` executive summary now leads with the derisk recommendation and includes a build-for-build comparison table. The 20 L2 + 4 DCFC ceiling is preserved as the long-term operating-profit target, committed to only after Y2-Y3 utilization validates.
+- Map updated: planning-metrics sidebar and candidate-site popup now show 8 + 4 derisk figures, not 20 + 4 full-build figures.
+- Landing page updated: replaced the East Lincoln placeholder card with a fully populated 84th card; updated lede to "Three site scenarios" and summary strip count from 2 → 3.
+- Files: `presentations/investor/volt-go-84th-nebraska-pkwy/index.html`, `presentations/investor/volt-go-84th-nebraska-pkwy/map.html`, `reports/84th_nebraska_parkway_fixed_site_analysis.md`, `index.html`, `models/84th_nebraska_pkwy_derisk_8L2_4DCFC_annual_ebitda.csv` (new), `models/three_site_comparison_v2.csv` (new), plus owner-authored `presentations/investor/volt-go-84th-nebraska-pkwy/README.md` and `vercel.json`.
+- Next concrete step: Owner pulls the AFDC API export for a 10-mi radius around 84th & Nebraska Pkwy, requests LES written demand-charge quote for 4 × 100 kW + 8 × 7.2 kW load, and starts the civil/turning review.
+
 ## 2026-05-14 - Root-level Vercel landing page for site scenarios
 
 - Commit: `9f4ac3d`

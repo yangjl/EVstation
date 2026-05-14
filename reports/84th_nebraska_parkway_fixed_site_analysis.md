@@ -7,23 +7,44 @@
 
 ## Executive Answer
 
-The 84th & Nebraska Parkway owner-lot scenario is the strongest of the three Lincoln options modeled so far.
+The 84th & Nebraska Parkway owner-lot scenario is the strongest of the three Lincoln options modeled so far. After owner feedback on derisking, the recommended launch build has been **downsized from the 20 L2 + 4 DCFC ceiling to an 8 L2 + 4 DCFC derisk launch**.
 
-The reason is not only demand. It is the combination of:
+The site's structural advantages are unchanged:
 
 - **owned land** — removes the lease drag that hurt the Fallbrook plan;
-- **retail/gas/errand traffic** — Sam's Club, Walmart, Menards, Dairy Queen, restaurants, and nearby retail create dwell-time and top-up occasions;
-- **high arterial visibility** — Nebraska Parkway and S 84th carry meaningful daily traffic;
-- **24-post physical concept** — the attached concept drawing appears workable for a dense back-in charging field, pending civil/turning review;
-- **confirmed regional DCFC gap** — supports a stronger DCFC count than the first South Lincoln model.
+- **retail/gas/errand traffic** — Sam's Club, Walmart, Menards, Dairy Queen, and nearby restaurants create dwell-time and top-up occasions;
+- **high arterial visibility** — Nebraska Parkway and S 84th carry 12-24k ADT each;
+- **24-post physical concept** — the attached concept drawing supports phased L2 expansion;
+- **confirmed regional DCFC gap** — supports four DCFC stalls from day one.
 
-> **Recommended full build for maximum five-year operating profit:** **20 Level 2 stalls + 4 DCFC stalls**  
-> **Estimated gross capex:** **~$1.15M**  
-> **Year 5 EBITDA:** **~$354K**  
-> **Five-year cumulative EBITDA:** **~$1.05M**  
-> **Five-year cash after capex:** **~($104K)** before debt service, taxes, terminal value, depreciation, or grants.
+> **Recommended derisk launch (DOWNSIZED):** **8 Level 2 stalls + 4 DCFC stalls**
+> **Estimated gross capex:** **~$934K** (−$216K vs full 20+4 ceiling)
+> **Year 5 EBITDA:** **~$305K** (86% of the full-build Y5 number at 81% of the capex)
+> **Five-year cumulative EBITDA:** **~$903K**
+> **Five-year cash after capex:** **~($31K)** — capex effectively recovered just past Y5
+> **Operating breakeven:** **Year 1** (owned-lot lower fixed OpEx)
 
-If the owner wants lower execution risk, the recommended Phase 1 is **12 L2 + 4 DCFC**, with conduit and transformer planning for the full 20 L2 + 4 DCFC build. Phase 1 produces lower five-year operating profit but reduces initial capex by about **$144K**.
+### Why downsize from 20+4 to 8+4
+
+All four DCFC stalls produce ~80% of operating margin in the model — so the right place to derisk is the L2 count, not the DCFC count. Going from 20 L2 to 8 L2 saves $216K of capex and only gives up $49K/yr of Y5 EBITDA, because L2 economics are dominated by demand (retail dwell + employees + light residential), not by stall count once a minimum is in place. Conduit, switchgear, and civil layout should still be engineered for the full 24-post concept so expansion to 12, 16, or 20 L2 is incremental — not a re-build.
+
+### Comparison to other sites
+
+| Axis | Fallbrook (8+2) | SouthPointe (16+3) | **84th derisk (8+4)** | 84th ceiling (20+4) |
+|---|---:|---:|---:|---:|
+| Capex | $1.0M | $953K | **$934K** | $1.15M |
+| Y5 EBITDA | ($15K) | $164K | **$305K** | $354K |
+| 5-yr cum EBITDA | ($206K) | $433K | **$903K** | $1,046K |
+| 5-yr cash after capex | ($1.2M) | ($520K) | **($31K)** | ($104K) |
+| Payback | never (model) | ~Y8-Y9 | **~Y5** | ~Y6 |
+
+**The 84th derisk build wins on capex, Y5 EBITDA, 5-yr cumulative, and payback simultaneously** — at the lowest capex of any 4-DCFC build that the optimization model produces.
+
+### Earlier full-build option (still valid for later expansion)
+
+> **Full-build ceiling:** 20 L2 + 4 DCFC · ~$1.15M capex · $354K Y5 EBITDA · $1.05M 5-yr cum · ~($104K) 5-yr cash · payback ~Y6
+
+This remains the model's operating-profit maximum and is the right target once Y2-Y3 utilization data validates the demand math. Phase 1 fallback at 12 L2 + 4 DCFC ($1.006M capex, $321K Y5) sits between the derisk launch and the full build.
 
 ## Human Review Gate
 
@@ -199,7 +220,7 @@ This fixed owner-lot location should become the new leading site scenario unless
 
 The owner's lot solves the biggest structural problem in the earlier plans: land economics. It also supports more DCFC than the first South Lincoln scenario because the site sits in a vehicle-oriented retail cluster rather than only a dwell-time retail center.
 
-**Recommended decision:** advance 84th & Nebraska Parkway to formal diligence with a **20 L2 + 4 DCFC full-build target** and a **12 L2 + 4 DCFC phase-one fallback**.
+**Recommended decision:** advance 84th & Nebraska Parkway to formal 60-day diligence with an **8 L2 + 4 DCFC derisk launch target** (~$934K capex). Engineer civil, conduit, and switchgear for the full 24-post concept so later expansion to 12, 16, or 20 L2 is incremental. The 20 L2 + 4 DCFC ceiling remains the long-term operating-profit target; commit only after Y2-Y3 utilization validates demand.
 
 ## Sources
 
