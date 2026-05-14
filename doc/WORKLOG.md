@@ -16,3 +16,14 @@ Keep short dated notes so a business planner or AI assistant can resume work qui
 - Reviewed the Volt & Go Lincoln EV charging station plan and created `reports/revised_ev_charging_station_business_plan_report.md`.
 - Key revision from the report: treat the concept as a site-validation and incentive-eligibility plan, not a ready-to-fund plan. Owner must decide whether to keep the 8 L2 + 2 DCFC mixed-use design or redesign around 4+ DCFC ports for stronger corridor/NEVI fit.
 - Improved the investor HTML deck with a candidate Volt&Go wordmark, removed seed-investment language, added formula-backed demand sizing, clarified NEVI/Section 30C requirements, added Fallbrook site-selection rationale, added membership-projection math, and expanded the map with highway labels plus a draft peak-hour traffic heat overlay.
+
+## 2026-05-14
+
+- Pulled latest GitHub changes (`ac97a51`) into the local workspace.
+- Created a South Lincoln alternative research scenario in `reports/south_lincoln_location_optimization_report.md`.
+- Added `models/south_lincoln_optimization_summary.csv` comparing stall mixes and five-year modeled economics.
+- Draft conclusion: SouthPointe / Pine Lake / S 27th is the strongest South Lincoln candidate zone. The operating-profit-maximizing mix is 16 L2 + 2 DCFC, with ~$808K gross capex, ~$237K five-year cumulative EBITDA, and ~$107K Year 5 EBITDA. No tested configuration recovers full capex inside five years under base assumptions.
+- Fixed South Lincoln report review issues: added annual EBITDA, sensitivity analysis, maintenance assumptions, cautious DCFC-gap language, and Section 30C deadline treatment.
+- Started a separate South Lincoln HTML diligence deck at `presentations/investor/volt-go-south-lincoln/index.html`, reusing the current Volt&Go visual style but focused on SouthPointe / Pine Lake / S 27th.
+- Added South Lincoln deck data depth and map context: demand-stack slide, embedded candidate-zone map, road labels, traffic-context heat overlays, nearby charging context, and `/map` Vercel route.
+- Revised the South Lincoln deck per owner feedback: removed the separate charging-gap slide after owner confirmation of no regional DCFC, added North 27th Tesla Supercharger context, adjusted US-77 / Nebraska Parkway / Hwy 2 map lines, and changed the deck recommendation to 16 L2 + 3 DCFC with a comparison graph.

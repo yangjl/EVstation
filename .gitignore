@@ -18,6 +18,8 @@ cache/*
 # Keep generated reporting output intentional and reviewed.
 reports/*
 !reports/.gitkeep
+!reports/revised_ev_charging_station_business_plan_report.md
+!reports/south_lincoln_location_optimization_report.md
 
 # Local exports and temporary files.
 *.tmp
