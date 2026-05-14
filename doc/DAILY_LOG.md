@@ -16,7 +16,7 @@ Each entry should include:
 
 ## 2026-05-14 - 84th & Nebraska Pkwy deck derisk pivot (v0.4 → 8 L2 + 4 DCFC)
 
-- Commit: (pending)
+- Commit: `042573f`
 - Summary: Rebuilt the 84th & Nebraska Pkwy investor/diligence deck around an **8 L2 + 4 DCFC derisk launch** at ~$934K capex (was 20 L2 + 4 DCFC at $1.15M). The four DCFC stalls — which drive ~80% of operating margin — are preserved; L2 count is dialed down for capital protection, with conduit/switchgear engineered for later expansion to 20 L2. Net result: $216K less capex, only $49K less Y5 EBITDA, and 5-yr cash gap shrinks from ($104K) to ($31K).
 - Deck rebuilt at 16 slides with deeper data: Demand Math (bottom-up Y5 derivation: ~$208K DCFC + ~$67K L2 + ~$9K membership − ~$70K energy − ~$52K fixed OpEx − ~$32K maintenance = ~$305K Y5), Direct Competitors (in-trade-area L2 and 9-mi-away DCFC), Build Ladder (0+4 / 4+4 / 8+4 highlighted / 12+4 / 20+4 ceiling), Capital Recovery (Y1-Y6 cumulative cash), Sensitivity (4 cases from $185K downside to $345K upside), and a like-for-like 3-Site Comparison showing the derisk pick wins on capex, Y5 EBITDA, 5-yr cum, and payback simultaneously.
 - New CSVs: `models/84th_nebraska_pkwy_derisk_8L2_4DCFC_annual_ebitda.csv` (Y1-Y8 ramp + cumulative cash), `models/three_site_comparison_v2.csv` (build-for-build comparison adding the derisk row alongside the full-build ceiling row).
