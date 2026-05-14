@@ -261,8 +261,14 @@ Record important project decisions and the reasoning behind them. Keep entries s
 
 - Decision: create a third fixed-location scenario for the owner-controlled lot near Sam's Club at 84th Street / Nebraska Parkway, and compare it directly with Fallbrook/North Lincoln and SouthPointe/South Lincoln.
 - Why: owner confirmed a specific lot and ownership/control of the land. That materially changes the economics because the model no longer carries the land lease drag that weakened the Fallbrook scenario, and the site appears physically capable of a dense 24-post concept.
-- Model result: draft optimization favors 20 Level 2 stalls + 4 DCFC stalls for maximum five-year cumulative operating EBITDA, estimated at about $1.05M. A smaller 12 L2 + 4 DCFC build is the recommended phase-one fallback if the owner wants lower execution risk.
+- Model result: draft optimization favors 20 Level 2 stalls + 4 DCFC stalls for maximum five-year cumulative operating EBITDA, but the current deck recommendation is the lower-risk 8 L2 + 4 DCFC derisk launch: ~$934K capex, ~$305K Year 5 EBITDA, ~$904K five-year cumulative EBITDA, and ~($30K) five-year cash after capex.
 - Status: active draft — requires LES utility quote, civil/turning review, parking/covenant check, and competitor export before becoming the active site strategy.
+
+### 84th deck financial headline recalculated
+
+- Decision: standardize the front-page and deck headline around the 8 L2 + 4 DCFC derisk-launch economics, not the 20 L2 + 4 DCFC expansion ceiling.
+- Why: the exact five-year cumulative EBITDA for the derisk launch is $903,565, which rounds to **$904K**. The same build has five-year cash after capex of **($30,435)**, which rounds to **($30K)**. Showing only cumulative EBITDA was confusing because it is before capex.
+- Status: active draft — keep both numbers visible together in deck and report summaries.
 
 ### 84th & Nebraska Parkway deck created as separate diligence track
 

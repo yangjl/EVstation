@@ -20,8 +20,8 @@ The site's structural advantages are unchanged:
 > **Recommended derisk launch (DOWNSIZED):** **8 Level 2 stalls + 4 DCFC stalls**
 > **Estimated gross capex:** **~$934K** (−$216K vs full 20+4 ceiling)
 > **Year 5 EBITDA:** **~$305K** (86% of the full-build Y5 number at 81% of the capex)
-> **Five-year cumulative EBITDA:** **~$903K**
-> **Five-year cash after capex:** **~($31K)** — capex effectively recovered just past Y5
+> **Five-year cumulative EBITDA:** **~$904K**
+> **Five-year cash after capex:** **~($30K)** — capex effectively recovered just past Y5
 > **Operating breakeven:** **Year 1** (owned-lot lower fixed OpEx)
 
 ### Why downsize from 20+4 to 8+4
@@ -34,8 +34,8 @@ All four DCFC stalls produce ~80% of operating margin in the model — so the ri
 |---|---:|---:|---:|---:|
 | Capex | $1.0M | $953K | **$934K** | $1.15M |
 | Y5 EBITDA | ($15K) | $164K | **$305K** | $354K |
-| 5-yr cum EBITDA | ($206K) | $433K | **$903K** | $1,046K |
-| 5-yr cash after capex | ($1.2M) | ($520K) | **($31K)** | ($104K) |
+| 5-yr cum EBITDA | ($206K) | $433K | **$904K** | $1,046K |
+| 5-yr cash after capex | ($1.2M) | ($520K) | **($30K)** | ($104K) |
 | Payback | never (model) | ~Y8-Y9 | **~Y5** | ~Y6 |
 
 **The 84th derisk build wins on capex, Y5 EBITDA, 5-yr cumulative, and payback simultaneously** — at the lowest capex of any 4-DCFC build that the optimization model produces.
@@ -51,8 +51,8 @@ This remains the model's operating-profit maximum and is the right target once Y
 This report changes location, land economics, stall mix, capex, profitability, and site strategy. The following assumptions require owner review before external use:
 
 - owned-lot economics and whether land opportunity cost should be charged to the project;
-- 20 L2 + 4 DCFC full-build recommendation;
-- 12 L2 + 4 DCFC phased-build option;
+- 8 L2 + 4 DCFC derisk-launch recommendation;
+- 20 L2 + 4 DCFC expansion ceiling;
 - DCFC demand saturation at about 4.2 effective stalls;
 - 100 kW DCFC planning power and demand-charge treatment;
 - civil feasibility of approximately 24 charging posts in the pictured lot;
@@ -162,15 +162,15 @@ The project nearly recovers gross capex within five years before any terminal va
 
 ## 7. Comparison With Other Lincoln Options
 
-| Axis | Fallbrook / North Lincoln | SouthPointe / South Lincoln revised | 84th & Nebraska Parkway owner lot |
+| Axis | Fallbrook / North Lincoln | SouthPointe / South Lincoln revised | 84th & Nebraska Parkway derisk launch |
 |---|---|---|---|
 | Site strategy | Standalone lease near I-80 and apartments | Retail-host South Lincoln DCFC gap | Owned lot near Sam's / Walmart / Menards |
-| Recommended build | 8 L2 + 2 DCFC | 16 L2 + 3 DCFC | **20 L2 + 4 DCFC** |
-| Gross capex | ~$1.0M | ~$953K | ~$1.15M |
-| Year 5 EBITDA | ~($15K) | ~$164K | **~$354K** |
-| 5-year cumulative EBITDA | ~($206K) | ~$433K | **~$1.05M** |
-| 5-year cash after capex | ~($1.21M) | ~($520K) | **~($104K)** |
-| Main advantage | I-80 access | South Lincoln DCFC gap, local demand | Owned land + retail/gas node + 24-post fit |
+| Recommended build | 8 L2 + 2 DCFC | 16 L2 + 3 DCFC | **8 L2 + 4 DCFC** |
+| Gross capex | ~$1.0M | ~$953K | **~$934K** |
+| Year 5 EBITDA | ~($15K) | ~$164K | **~$305K** |
+| 5-year cumulative EBITDA | ~($206K) | ~$433K | **~$904K** |
+| 5-year cash after capex | ~($1.21M) | ~($520K) | **~($30K)** |
+| Main advantage | I-80 access | South Lincoln DCFC gap, local demand | Owned land + retail/gas node + lowest-risk 4-DCFC launch |
 | Main risk | Lease drag and nearby competitors | Host-site terms not controlled | Civil/utility feasibility and actual traffic capture |
 
 ### Ranking
@@ -181,33 +181,33 @@ The project nearly recovers gross capex within five years before any terminal va
 
 ## 8. Recommended Build Strategy
 
-### Preferred Full Build
+### Preferred Derisk Launch
 
-**20 L2 + 4 DCFC**
+**8 L2 + 4 DCFC**
 
-Use this if the owner is comfortable with a roughly **$1.15M** gross capex plan and can get a favorable LES load quote.
+Use this as the construction-start target if the owner wants the best balance of EBITDA, capex protection, and near-five-year recovery.
 
 Why this is best:
 
 - Four DCFC stalls monetize the confirmed fast-charging gap.
-- Twenty L2 stalls use the lot's 24-post density without overbuilding beyond the modeled L2 saturation point.
-- Owned land shifts the project from a long-payback infrastructure experiment to a near-five-year capital-recovery asset.
-- The fourth DCFC is accretive; the fifth is not capital-efficient yet.
+- Eight L2 stalls are enough to test retail dwell, employee, and local membership demand.
+- Capex stays near **$934K**, with five-year cash after capex only about **($30K)**.
+- The design can still pre-build conduit and switchgear for later L2 expansion.
 
-### Lower-Risk Phase 1
+### Expansion Ceiling
 
-**12 L2 + 4 DCFC**
+**20 L2 + 4 DCFC**
 
-Use this if the owner wants to stage capital:
+Use this later if Y2-Y3 demand validates the full 24-post concept:
 
-- capex drops to about **$1.006M**;
-- Year 5 EBITDA remains strong at about **$321K**;
-- five-year cash after capex is about **($55K)**, slightly better than the full 20+4 plan because less capital is deployed;
-- the site can later expand L2 count if utilization validates.
+- capex rises to about **$1.15M**;
+- Year 5 EBITDA rises to about **$354K**;
+- five-year cumulative EBITDA rises to about **$1.046M**;
+- five-year cash after capex is about **($104K)** because more capital is deployed upfront.
 
 ## 9. Critical Diligence Before Construction
 
-1. **LES utility quote:** confirm transformer size, demand charges, line-extension responsibility, service timing, and whether 4 x 100 kW DCFC plus 20 L2 is feasible without a major off-site upgrade.
+1. **LES utility quote:** confirm transformer size, demand charges, line-extension responsibility, service timing, and whether 4 x 100 kW DCFC plus 8 L2 is feasible now, with expansion path to 20 L2.
 2. **Civil/traffic review:** verify turning radius, back-in geometry, ADA placement, snow storage, fire access, and whether customer circulation conflicts with nearby restaurant / Sam's traffic.
 3. **Site control documentation:** confirm the project entity owns or controls the lot and whether any easements, cross-access agreements, or parking covenants restrict EV charging.
 4. **Competitive export:** pull AFDC / PlugShare around 84th & Nebraska Parkway to document the no-DCFC claim and the nearest Tesla/open-network DCFC distances.

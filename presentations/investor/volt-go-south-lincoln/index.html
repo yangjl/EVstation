@@ -334,5 +334,64 @@
   </section>
 
 </div>
+
+<!-- Mobile-only on-screen nav (hidden on desktop via CSS) -->
+<nav class="mobile-nav" aria-label="Slide navigation">
+  <button type="button" data-nav="prev" aria-label="Previous slide">&#x2039;</button>
+  <span class="pageind"><span id="mob-cur">1</span> / <span id="mob-total">16</span></span>
+  <button type="button" data-nav="next" aria-label="Next slide">&#x203A;</button>
+</nav>
+
 <script src="vendor/html-ppt/runtime.js"></script>
+<script>
+/* Mobile touch navigation + button nav.
+ * The deck runtime listens for keydown on document. We synthesize
+ * ArrowLeft/ArrowRight events so all the existing nav/animation/notes
+ * wiring stays single-sourced — no need to expose go() externally. */
+(function(){
+  function send(key){
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: key, bubbles: true }));
+  }
+
+  /* Swipe — only horizontal, only outside the map iframe */
+  var sx = 0, sy = 0, sTarget = null;
+  document.addEventListener('touchstart', function(e){
+    if (e.touches.length !== 1) return;
+    sx = e.touches[0].clientX;
+    sy = e.touches[0].clientY;
+    sTarget = e.target;
+  }, { passive: true });
+
+  document.addEventListener('touchend', function(e){
+    if (!e.changedTouches.length || sTarget == null) return;
+    /* Don't hijack swipes inside the embedded map iframe */
+    if (sTarget && sTarget.closest && sTarget.closest('.map-slide')) return;
+    var dx = e.changedTouches[0].clientX - sx;
+    var dy = e.changedTouches[0].clientY - sy;
+    /* require clear horizontal intent so vertical scrolling isn't blocked */
+    if (Math.abs(dx) < 60) return;
+    if (Math.abs(dx) < Math.abs(dy) * 1.3) return;
+    send(dx < 0 ? 'ArrowRight' : 'ArrowLeft');
+  }, { passive: true });
+
+  /* Buttons */
+  document.querySelectorAll('.mobile-nav button[data-nav]').forEach(function(b){
+    b.addEventListener('click', function(){
+      send(b.getAttribute('data-nav') === 'next' ? 'ArrowRight' : 'ArrowLeft');
+    });
+  });
+
+  /* Keep the mobile page indicator in sync with the deck's own counter */
+  var cur = document.getElementById('mob-cur');
+  var total = document.getElementById('mob-total');
+  var counter = document.querySelector('.slide-number');
+  if (counter && total) total.textContent = counter.getAttribute('data-total') || total.textContent;
+  if (counter && cur && 'MutationObserver' in window) {
+    new MutationObserver(function(){
+      cur.textContent = counter.getAttribute('data-current') || '1';
+      if (total) total.textContent = counter.getAttribute('data-total') || total.textContent;
+    }).observe(counter, { attributes: true, attributeFilter: ['data-current','data-total'] });
+  }
+})();
+</script>
 </body></html>

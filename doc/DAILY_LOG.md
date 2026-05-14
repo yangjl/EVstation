@@ -14,6 +14,14 @@ Each entry should include:
 - result or impact
 - next concrete step
 
+## 2026-05-14 - Mobile nav on all 3 decks + Fallbrook financials slide fix + landing rounding
+
+- Commit: (pending)
+- Summary: (1) Ported the Fallbrook deck's mobile swipe handler and bottom prev/next nav-bar to the SouthPointe and 84th decks — they had the CSS but were missing the JS shim. Now all three decks advance on mobile via horizontal swipe or via the bottom buttons. (2) Rebuilt Fallbrook slide 7 (Financials) — it was showing revenue bars labeled with positive numbers ($63K → $171K) while the landing page card correctly showed −$206K cumulative EBITDA, which read as a contradiction. New slide shows revenue (gradient) + OpEx (gray) as paired bars per year with the EBITDA gap called out in red underneath, plus an explicit note that the $4,500/mo land lease ($54K/yr) keeps OpEx above revenue every year. (3) Reconciled landing-page card rounding: Fallbrook −$205K → −$206K; 84th derisk +$903K → +$904K, matching CSV values $206,150 and $903,565.
+- Files: `presentations/investor/volt-go-lincoln/index.html` (financials slide + mobile nav), `presentations/investor/volt-go-south-lincoln/index.html` (mobile nav added), `presentations/investor/volt-go-84th-nebraska-pkwy/index.html` (mobile nav added), `index.html` (landing rounding). Owner intervening edits also captured: deck cover data-strip added to 84th, refined annual EBITDA CSV (Y1 $25k → $28,472; cum $903,565), map sidebar metrics updated to derisk numbers, DECISIONS.md and WORKLOG.md entries for the 84th deck creation.
+- Result: All three deck URLs are now mobile-usable. Fallbrook financials slide is no longer misleading. Every landing-card number reconciles to the source CSV.
+- Next concrete step: Owner picks the SouthPointe and 84th deck Annual EBITDA slides — should they get the same paired revenue+OpEx visual the Fallbrook slide now has? (Existing EBITDA-only bars on those two are accurate but less explicit about *why* EBITDA is shaped the way it is.)
+
 ## 2026-05-14 - 84th & Nebraska Pkwy deck derisk pivot (v0.4 → 8 L2 + 4 DCFC)
 
 - Commit: `042573f`

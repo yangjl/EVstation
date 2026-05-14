@@ -212,16 +212,68 @@
   <section class="slide" data-title="Financials">
     <span class="section-num">07</span>
     <p class="num-tag">FINANCIAL SNAPSHOT</p>
-    <h2 class="h2 mt-s">Revenue ramps with utilization.</h2>
-    <div class="traction-bar mt-l">
-      <div class="bar" style="height:30%"><em>$63k</em><span>Y1</span></div>
-      <div class="bar" style="height:48%"><em>$96k</em><span>Y2</span></div>
-      <div class="bar" style="height:66%"><em>$132k</em><span>Y3</span></div>
-      <div class="bar" style="height:82%"><em>$155k</em><span>Y4</span></div>
-      <div class="bar" style="height:100%"><em>$171k</em><span>Y5</span></div>
+    <h2 class="h2 mt-s">Revenue grows. <span style="color:#dc2626">OpEx grows faster.</span></h2>
+    <style>
+      .ebitda-chart{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:36px;align-items:end}
+      .ebitda-chart .yr{display:flex;flex-direction:column;align-items:center;gap:8px}
+      .ebitda-chart .pair{display:flex;align-items:flex-end;gap:6px;height:220px;width:100%;justify-content:center}
+      .ebitda-chart .bar{width:46px;border-radius:8px 8px 0 0;display:flex;align-items:flex-start;justify-content:center;padding-top:8px;font-weight:900;font-size:12px;color:#fff;position:relative}
+      .ebitda-chart .bar.rev{background:var(--grad);box-shadow:0 8px 18px rgba(122,70,255,.18)}
+      .ebitda-chart .bar.opex{background:linear-gradient(180deg,#94a3b8,#475569);box-shadow:0 8px 18px rgba(20,25,60,.12)}
+      .ebitda-chart .gap{font-size:14px;font-weight:900;color:#dc2626;letter-spacing:-.01em}
+      .ebitda-chart .label{font-size:13px;font-weight:800;color:var(--text-2)}
+      .ebitda-legend{display:flex;justify-content:center;gap:24px;margin-top:14px;font-size:11.5px;color:var(--text-3);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+      .ebitda-legend .swatch{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:middle}
+    </style>
+    <div class="ebitda-chart">
+      <div class="yr">
+        <div class="pair">
+          <div class="bar rev" style="height:34%">$63K</div>
+          <div class="bar opex" style="height:77%">$144K</div>
+        </div>
+        <span class="gap">−$81K</span>
+        <span class="label">Y1</span>
+      </div>
+      <div class="yr">
+        <div class="pair">
+          <div class="bar rev" style="height:51%">$96K</div>
+          <div class="bar opex" style="height:82%">$152K</div>
+        </div>
+        <span class="gap">−$56K</span>
+        <span class="label">Y2</span>
+      </div>
+      <div class="yr">
+        <div class="pair">
+          <div class="bar rev" style="height:71%">$132K</div>
+          <div class="bar opex" style="height:89%">$166K</div>
+        </div>
+        <span class="gap">−$34K</span>
+        <span class="label">Y3</span>
+      </div>
+      <div class="yr">
+        <div class="pair">
+          <div class="bar rev" style="height:83%">$155K</div>
+          <div class="bar opex" style="height:95%">$176K</div>
+        </div>
+        <span class="gap">−$21K</span>
+        <span class="label">Y4</span>
+      </div>
+      <div class="yr">
+        <div class="pair">
+          <div class="bar rev" style="height:92%">$171K</div>
+          <div class="bar opex" style="height:100%">$186K</div>
+        </div>
+        <span class="gap">−$15K</span>
+        <span class="label">Y5</span>
+      </div>
     </div>
-    <p class="dim mt-l" style="margin-top:48px">Base case · 5-year revenue (L2 + DCFC + membership). Path to EBITDA-positive depends on land lease &lt; $3,000/mo — see scenarios.</p>
-    <div class="notes">CRITICAL: Land lease is the dominant variable. Base case ($4,500/mo lease) does not break even within 5 years. Optimistic case ($3,000/mo + 30% higher utilization) reaches positive EBITDA in Y3. Owner must review before presenting.</div>
+    <div class="ebitda-legend">
+      <span><span class="swatch" style="background:var(--grad)"></span>Revenue (L2 + DCFC + membership)</span>
+      <span><span class="swatch" style="background:linear-gradient(180deg,#94a3b8,#475569)"></span>OpEx (lease + electricity + maint + insurance)</span>
+      <span style="color:#dc2626"><span class="swatch" style="background:#dc2626"></span>EBITDA gap</span>
+    </div>
+    <p class="dim mt-l" style="margin-top:28px;font-size:13.5px">Base case · 5-yr cumulative: <b>+$618K revenue − $824K OpEx = −$206K EBITDA</b>. Revenue ramps cleanly, but the <b>$4,500/mo land lease ($54K/yr)</b> keeps OpEx above revenue every year. Path to EBITDA-positive requires lease &lt; $3,000/mo or a partner-contributed site — see scenarios in <code>FINANCIAL_MODEL_NOTES.md</code>.</p>
+    <div class="notes">CRITICAL: Land lease is the dominant variable. Base case ($4,500/mo lease) stays EBITDA-negative every year through Y5; cumulative loss is $206K. Optimistic case ($3,000/mo + 30% higher utilization) reaches positive EBITDA in Y3. This slide replaces the revenue-only chart that was misleading — revenue bars looked positive but the cumulative EBITDA on the landing page (−$206K) is the truth.</div>
   </section>
 
   <!-- 9. Capital Plan -->
