@@ -14,6 +14,14 @@ Each entry should include:
 - result or impact
 - next concrete step
 
+## 2026-05-13 - Deck v0.2.2: mobile-compatible investor deck
+
+- Commit: pending
+- Summary: Made the Volt&Go Lincoln investor deck usable on phones. Added a `@media (max-width:820px)` breakpoint that lets each slide scroll vertically inside the fixed-viewport frame, collapses the g2/g3/g4 grids and the data-strip / funnel layouts to single column, shrinks display typography (h1 86→34px, h2 62→26px, metric .n 72→44px), repositions the cover wordmark and footer, and re-anchors the map-slide captions. Added a touch-swipe handler that dispatches synthetic `ArrowLeft`/`ArrowRight` keydown events so the existing keyboard nav, animations, and progress wiring stay single-sourced. Added a small bottom-of-screen prev/next button bar with a page indicator that mirrors the deck's own counter via MutationObserver. Inline overrides in `index.html` shadow `style.css` for `.map-caption` and `.src-grid` so the cascade resolves correctly on mobile.
+- Files: `presentations/investor/volt-go-lincoln/style.css`, `presentations/investor/volt-go-lincoln/index.html`
+- Result: Deck content reflows cleanly down to ~360px viewports. Map slide skips swipe to keep pan/zoom usable; all other slides advance on horizontal swipe or tap. Desktop layout unchanged.
+- Next concrete step: Manually test on a real iPhone/Android device, then have the owner verify the financial bar chart and sources slide remain readable before sharing the link externally.
+
 ## 2026-05-13 - Deck v0.2.1: embed map slide + sources slide in investor deck
 
 - Commit: `eb869e3`
