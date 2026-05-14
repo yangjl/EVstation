@@ -1,0 +1,11 @@
+configuration,l2_stalls,dcfc_stalls,gross_capex_usd,five_year_cumulative_ebitda_usd,five_year_cash_after_capex_usd,year_5_ebitda_usd,interpretation
+"6 L2 + 2 DCFC",6,2,628000,81848,-546152,55337,"Most capital-protective tested build; likely undersized for South Lincoln opportunity"
+"8 L2 + 2 DCFC",8,2,664000,112798,-551202,65632,"Better utilization but still undersized"
+"12 L2 + 2 DCFC",12,2,736000,174696,-561304,86222,"Capital-efficient phased build"
+"16 L2 + 2 DCFC",16,2,808000,236594,-571406,106813,"Best five-year operating-profit configuration"
+"18 L2 + 2 DCFC",18,2,844000,231794,-612206,106613,"Extra L2 begins to dilute utilization"
+"20 L2 + 2 DCFC",20,2,880000,226994,-653006,106413,"Overbuilt under base demand"
+"12 L2 + 4 DCFC",12,4,1026000,132946,-893054,81467,"Too DCFC-heavy for South Lincoln local demand"
+"16 L2 + 4 DCFC",16,4,1098000,194845,-903155,102058,"Higher capex without matching South Lincoln DCFC demand"
+"24 L2 + 2 DCFC",24,2,952000,217394,-734606,106013,"Too many L2 stalls before demand is proven"
+"16 L2 + 0 DCFC",16,0,518000,-155906,-673906,-7639,"L2-only cannot cover fixed standalone site costs"

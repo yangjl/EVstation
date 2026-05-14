@@ -14,6 +14,14 @@ Each entry should include:
 - result or impact
 - next concrete step
 
+## 2026-05-14 - South Lincoln scenario audit + map (v0.3 research)
+
+- Commit: (pending)
+- Summary: Audited the south Lincoln optimization report and stall-mix CSV (16 L2 + 2 DCFC, $808k capex, $237k five-year cum EBITDA). Verified the internal math, called out an unstated operating-cashflow-positive Y1-Y2 result, flagged that capex recovery is realistic at Y8-Y10 rather than impossible, removed §30C from any forward capital plan because of the 2026-06-30 placed-in-service deadline (47 days away), and noted two aggressive assumptions worth challenging (DCFC saturation cap of 2.2 stalls; 32% mature L2 utilization). Built a south-Lincoln Leaflet map plotting the SouthPointe candidate, ChargePoint competitor at 2980 Pine Lake Rd, Aventine and Level apartments, the Pine Lake / S 27th / Hwy 2 / US-77 arterials with AADT, and a small distant indicator showing I-80 is ~7 mi north. Added a north-vs-south comparison table to the report; the headline insight is that cost structure (retail-host vs standalone lease) is the real driver of the $442k five-year EBITDA delta, not geography per se.
+- Files: `presentations/investor/volt-go-lincoln/south_lincoln_map.html` (new), `reports/south_lincoln_location_optimization_report.md` (added §11 audit), `doc/DECISIONS.md` (fixed Brookside/Northbrook leftover in south Lincoln entry; added §30C-unavailable decision), `doc/PROJECT_STATUS.md` (recorded v0.3 audit), `doc/DAILY_LOG.md`
+- Result: South Lincoln scenario remains a research alternative — the active investor deck stays on Fallbrook v0.2 per project memory rules. The owner now has a defensible comparison memo and a south-Lincoln map for in-person diligence.
+- Next concrete step: Owner decides whether to (a) contact RED Development at SouthPointe re: a host-pad, (b) re-run the optimization at DCFC saturation = 1.6/2.2/3.0 and L2 mature utilization = 24%/32%, or (c) keep Fallbrook v0.2 and abandon south Lincoln.
+
 ## 2026-05-13 - Deck v0.2.2: mobile-compatible investor deck
 
 - Commit: pending

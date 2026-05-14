@@ -102,8 +102,24 @@ Record important project decisions and the reasoning behind them. Keep entries s
 - **Why:** It is the only Class A apartment cluster in Lincoln (Brookside / Northbrook / Fallbrook development, ~1,500 units within 1 mile) with no non-Tesla DCFC within 3 miles, plus direct I-80 highway access via Exit 401 (US-34) at ~1.5 mi. The Tesla Supercharger at Hy-Vee #3 (5020 N 27th) is 2.6 mi east but Tesla-first; the only open-network DCFC (Electrify America at Casey's NW 20th) is 3.5 mi southwest.
 - **Alternatives considered:** (a) Wilderness Hills / south Lincoln near US-77 — high-income but no I-80 frontage; (b) co-location at an existing Hy-Vee or Casey's — likely requires retailer partnership and gives up site control; (c) downtown / Haymarket — saturated with municipal L2 and no DCFC gap to fill.
 - **Risks:** Tesla rolling out Magic Dock at Hy-Vee #3 would shrink the DCFC gap to ~2.6 mi; Electrify America siting a second Lincoln location via NEVI would weaken the "only open DCFC nearby" claim.
-- **Next action (human):** Confirm parcel availability, lease rate, LES transformer capacity, and partnership willingness with Brookside / Northbrook property management. Verify NEVI eligibility for this off-corridor "community charging" submarket with NDOT.
-- **Status:** Draft v0.2 — owner must validate site before any investor commitment.
+
+## 2026-05-14 — South Lincoln Alternative Scenario
+
+### South Lincoln research scenario opened, not yet adopted
+
+- **Decision:** Create a South Lincoln alternative scenario centered on the SouthPointe / Pine Lake / South 27th corridor, with Wilderness Hills and Village Gardens as secondary demand anchors. Build it as a comparable to the Fallbrook recommendation, not yet a replacement.
+- **Why:** Owner requested a different location and a data-first reassessment with flexible stall count and capital investment. South Lincoln has stronger local retail/apartment/commuter demand than the Fallbrook I-80-access concept, but weaker NEVI corridor fit and no I-80 frontage.
+- **Model result:** Base-case optimization favors **16 Level 2 stalls + 2 DCFC stalls** for maximum five-year cumulative operating EBITDA, estimated at ~$237K. None of the tested configurations recovers full capex within five years under base assumptions; operating cashflow turns positive in Y1-Y2; full capex recovery realistic at Y8-Y10.
+- **Alternatives considered:** L2-only at SouthPointe (rejected — fixed OpEx eats margin); 4+ DCFC at SouthPointe (rejected — south-Lincoln DCFC demand saturates around 2.2 stalls); raw-land standalone lease in south Lincoln (rejected — same cost-structure problem that hurt the Fallbrook base case).
+- **Next action (human):** (1) Contact RED Development re: a host-pad / revenue-share at SouthPointe Pavilions. (2) Request an LES written demand-charge schedule for a 16-L2 + 2-DCFC load profile. (3) Survey 20+ residents at Aventine (8801 S 33rd) and Level at Village Gardens (5701 Boboli Ln). (4) Re-run the optimization at DCFC saturation = 1.6/2.2/3.0 and L2 mature utilization = 24%/32% per the addendum in `reports/south_lincoln_location_optimization_report.md` §11.
+- **Status:** Draft v0.3 — research scenario; **does not yet replace the Fallbrook v0.2 recommendation in the investor deck.**
+
+### Section 30C tax credit treated as unavailable
+
+- **Decision:** Both the Fallbrook and South Lincoln capital plans should treat the IRA §30C Alternative Fuel Vehicle Refueling Property Credit as **unavailable** for any new project starting in May 2026.
+- **Why:** The One Big Beautiful Bill Act (signed July 2025) accelerated §30C termination to property placed in service after **2026-06-30**. Any 10-18 stall charging station starting permits now cannot be placed-in-service within ~47 days. Continuing to model the credit as a $30k-$100k upside misrepresents the capital stack to lenders and investors.
+- **Alternatives considered:** (a) Keep §30C as "if available" upside — rejected because investors will inflate the implied stack; (b) Pursue a partial 6% credit — same deadline applies, still unavailable.
+- **Status:** Active. Update FINANCIAL_MODEL_NOTES.md, deck slide 9 (Capital Plan), and the south Lincoln report Executive Answer to remove §30C from the capital stack.
 
 ### NEVI and IRA §30C grants included in capital plan
 
