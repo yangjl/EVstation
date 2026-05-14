@@ -1,0 +1,244 @@
+/* pitch-deck — classic YC/VC pitch */
+.tpl-pitch-deck{
+  --bg:#ffffff;--bg-soft:#f6f7fb;--surface:#ffffff;--surface-2:#f2f4fa;
+  --border:rgba(20,25,60,.08);--border-strong:rgba(20,25,60,.18);
+  --text-1:#0d1130;--text-2:#4a5070;--text-3:#8a90ad;
+  --accent:#3b5bff;--accent-2:#7a46ff;--accent-3:#d94cff;
+  --grad:linear-gradient(135deg,#3b5bff 0%,#7a46ff 55%,#d94cff 100%);
+  --grad-soft:linear-gradient(135deg,#eef1ff,#f4edff 55%,#fbedff);
+  --radius:20px;--radius-lg:28px;
+  --shadow:0 14px 40px rgba(20,25,60,.08),0 2px 8px rgba(20,25,60,.04);
+  font-family:'Inter','Noto Sans SC',sans-serif;
+}
+.tpl-pitch-deck .slide{padding:88px 112px}
+.tpl-pitch-deck .kicker{color:var(--accent);font-weight:700}
+.tpl-pitch-deck .h1{font-size:86px;line-height:1.02;font-weight:900;letter-spacing:-.035em}
+.tpl-pitch-deck .h2{font-size:62px;font-weight:800;letter-spacing:-.03em}
+.tpl-pitch-deck .mega{font-size:180px;font-weight:900;line-height:.95;letter-spacing:-.05em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tpl-pitch-deck .mega-sub{font-size:28px;color:var(--text-2);margin-top:18px}
+.tpl-pitch-deck .cover-bg{position:absolute;inset:0;background:var(--grad-soft);z-index:-1}
+.tpl-pitch-deck .cover-blob{position:absolute;right:-140px;top:-140px;width:560px;height:560px;border-radius:50%;background:var(--grad);filter:blur(8px);opacity:.35;z-index:-1}
+.tpl-pitch-deck .brand-dot{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--grad);margin-right:10px;vertical-align:middle}
+.tpl-pitch-deck .brand{font-weight:800;font-size:22px;letter-spacing:-.02em}
+.tpl-pitch-deck .wordmark-logo{display:inline-flex;align-items:center;gap:12px;padding:10px 14px;border:1px solid var(--border-strong);border-radius:10px;background:rgba(255,255,255,.72);box-shadow:var(--shadow);backdrop-filter:blur(8px)}
+.tpl-pitch-deck .logo-mark{width:34px;height:34px;border-radius:8px;background:var(--grad);display:grid;place-items:center;color:#fff;font-size:19px;font-weight:900;letter-spacing:-.06em}
+.tpl-pitch-deck .logo-text{font-size:22px;font-weight:900;letter-spacing:-.025em;color:var(--text-1)}
+.tpl-pitch-deck .logo-text small{display:block;font-size:10px;font-weight:800;letter-spacing:.16em;color:var(--text-3);text-transform:uppercase;margin-top:2px}
+.tpl-pitch-deck .card{border-radius:var(--radius)}
+.tpl-pitch-deck .card.compact{padding:20px}
+.tpl-pitch-deck .card.compact h4{margin-bottom:8px}
+.tpl-pitch-deck .num-tag{font-family:'Inter',sans-serif;font-size:14px;font-weight:700;color:var(--accent);letter-spacing:.12em}
+.tpl-pitch-deck .big-q{font-family:'Playfair Display',serif;font-size:56px;line-height:1.15;font-weight:700;letter-spacing:-.02em;max-width:22ch}
+.tpl-pitch-deck .metric{display:flex;flex-direction:column;gap:6px}
+.tpl-pitch-deck .metric .n{font-size:72px;font-weight:900;letter-spacing:-.035em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
+.tpl-pitch-deck .metric .l{color:var(--text-2);font-size:16px}
+.tpl-pitch-deck .mini-metric{display:grid;grid-template-columns:auto 1fr;gap:8px 12px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--border)}
+.tpl-pitch-deck .mini-metric:last-child{border-bottom:0}
+.tpl-pitch-deck .mini-metric .n{font-size:30px;font-weight:900;line-height:1;color:var(--accent)}
+.tpl-pitch-deck .mini-metric .l{font-size:13px;color:var(--text-2);line-height:1.35}
+.tpl-pitch-deck .source-note{font-size:11px;color:var(--text-3);line-height:1.35;margin-top:14px}
+.tpl-pitch-deck .source-note a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(59,91,255,.3)}
+.tpl-pitch-deck .formula{font-family:'Inter',sans-serif;font-size:12px;color:var(--text-3);background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:8px 10px;line-height:1.35}
+.tpl-pitch-deck .data-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tpl-pitch-deck .data-strip .data-cell{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 14px 12px;box-shadow:0 4px 12px rgba(20,25,60,.04)}
+.tpl-pitch-deck .data-strip .data-cell strong{display:block;font-size:28px;line-height:1;font-weight:900;color:var(--accent)}
+.tpl-pitch-deck .data-strip .data-cell span{display:block;color:var(--text-2);font-size:12px;line-height:1.3;margin-top:6px}
+.tpl-pitch-deck .funnel{display:grid;grid-template-columns:1.25fr 1fr .8fr;gap:10px;align-items:end;margin-top:22px}
+.tpl-pitch-deck .funnel .step{background:var(--grad-soft);border:1px solid var(--border);border-radius:10px;padding:16px;min-height:112px}
+.tpl-pitch-deck .funnel .step:nth-child(2){min-height:92px}
+.tpl-pitch-deck .funnel .step:nth-child(3){min-height:72px;background:#fff}
+.tpl-pitch-deck .funnel strong{display:block;font-size:28px;font-weight:900;color:var(--accent)}
+.tpl-pitch-deck .funnel span{display:block;font-size:12px;color:var(--text-2);line-height:1.35;margin-top:6px}
+.tpl-pitch-deck .bar-list{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.tpl-pitch-deck .bar-row{display:grid;grid-template-columns:150px 1fr 70px;gap:12px;align-items:center;font-size:13px;color:var(--text-2)}
+.tpl-pitch-deck .bar-track{height:12px;background:var(--surface-2);border-radius:999px;overflow:hidden}
+.tpl-pitch-deck .bar-fill{height:100%;background:var(--grad);border-radius:999px}
+.tpl-pitch-deck .team-card{text-align:center;padding:32px 20px}
+.tpl-pitch-deck .avatar{width:96px;height:96px;border-radius:50%;margin:0 auto 14px;background:var(--grad);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:32px}
+.tpl-pitch-deck .ask-box{background:var(--grad);color:#fff;padding:56px 64px;border-radius:var(--radius-lg);box-shadow:0 30px 70px rgba(59,91,255,.35)}
+.tpl-pitch-deck .ask-box .h2{color:#fff}
+.tpl-pitch-deck .ask-box .dim{color:rgba(255,255,255,.85)}
+.tpl-pitch-deck .traction-bar{display:flex;align-items:flex-end;gap:14px;height:240px;margin-top:24px}
+.tpl-pitch-deck .traction-bar .bar{flex:1;background:var(--grad);border-radius:8px 8px 0 0;position:relative;min-height:20px}
+.tpl-pitch-deck .traction-bar .bar span{position:absolute;bottom:-28px;left:0;right:0;text-align:center;font-size:13px;color:var(--text-3)}
+.tpl-pitch-deck .traction-bar .bar em{position:absolute;top:-28px;left:0;right:0;text-align:center;font-size:14px;font-weight:700;font-style:normal;color:var(--text-1)}
+.tpl-pitch-deck .section-num{font-size:220px;font-weight:900;line-height:.9;color:var(--surface-2);position:absolute;right:72px;bottom:40px;z-index:0;letter-spacing:-.05em}
+.tpl-pitch-deck .slide > *{position:relative;z-index:1}
+.tpl-pitch-deck .deck-footer{color:var(--text-3)}
+
+/* =====================================================================
+   MOBILE / TABLET LAYOUT
+   The deck is designed for 1920×1080 desktop. On phones and small
+   tablets we (a) let each slide scroll vertically inside its frame,
+   (b) collapse multi-column grids to one column, and (c) shrink the
+   display typography so headlines and metrics actually fit.
+   Touch-swipe navigation is added via inline script in index.html.
+   ===================================================================== */
+@media (max-width: 1024px){
+  .tpl-pitch-deck .slide{padding:56px 56px 88px}
+  .tpl-pitch-deck .h1{font-size:56px}
+  .tpl-pitch-deck .h2{font-size:42px}
+  .tpl-pitch-deck .section-num{font-size:140px;right:32px;bottom:24px}
+}
+@media (max-width: 820px){
+  /* Allow each slide to scroll vertically — required because the deck
+     uses position:absolute;inset:0;overflow:hidden by default. */
+  .tpl-pitch-deck .deck{height:100dvh}
+  .tpl-pitch-deck .slide{
+    padding:64px 20px 96px;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    justify-content:flex-start;
+  }
+  .tpl-pitch-deck .slide.map-slide{padding:0;overflow:hidden}
+
+  /* Typography */
+  .tpl-pitch-deck .h1{font-size:34px;line-height:1.08}
+  .tpl-pitch-deck .h2{font-size:26px;line-height:1.15}
+  .tpl-pitch-deck .h2 br{display:none}
+  .tpl-pitch-deck .h1 br{display:none}
+  .tpl-pitch-deck .lede{font-size:15px;line-height:1.5}
+  .tpl-pitch-deck .kicker,
+  .tpl-pitch-deck .num-tag{font-size:11px;letter-spacing:.08em}
+  .tpl-pitch-deck .big-q{font-size:32px}
+  .tpl-pitch-deck .mega{font-size:96px}
+  .tpl-pitch-deck .mega-sub{font-size:18px}
+
+  /* Cover-slide chrome */
+  .tpl-pitch-deck .wordmark-logo{
+    position:static !important;
+    top:auto !important;left:auto !important;
+    margin-bottom:18px;
+  }
+  .tpl-pitch-deck .cover-blob{
+    width:280px;height:280px;
+    right:-100px;top:-100px;
+  }
+  .tpl-pitch-deck .deck-footer{
+    position:static;
+    margin-top:24px;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:4px;
+    padding:0;
+  }
+
+  /* Section-number watermark — keep but make small so it doesn't dwarf text */
+  .tpl-pitch-deck .section-num{font-size:84px;right:16px;bottom:16px;opacity:.55}
+
+  /* Grids — collapse to single column */
+  .tpl-pitch-deck .grid.g2,
+  .tpl-pitch-deck .grid.g3,
+  .tpl-pitch-deck .grid.g4{grid-template-columns:1fr;gap:14px}
+  .tpl-pitch-deck .row{flex-wrap:wrap;gap:12px}
+
+  /* Cards */
+  .tpl-pitch-deck .card{padding:18px 18px}
+  .tpl-pitch-deck .card.compact{padding:16px}
+  .tpl-pitch-deck .card h4{font-size:17px}
+  .tpl-pitch-deck .card .dim{font-size:14px;line-height:1.5}
+
+  /* Pills */
+  .tpl-pitch-deck .pill{font-size:11px;padding:3px 10px}
+
+  /* Data-strip — collapse 4 cols → 2 cols */
+  .tpl-pitch-deck .data-strip{grid-template-columns:repeat(2,1fr);gap:8px}
+  .tpl-pitch-deck .data-strip .data-cell{padding:12px 10px}
+  .tpl-pitch-deck .data-strip .data-cell strong{font-size:22px}
+  .tpl-pitch-deck .data-strip .data-cell span{font-size:11px}
+
+  /* Funnel — stack */
+  .tpl-pitch-deck .funnel{grid-template-columns:1fr;gap:10px}
+  .tpl-pitch-deck .funnel .step,
+  .tpl-pitch-deck .funnel .step:nth-child(2),
+  .tpl-pitch-deck .funnel .step:nth-child(3){min-height:0;padding:14px}
+  .tpl-pitch-deck .funnel strong{font-size:24px}
+
+  /* Bar list — single-line layout instead of fixed 150px label column */
+  .tpl-pitch-deck .bar-list{margin-top:14px}
+  .tpl-pitch-deck .bar-row{
+    grid-template-columns:1fr auto;
+    grid-template-areas:"label value" "bar bar";
+    gap:4px 12px;
+    font-size:12px;
+  }
+  .tpl-pitch-deck .bar-row > :first-child{grid-area:label}
+  .tpl-pitch-deck .bar-row > :nth-child(2){grid-area:bar}
+  .tpl-pitch-deck .bar-row > :nth-child(3){grid-area:value;text-align:right}
+
+  /* Metrics */
+  .tpl-pitch-deck .metric .n{font-size:44px}
+  .tpl-pitch-deck .metric .l{font-size:13px}
+  .tpl-pitch-deck .mini-metric .n{font-size:22px}
+  .tpl-pitch-deck .mini-metric .l{font-size:12px}
+
+  /* Pricing card big numbers — override inline style:font-size:56px via specificity */
+  .tpl-pitch-deck .card .metric .n[style]{font-size:38px !important}
+
+  /* Traction bar (financial chart) */
+  .tpl-pitch-deck .traction-bar{height:160px;gap:8px;margin-top:32px;margin-bottom:32px}
+  .tpl-pitch-deck .traction-bar .bar em{font-size:11px;top:-22px}
+  .tpl-pitch-deck .traction-bar .bar span{font-size:11px;bottom:-22px}
+
+  /* Ask box */
+  .tpl-pitch-deck .ask-box{padding:28px 22px;border-radius:18px}
+  .tpl-pitch-deck .ask-box .row{gap:18px !important}
+  .tpl-pitch-deck .ask-box .row > div > div:first-child{font-size:30px !important}
+
+  /* Sources slide — single column, smaller links */
+  .tpl-pitch-deck .slide.sources-slide{padding-bottom:120px}
+  .tpl-pitch-deck .slide.sources-slide .src-grid{grid-template-columns:1fr;gap:18px;font-size:13px}
+  .tpl-pitch-deck .slide.sources-slide .h2{font-size:24px !important}
+
+  /* Map slide captions reposition for narrow screen */
+  .tpl-pitch-deck .slide.map-slide .map-caption{
+    flex-direction:column;
+    top:8px;left:8px;right:8px;
+    gap:6px;
+  }
+  .tpl-pitch-deck .slide.map-slide .map-caption .tag{
+    font-size:11px;padding:6px 10px;
+  }
+  .tpl-pitch-deck .slide.map-slide .map-caption .tag small{font-size:10px}
+
+  /* Source notes & formulas */
+  .tpl-pitch-deck .source-note{font-size:11px}
+  .tpl-pitch-deck .formula{font-size:11px}
+
+  /* Inline tables (Site & Competitors) */
+  .tpl-pitch-deck table{font-size:12px !important}
+
+  /* Spacing utilities tightened */
+  .tpl-pitch-deck .mt-l{margin-top:20px}
+  .tpl-pitch-deck .mt-m{margin-top:14px}
+}
+
+/* On-screen mobile nav buttons (prev/next). Hidden on desktop. */
+.mobile-nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:30;
+  display:none;justify-content:space-between;
+  padding:10px 14px env(safe-area-inset-bottom) 14px;
+  background:linear-gradient(to top,rgba(255,255,255,.92),rgba(255,255,255,0));
+  pointer-events:none;
+}
+.mobile-nav button{
+  pointer-events:auto;
+  background:rgba(13,17,48,.86);color:#fff;border:0;
+  width:44px;height:44px;border-radius:50%;
+  font-size:20px;font-weight:700;line-height:1;
+  box-shadow:0 8px 24px rgba(20,25,60,.25);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+}
+.mobile-nav button:active{transform:scale(.94)}
+.mobile-nav .pageind{
+  pointer-events:none;
+  align-self:center;
+  background:rgba(13,17,48,.86);color:#fff;
+  padding:6px 12px;border-radius:999px;
+  font-size:12px;font-weight:700;letter-spacing:.06em;
+  box-shadow:0 8px 24px rgba(20,25,60,.25);
+}
+@media (max-width: 820px){
+  .mobile-nav{display:flex}
+}

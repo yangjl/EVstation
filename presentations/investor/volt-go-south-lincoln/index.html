@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Volt&amp;Go South Lincoln · Owner Diligence Deck</title>
+<link rel="stylesheet" href="vendor/html-ppt/fonts.css">
+<link rel="stylesheet" href="vendor/html-ppt/base.css">
+<link rel="stylesheet" href="vendor/html-ppt/animations/animations.css">
+<link rel="stylesheet" href="style.css">
+<style>
+  .tpl-pitch-deck .slide.map-slide{padding:0;overflow:hidden}
+  .tpl-pitch-deck .slide.map-slide .map-frame{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+  .tpl-pitch-deck .slide.map-slide .map-caption{position:absolute;top:24px;left:32px;right:32px;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;z-index:5;pointer-events:none}
+  .tpl-pitch-deck .slide.map-slide .map-caption .tag{background:rgba(13,17,48,.82);color:#fff;padding:10px 14px;border-radius:10px;backdrop-filter:blur(6px);font-size:14px;font-weight:700;letter-spacing:.04em;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  .tpl-pitch-deck .slide.map-slide .map-caption .tag small{display:block;font-weight:500;color:rgba(255,255,255,.78);font-size:11px;margin-top:3px;letter-spacing:.06em}
+  .tpl-pitch-deck .slide.sources-slide a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(59,91,255,.4);word-break:break-all}
+  .tpl-pitch-deck .slide.sources-slide .src-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 36px;margin-top:22px;font-size:13px;line-height:1.45;color:var(--text-2)}
+  .tpl-pitch-deck .slide.sources-slide .src-grid h4{margin:0 0 6px;font-size:12px;letter-spacing:.12em;color:var(--accent-3);text-transform:uppercase}
+  .tpl-pitch-deck .slide.sources-slide .src-grid ul{margin:0;padding:0;list-style:none}
+  .tpl-pitch-deck .slide.sources-slide .src-grid li{margin:0 0 6px;padding-left:14px;position:relative}
+  .tpl-pitch-deck .slide.sources-slide .src-grid li::before{content:"›";position:absolute;left:0;color:var(--text-3)}
+  .tpl-pitch-deck .profit-graph{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:end;margin-top:28px}
+  .tpl-pitch-deck .profit-bars{height:240px;display:flex;align-items:end;gap:18px;padding:18px 14px 0;border-left:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .tpl-pitch-deck .profit-bar{flex:1;min-width:0;border-radius:10px 10px 0 0;background:linear-gradient(180deg,rgba(59,91,255,.45),rgba(59,91,255,.82));position:relative;display:flex;align-items:flex-start;justify-content:center;padding-top:10px;color:#fff;font-weight:900;font-size:15px;box-shadow:0 10px 24px rgba(59,91,255,.18)}
+  .tpl-pitch-deck .profit-bar.best{background:var(--grad);box-shadow:0 14px 30px rgba(122,70,255,.25)}
+  .tpl-pitch-deck .profit-bar small{position:absolute;bottom:-34px;left:50%;transform:translateX(-50%);width:100px;text-align:center;color:var(--text-2);font-weight:800;font-size:11px;line-height:1.15}
+  .tpl-pitch-deck .profit-notes{display:grid;gap:12px}
+  .tpl-pitch-deck .profit-note{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow-soft)}
+  .tpl-pitch-deck .profit-note b{display:block;color:var(--text-1);font-size:15px;margin-bottom:4px}
+  .tpl-pitch-deck .profit-note span{display:block;color:var(--text-2);font-size:13px;line-height:1.35}
+</style>
+</head>
+<body class="tpl-pitch-deck">
+<div class="deck">
+
+  <section class="slide" data-title="Cover">
+    <div class="cover-bg"></div>
+    <div class="cover-blob"></div>
+    <div style="position:absolute;top:52px;left:112px" class="wordmark-logo"><span class="logo-mark">V</span><span class="logo-text">Volt&amp;Go<small>South Lincoln scenario</small></span></div>
+    <p class="kicker">Owner/SBA diligence · draft scenario · 2026-05-14</p>
+    <h1 class="h1 anim-fade-up" data-anim="fade-up">A local EV hub<br><span class="gradient-text">for South Lincoln.</span></h1>
+    <p class="lede mt-m">A SouthPointe / Pine Lake / S 27th charging concept optimized for retail dwell time, apartment residents, and commuter top-ups — not a NEVI corridor thesis.</p>
+    <div class="deck-footer"><span>Draft v0.3.1 · Human review required</span><span class="slide-number" data-current="1" data-total="16"></span></div>
+    <div class="notes">This is a separate South Lincoln diligence deck. It does not replace the Fallbrook/North Lincoln plan until the owner approves the site strategy change.</div>
+  </section>
+
+  <section class="slide" data-title="Thesis">
+    <span class="section-num">01</span>
+    <p class="num-tag">LOCATION THESIS</p>
+    <h2 class="h2 mt-s">South Lincoln is a local<br><span class="gradient-text">dwell-time market.</span></h2>
+    <div class="grid g3 mt-l">
+      <div class="card compact"><h4>Retail traffic</h4><p class="dim">SouthPointe / Pine Lake / S 27th combines shopping, restaurants, cinema, healthcare, and daily errands.</p></div>
+      <div class="card compact"><h4>Apartment demand</h4><p class="dim">Wilderness Hills, Village Gardens, and nearby Class A apartments create recurring L2 potential.</p></div>
+      <div class="card compact"><h4>Not NEVI-first</h4><p class="dim">The best South Lincoln sites are too far from I-80 to rely on corridor funding as base-case capital.</p></div>
+    </div>
+    <div class="notes">Frame as a local convenience charging hub, not an I-80 station. NEVI should be upside only, and likely not available for this location.</div>
+  </section>
+
+  <section class="slide" data-title="Data Anchors">
+    <span class="section-num">02</span>
+    <p class="num-tag">DATA ANCHORS</p>
+    <h2 class="h2 mt-s">The corridor already has<br>daily charging occasions.</h2>
+    <div class="data-strip mt-m">
+      <div class="data-cell"><strong>25.4k</strong><span>S 27th, Jane Ln to Pine Lake Rd ADT</span></div>
+      <div class="data-cell"><strong>22.1k</strong><span>S 27th, Pine Lake to Yankee Hill ADT</span></div>
+      <div class="data-cell"><strong>10.9k</strong><span>Nebraska electric vehicles, 2025-12 source</span></div>
+      <div class="data-cell"><strong>1.2-1.8k</strong><span>planning estimate for Lincoln EVs</span></div>
+    </div>
+    <p class="source-note">Sources: City of Lincoln 2024 ADT list; Nebraska DWEE/DMV fuel-consumed vehicle report. Lincoln-specific EV registrations remain a data gap.</p>
+    <div class="notes">Use these as planning anchors only. The exact site needs an AFDC/PlugShare export and field visit.</div>
+  </section>
+
+  <section class="slide" data-title="Demand Math">
+    <span class="section-num">02a</span>
+    <p class="num-tag">DEMAND MATH · BOTTOM-UP</p>
+    <h2 class="h2 mt-s">Where the $164K Y5 EBITDA<br>actually comes from.</h2>
+    <div class="grid g2 mt-l">
+      <div class="card compact">
+        <h4>DCFC capture — highway-adjacent retail</h4>
+        <p class="formula" style="margin:0 0 8px">25,430 ADT × 1% EV share × 24h capture-rate at peak → ~250 EVs/day pass site → 1–2% need fast charge here.</p>
+        <div class="mini-metric"><span class="n">~20</span><span class="l">fast-charge sessions/day at 28% mature utilization across 3 DCFC stalls</span></div>
+        <div class="mini-metric"><span class="n">~30 kWh</span><span class="l">average session size · $0.49/kWh → ~$15 ticket</span></div>
+        <div class="mini-metric"><span class="n">$108K</span><span class="l">Y5 DCFC revenue contribution (3 × 100 kW × 8,760h × 0.28 util × $0.49/kWh)</span></div>
+      </div>
+      <div class="card compact">
+        <h4>L2 capture — apartment + commuter</h4>
+        <p class="formula" style="margin:0 0 8px">~1,500 Lincoln EVs × 15% south Lincoln catchment × 30% no home charging × 60% conversion → ~40 active members.</p>
+        <div class="mini-metric"><span class="n">~40</span><span class="l">paid members at $29/mo · ~$16K/yr membership revenue floor</span></div>
+        <div class="mini-metric"><span class="n">32%</span><span class="l">mature utilization across 16 L2 × 7.2 kW × 8,760h → 323,000 kWh/yr at $0.38/kWh</span></div>
+        <div class="mini-metric"><span class="n">$123K</span><span class="l">Y5 L2 revenue contribution (16 stalls × 7.2 kW × 8,760h × 0.32 × $0.38/kWh)</span></div>
+      </div>
+    </div>
+    <p class="source-note">Sum: ~$123K L2 + ~$108K DCFC + ~$16K membership − ~$83K net energy/fees − ~$90K fixed OpEx ≈ $164K Y5 EBITDA · matches comparison CSV.</p>
+    <div class="notes">This slide makes the model auditable: every Y5 input is shown explicitly. The 1% EV share of passing traffic, 30% no-home-charging assumption, and 60% member-conversion are the three numbers most worth testing in customer discovery before owner commitment.</div>
+  </section>
+
+  <section class="slide" data-title="Demand Stack">
+    <span class="section-num">02b</span>
+    <p class="num-tag">DEMAND STACK</p>
+    <h2 class="h2 mt-s">South Lincoln demand is<br>built from daily routines.</h2>
+    <div class="grid g2 mt-l">
+      <div class="card compact">
+        <h4>Retail dwell time</h4>
+        <div class="mini-metric"><span class="n">2-3 hr</span><span class="l">typical shopping, restaurant, movie, or healthcare dwell window at SouthPointe / Pine Lake anchors</span></div>
+        <div class="mini-metric"><span class="n">21-25k</span><span class="l">nearby S 27th daily traffic segments from City ADT list</span></div>
+      </div>
+      <div class="card compact">
+        <h4>Residential repeat use</h4>
+        <div class="mini-metric"><span class="n">3</span><span class="l">priority apartment / mixed-use anchors: Wilderness Hills, Village Gardens, SouthPointe-area apartments</span></div>
+        <div class="mini-metric"><span class="n">16</span><span class="l">L2 demand saturation used in the model before per-stall utilization begins to flatten</span></div>
+      </div>
+    </div>
+    <p class="formula mt-l">Working model: retail visitors create opportunistic L2 sessions; residents and commuters create recurring pass/reservation demand; three DCFC stalls capture high-ticket convenience top-ups and reduce queue risk.</p>
+    <div class="notes">This slide adds the qualitative demand logic behind the revised 16 L2 + 3 DCFC recommendation.</div>
+  </section>
+
+  <section class="slide" data-title="Candidate Zones">
+    <span class="section-num">03</span>
+    <p class="num-tag">CANDIDATE ZONES</p>
+    <h2 class="h2 mt-s">SouthPointe screens best.</h2>
+    <div class="grid g3 mt-l">
+      <div class="card card-accent compact"><h4>A · SouthPointe / Pine Lake / S 27th</h4><p class="dim">Best blend of retail dwell time, visibility, apartment access, and host-site partnership potential.</p></div>
+      <div class="card compact"><h4>B · Wilderness Hills / S 33rd</h4><p class="dim">Strong residential income profile and apartment growth, but weaker retail turnover unless co-located with a pad user.</p></div>
+      <div class="card compact"><h4>C · Village Gardens / S 56th</h4><p class="dim">Good mixed-use L2 logic; weaker DCFC draw and less arterial volume than S 27th/Pine Lake.</p></div>
+    </div>
+    <div class="notes">This slide is a screening recommendation, not final site selection. Need RED Development / SouthPointe host outreach.</div>
+  </section>
+
+  <section class="slide" data-title="Direct Competitors">
+    <span class="section-num">03b</span>
+    <p class="num-tag">DIRECT COMPETITORS</p>
+    <h2 class="h2 mt-s">Inside the zone: 1 L2 station.<br>Beyond: <span class="gradient-text">no DCFC south of I-80.</span></h2>
+    <div class="grid g2 mt-l">
+      <div class="card compact">
+        <h4>L2 competition · in-zone</h4>
+        <table style="width:100%;border-collapse:collapse;font-size:12px;color:var(--text-2);margin-top:8px">
+          <tr style="border-bottom:1px solid var(--border)"><th style="text-align:left;padding:6px 4px;color:var(--text-3)">Site</th><th style="text-align:right;padding:6px 4px;color:var(--text-3)">Distance</th></tr>
+          <tr style="border-bottom:1px solid var(--border)"><td style="padding:6px 4px">ChargePoint · 2980 Pine Lake Rd <small style="color:var(--text-3)">(4 × L2 · $1.50/hr)</small></td><td style="text-align:right;padding:6px 4px">0 mi</td></tr>
+          <tr style="border-bottom:1px solid var(--border)"><td style="padding:6px 4px">Russ's Market 33rd &amp; Hwy 2 <small style="color:var(--text-3)">(L2 · retail)</small></td><td style="text-align:right;padding:6px 4px">~1.5 mi N</td></tr>
+        </table>
+        <p class="formula" style="margin-top:10px">ChargePoint at SouthPointe is the one direct L2 competitor. At $1.50/hr (≈$0.20/kWh-equivalent) it underprices our $0.38/kWh — our edge must be reservations, canopy, lighting, and a dedicated apartment-resident pass.</p>
+      </div>
+      <div class="card compact">
+        <h4>DCFC competition · zero in south Lincoln</h4>
+        <table style="width:100%;border-collapse:collapse;font-size:12px;color:var(--text-2);margin-top:8px">
+          <tr style="border-bottom:1px solid var(--border)"><th style="text-align:left;padding:6px 4px;color:var(--text-3)">Lincoln DCFC site</th><th style="text-align:right;padding:6px 4px;color:var(--text-3)">Drive</th></tr>
+          <tr style="border-bottom:1px solid var(--border)"><td style="padding:6px 4px">Tesla SC · Hy-Vee #3 <small style="color:var(--text-3)">(8 stalls · 150 kW · Tesla-first)</small></td><td style="text-align:right;padding:6px 4px">~10 mi N</td></tr>
+          <tr style="border-bottom:1px solid var(--border)"><td style="padding:6px 4px">Tesla SC · West O <small style="color:var(--text-3)">(8 stalls · 250 kW · Tesla-first)</small></td><td style="text-align:right;padding:6px 4px">~7 mi NW</td></tr>
+          <tr style="border-bottom:1px solid var(--border)"><td style="padding:6px 4px">Electrify America · Casey's NW 20th <small style="color:var(--text-3)">(4 plugs · open CCS)</small></td><td style="text-align:right;padding:6px 4px">~7 mi NW</td></tr>
+          <tr><td style="padding:6px 4px;color:var(--accent)"><b>Volt &amp; Go South · proposed</b></td><td style="text-align:right;padding:6px 4px;color:var(--accent)"><b>0 mi</b></td></tr>
+        </table>
+        <p class="formula" style="margin-top:10px">All 20 of Lincoln's existing DCFC ports are north/west of I-80. A south Lincoln resident needing fast charge today drives 7–10 mi each way — that's the gap supporting 3 DCFC stalls.</p>
+      </div>
+    </div>
+    <p class="source-note">Sources: PlugShare directory (May 2026); ChargeHub Lincoln; Tesla locator; Electrify America locator. <b>Owner action:</b> validate the in-zone ChargePoint pricing and any DCFC retrofit plans at SouthPointe with one site visit before deck use.</p>
+    <div class="notes">This slide is the answer to "what stops a competitor from copying us?" — the L2 incumbent is already there at $1.50/hr but doesn't reserve stalls. The DCFC gap is real and visible: 20 DCFC ports in Lincoln, zero in south Lincoln. The defensible moat is site control + reservation/membership product, not raw connectivity.</div>
+  </section>
+
+  <section class="slide map-slide" data-title="South Lincoln Map">
+    <iframe class="map-frame" src="map.html" title="Volt&Go South Lincoln · Candidate Zone Map" loading="lazy"></iframe>
+    <div class="map-caption">
+      <div class="tag">★ Candidate zone: SouthPointe / Pine Lake<small>S 27th retail corridor · host-site concept</small></div>
+      <div class="tag">Interactive — click pins for details<small>Anchors · L2/DCFC context · highways · ADT heat</small></div>
+    </div>
+    <div class="notes">Map shows the SouthPointe candidate zone, South Lincoln demand anchors, nearby L2 signals, north/west Lincoln DCFC context, major route labels, and traffic heat overlays. User confirmed no DCFC in the South Lincoln region; coordinates still need field verification before external use.</div>
+  </section>
+
+  <section class="slide" data-title="Optimal Mix">
+    <span class="section-num">04</span>
+    <p class="num-tag">STALL MIX</p>
+    <h2 class="h2 mt-s">Best revised answer:<br><span class="gradient-text">16 L2 + 3 DCFC.</span></h2>
+    <div class="profit-graph">
+      <div class="profit-bars" aria-label="Five-year cumulative EBITDA comparison">
+        <div class="profit-bar" style="height:40%"><em>$175k</em><small>12 L2<br>2 DCFC</small></div>
+        <div class="profit-bar" style="height:55%"><em>$237k</em><small>16 L2<br>2 DCFC</small></div>
+        <div class="profit-bar best" style="height:100%"><em>$433k</em><small>16 L2<br>3 DCFC</small></div>
+        <div class="profit-bar" style="height:90%"><em>$388k</em><small>16 L2<br>4 DCFC</small></div>
+      </div>
+      <div class="profit-notes">
+        <div class="profit-note"><b>Why 16 L2?</b><span>Retail and apartment demand supports a strong L2 base, but the model shows returns flatten after 16 stalls.</span></div>
+        <div class="profit-note"><b>Why 3 DCFC?</b><span>Confirmed South Lincoln DCFC gap raises the demand cap from 2.2 to 3.0 stalls, making the third fast charger accretive.</span></div>
+        <div class="profit-note"><b>Why not 4 DCFC?</b><span>The fourth stall adds capex and maintenance before the local traffic pattern proves enough fast-charge sessions.</span></div>
+      </div>
+    </div>
+    <p class="source-note" style="margin-top:48px">Revised scenario estimate: ~$953K gross capex, ~$433K five-year cumulative EBITDA, and ~$164K Year 5 EBITDA. This depends on the owner-confirmed South Lincoln DCFC gap and must be validated with host-site and utility quotes.</p>
+    <div class="notes">This slide revises the prior 2-DCFC model. The new logic is that confirmed regional DCFC scarcity supports 3.0 effective DCFC demand saturation; 16 L2 + 3 DCFC is best under that revised assumption.</div>
+  </section>
+
+  <section class="slide" data-title="Annual EBITDA">
+    <span class="section-num">05</span>
+    <p class="num-tag">OPERATING RAMP</p>
+    <h2 class="h2 mt-s">Operating cashflow turns<br>positive in Year 2.</h2>
+    <div class="traction-bar mt-l">
+      <div class="bar" style="height:22%"><em>-$18k</em><span>Y1</span></div>
+      <div class="bar" style="height:36%"><em>$41k</em><span>Y2</span></div>
+      <div class="bar" style="height:63%"><em>$103k</em><span>Y3</span></div>
+      <div class="bar" style="height:87%"><em>$143k</em><span>Y4</span></div>
+      <div class="bar" style="height:100%"><em>$164k</em><span>Y5</span></div>
+    </div>
+    <p class="dim mt-l" style="margin-top:48px">The concern is not operating breakeven after ramp; it is capital recovery, which likely extends beyond five years without subsidies or host contribution.</p>
+    <div class="notes">This is the revised 16 L2 + 3 DCFC annual EBITDA view. It assumes the confirmed South Lincoln DCFC gap supports three effective fast-charge stalls.</div>
+  </section>
+
+  <section class="slide" data-title="Capital Recovery">
+    <span class="section-num">05b</span>
+    <p class="num-tag">CAPITAL RECOVERY</p>
+    <h2 class="h2 mt-s">Year 5 is mid-curve.<br>Payback is <span class="gradient-text">Year 8–9.</span></h2>
+    <div class="traction-bar mt-l" style="height:200px">
+      <div class="bar" style="height:8%;background:linear-gradient(180deg,#ef4444,#b91c1c)"><em>-$971k</em><span>Y1</span></div>
+      <div class="bar" style="height:14%;background:linear-gradient(180deg,#ef4444,#b91c1c)"><em>-$930k</em><span>Y2</span></div>
+      <div class="bar" style="height:26%;background:linear-gradient(180deg,#f59e0b,#d97706)"><em>-$827k</em><span>Y3</span></div>
+      <div class="bar" style="height:42%;background:linear-gradient(180deg,#f59e0b,#d97706)"><em>-$684k</em><span>Y4</span></div>
+      <div class="bar" style="height:58%;background:linear-gradient(180deg,#f59e0b,#d97706)"><em>-$520k</em><span>Y5</span></div>
+      <div class="bar" style="height:74%;background:linear-gradient(180deg,#eab308,#a16207)"><em>-$350k</em><span>Y6</span></div>
+      <div class="bar" style="height:84%;background:linear-gradient(180deg,#eab308,#a16207)"><em>-$180k</em><span>Y7</span></div>
+      <div class="bar" style="height:94%;background:linear-gradient(180deg,#22c55e,#15803d)"><em>-$10k</em><span>Y8</span></div>
+      <div class="bar" style="height:100%;background:linear-gradient(180deg,#22c55e,#15803d)"><em>+$160k</em><span>Y9</span></div>
+    </div>
+    <p class="dim mt-l" style="margin-top:48px">Cumulative cash position by year (revised 16 L2 + 3 DCFC build, $953K gross capex, flat $170K/yr post-ramp EBITDA). Without grants or terminal value, the project pays back its capital around <b>Year 8–9</b>. With a host-pad contribution, recovery moves toward Year 6–7. This is normal for charging infrastructure — public DCFC networks typically model 7–12-year payback.</p>
+    <div class="notes">This slide reframes the "5-year cash after capex = -$520k" line that has been read as "do not proceed." The correct frame is that EV charging is an 8–10 year infrastructure asset that turns operating-cash positive in Year 2 and recovers capex around Year 8 under base assumptions. Owners requiring 5-year full payback should structure the deal around host contributions or do not proceed.</div>
+  </section>
+
+  <section class="slide" data-title="Sensitivity">
+    <span class="section-num">06</span>
+    <p class="num-tag">SENSITIVITY</p>
+    <h2 class="h2 mt-s">The answer depends on<br>L2 utilization.</h2>
+    <div class="grid g2 mt-l">
+      <div class="card compact"><h4>Downside</h4><div class="metric mt-s"><div class="n" style="font-size:46px">$50K</div><div class="l">Y5 EBITDA · 24% L2 util · 1.6 DCFC effective</div></div></div>
+      <div class="card compact"><h4>Conservative</h4><div class="metric mt-s"><div class="n" style="font-size:46px">$115K</div><div class="l">Y5 EBITDA · 24% L2 util · 3.0 DCFC effective</div></div></div>
+      <div class="card card-accent compact"><h4>Revised base</h4><div class="metric mt-s"><div class="n" style="font-size:46px">$164K</div><div class="l">Y5 EBITDA · 32% L2 util · 3.0 DCFC effective</div></div></div>
+      <div class="card compact"><h4>Upside</h4><div class="metric mt-s"><div class="n" style="font-size:46px">$200K</div><div class="l">Y5 EBITDA · 40% L2 util · 3.0 DCFC effective</div></div></div>
+    </div>
+    <p class="formula mt-l">Full 2-axis sensitivity in <code>models/south_lincoln_revised_3dcfc_sensitivity.csv</code>. The two most important owner-validation tasks: (1) prove mature L2 utilization can approach 32% with a property-manager MOU; (2) confirm 3-stall DCFC demand with a 30-day field count of fast-charge trips out of south Lincoln to the existing Tesla / EA sites.</p>
+    <div class="notes">Sensitivity now reflects the revised 3-DCFC build. The 40% L2 upside requires a hard apartment-membership lock; the 24%/1.6 downside is what a defensive lender would price.</div>
+  </section>
+
+  <section class="slide" data-title="North vs South">
+    <span class="section-num">07</span>
+    <p class="num-tag">NORTH VS SOUTH</p>
+    <h2 class="h2 mt-s">This is really a<br>site-structure decision.</h2>
+    <div class="grid g2 mt-l">
+      <div class="card compact">
+        <h4>Fallbrook / North</h4>
+        <table style="width:100%;border-collapse:collapse;font-size:12px;color:var(--text-2);margin-top:8px">
+          <tr><td style="padding:5px 4px;color:var(--text-3)">Build</td><td style="text-align:right;padding:5px 4px">8 L2 + 2 DCFC</td></tr>
+          <tr><td style="padding:5px 4px;color:var(--text-3)">Gross capex</td><td style="text-align:right;padding:5px 4px">~$1.0M</td></tr>
+          <tr><td style="padding:5px 4px;color:var(--text-3)">5-yr cum EBITDA</td><td style="text-align:right;padding:5px 4px;color:#ef4444">~−$205K</td></tr>
+          <tr><td style="padding:5px 4px;color:var(--text-3)">Land assumption</td><td style="text-align:right;padding:5px 4px">$4,500/mo lease</td></tr>
+          <tr><td style="padding:5px 4px;color:var(--text-3)">I-80 access</td><td style="text-align:right;padding:5px 4px">1.5 mi · Exit 401</td></tr>
+        </table>
+      </div>
+      <div class="card card-accent compact">
+        <h4>SouthPointe / South · revised 3 DCFC</h4>
+        <table style="width:100%;border-collapse:collapse;font-size:12px;color:var(--text-2);margin-top:8px">
+          <tr><td style="padding:5px 4px;color:var(--text-3)">Build</td><td style="text-align:right;padding:5px 4px"><b>16 L2 + 3 DCFC</b></td></tr>
+          <tr><td style="padding:5px 4px;color:var(--text-3)">Gross capex</td><td style="text-align:right;padding:5px 4px">~$953K</td></tr>
+          <tr><td style="padding:5px 4px;color:var(--text-3)">5-yr cum EBITDA</td><td style="text-align:right;padding:5px 4px;color:#22c55e"><b>+$433K</b></td></tr>
+          <tr><td style="padding:5px 4px;color:var(--text-3)">Land assumption</td><td style="text-align:right;padding:5px 4px">retail-host pad</td></tr>
+          <tr><td style="padding:5px 4px;color:var(--text-3)">I-80 access</td><td style="text-align:right;padding:5px 4px;color:var(--text-3)">~7 mi N (not on AFC)</td></tr>
+        </table>
+      </div>
+    </div>
+    <p class="formula mt-m"><b>$638K five-year operating-EBITDA delta.</b> The driver is <b>cost structure</b> (retail-host vs standalone lease) plus the L2 stall count (16 vs 8) matching dwell-time demand — not geography per se. A Fallbrook deal restructured as a retail-host partnership would close most of the gap.</p>
+    <div class="notes">Do not sell this as a location-only win. The dollar magnitude is the cost-structure delta, not a fundamentally different EV market. The deck must show the comparable build-for-build numbers to be honest with investors.</div>
+  </section>
+
+  <section class="slide" data-title="30C">
+    <span class="section-num">08</span>
+    <p class="num-tag">INCENTIVES</p>
+    <h2 class="h2 mt-s">Do not count Section 30C<br>in the base case.</h2>
+    <div class="grid g2 mt-l">
+      <div class="card compact">
+        <h4>The deadline is real</h4>
+        <p class="dim">The One Big Beautiful Bill Act (signed July 2025) accelerated §30C termination to property placed in service on or before <b>June 30, 2026</b> — 47 days from this deck.</p>
+        <div class="mini-metric"><span class="n">~6–9 mo</span><span class="l">realistic permit → build → commission timeline for a 19-stall station</span></div>
+        <div class="mini-metric"><span class="n">$0</span><span class="l">§30C credit value assumed in the capital plan</span></div>
+      </div>
+      <div class="card compact">
+        <h4>Counterfactual + substitutes</h4>
+        <p class="dim">At 30% with prevailing-wage compliance on ~$700K of eligible equipment, the credit would have been ~$210K — material loss. Substitute paths:</p>
+        <ul style="color:var(--text-2);font-size:13px;margin:6px 0 0 18px;padding:0">
+          <li>Retail-host capital contribution (target: $100–200K)</li>
+          <li>Nebraska Energy Office state grant ($25–50K typical)</li>
+          <li>LES load-management rebate (utility-side rather than federal)</li>
+          <li>Apartment-developer co-investment in exchange for resident reservations</li>
+        </ul>
+      </div>
+    </div>
+    <p class="source-note">Sources: <a href="https://www.irs.gov/credits-deductions/alternative-fuel-vehicle-refueling-property-credit" target="_blank" rel="noopener">IRS §30C overview</a>, <a href="https://www.congress.gov/bill/119th-congress/house-bill/1" target="_blank" rel="noopener">H.R.1 (OBBBA) text</a>. Owner action: confirm §30C status with a CPA before any external deck use; this is the most time-sensitive macro variable in the plan.</p>
+    <div class="notes">§30C is effectively unavailable for any new charging-station project starting in May 2026. The deck must drop §30C from the capital stack entirely — otherwise an investor or lender will read it as upside and inflate the implied stack.</div>
+  </section>
+
+  <section class="slide" data-title="Next Steps">
+    <p class="num-tag">90-DAY DILIGENCE</p>
+    <div class="ask-box mt-m">
+      <h2 class="h2">Validate the host-site deal.</h2>
+      <p class="lede" style="color:rgba(255,255,255,.9);max-width:64ch">The South Lincoln plan becomes attractive only if SouthPointe or a similar host reduces land cost and helps drive recurring usage.</p>
+      <div class="row mt-l" style="gap:40px">
+        <div><div style="font-size:44px;font-weight:900">1</div><div class="dim">host-site conversation</div></div>
+        <div><div style="font-size:44px;font-weight:900">1</div><div class="dim">LES load quote</div></div>
+        <div><div style="font-size:44px;font-weight:900">30+</div><div class="dim">customer surveys</div></div>
+      </div>
+    </div>
+    <div class="notes">Decision requested: authorize South Lincoln diligence, not construction.</div>
+  </section>
+
+  <section class="slide sources-slide" data-title="Sources">
+    <p class="num-tag">SOURCES &amp; MODEL FILES</p>
+    <h2 class="h2 mt-s" style="font-size:46px">Traceable draft numbers.</h2>
+    <p class="dim mt-s" style="max-width:80ch">This deck summarizes the South Lincoln research report and should stay marked DRAFT until the owner validates site control, utility pricing, and customer demand.</p>
+    <div class="src-grid">
+      <div>
+        <h4>Local data</h4>
+        <ul>
+          <li><a href="https://www.lincoln.ne.gov/City/Departments/LTU/Transportation/Traffic-Engineering/Average-Daily-Traffic-Volume" target="_blank" rel="noopener">City of Lincoln ADT overview</a></li>
+          <li><a href="https://www.lincoln.ne.gov/files/sharedassets/public/v/1/ltu/transportation/traffic-engineering/adtv/2024-list.pdf" target="_blank" rel="noopener">City of Lincoln 2024 ADT list</a></li>
+          <li><a href="https://www.reddevelopment.com/southpointe-pavilions/venue/southpointe-pavilions/" target="_blank" rel="noopener">SouthPointe Pavilions</a></li>
+          <li><a href="https://www.plugshare.com/directory/us/nebraska/lincoln" target="_blank" rel="noopener">PlugShare Lincoln</a></li>
+          <li><a href="https://www.tesla.com/findus/location/supercharger/lincolnnesupercharger" target="_blank" rel="noopener">Tesla Supercharger · Lincoln, NE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project files · 3-DCFC build</h4>
+        <ul>
+          <li><a href="https://github.com/yangjl/EVstation/blob/main/reports/south_lincoln_location_optimization_report.md" target="_blank" rel="noopener">South Lincoln optimization report (incl. §11 audit memo)</a></li>
+          <li><a href="https://github.com/yangjl/EVstation/blob/main/models/south_lincoln_revised_3dcfc_comparison.csv" target="_blank" rel="noopener">Revised 3-DCFC comparison CSV</a></li>
+          <li><a href="https://github.com/yangjl/EVstation/blob/main/models/south_lincoln_revised_3dcfc_annual_ebitda.csv" target="_blank" rel="noopener">3-DCFC annual EBITDA + cash-recovery CSV</a></li>
+          <li><a href="https://github.com/yangjl/EVstation/blob/main/models/south_lincoln_revised_3dcfc_sensitivity.csv" target="_blank" rel="noopener">3-DCFC sensitivity matrix CSV</a></li>
+          <li><a href="https://github.com/yangjl/EVstation/blob/main/models/south_lincoln_optimization_summary.csv" target="_blank" rel="noopener">Original 2-DCFC stall-mix optimization CSV</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="notes">Keep source files in sync before publishing. The embedded map is a planning layer with approximate coordinates, traffic-context overlays, DCFC context, and candidate anchors; verify all pins before external use.</div>
+  </section>
+
+</div>
+<script src="vendor/html-ppt/runtime.js"></script>
+</body></html>

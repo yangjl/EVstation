@@ -14,6 +14,24 @@ Each entry should include:
 - result or impact
 - next concrete step
 
+## 2026-05-14 - South Lincoln deck v0.3.1: data audit + 3 new evidence slides
+
+- Commit: (pending)
+- Summary: Audited the revised South Lincoln deck (`presentations/investor/volt-go-south-lincoln/index.html`) and found three sync/data issues plus three missing evidence sections. Fixed the inconsistencies and added the new slides.
+- Issues found: (1) the Annual EBITDA slide showed 3-DCFC numbers ($164k Y5, $433k cum) but the supporting CSV in `models/` was still the 2-DCFC build; (2) the Sensitivity slide's "$50k downside" had no CSV behind it; (3) the §30C slide hedged ("research indicates") despite the deadline being firm at 2026-06-30 (47 days away).
+- New CSVs: `models/south_lincoln_revised_3dcfc_annual_ebitda.csv` (Y1-Y10 with cumulative cash by year — for the capital-recovery slide), `models/south_lincoln_revised_3dcfc_sensitivity.csv` (7-row matrix across 24%/32%/40% L2 utilization × 1.6/2.2/3.0 DCFC saturation).
+- New slides (deck now 16, was 13):
+  - **02a · Demand math** — bottom-up Y5 EBITDA derivation: 25,430 ADT × 1% EV share → 250 EVs/day pass site → ~20 fast-charge sessions/day across 3 DCFC stalls = ~$108k DCFC; 1,500 Lincoln EVs × 15% catchment × 30% no-home-charging × 60% conversion = ~40 paying members; 16 L2 × 32% util × $0.38/kWh = ~$123k L2; sums to ~$164k Y5.
+  - **03b · Direct competitors** — in-zone ChargePoint L2 at 2980 Pine Lake ($1.50/hr undercuts our $0.38/kWh, edge must be reservations + canopy + apartment pass); out-of-zone DCFC table showing all 20 of Lincoln's existing DCFC ports are 7-10 mi N/NW.
+  - **05b · Capital recovery** — Y1-Y9 cumulative cash bar chart showing the project pays back ~$953k capex around Year 8-9 under base assumptions (turns operating-positive in Y2). Reframes the "5-yr cash = -$520k" line that has been misread as "do not proceed."
+- Tightened existing slides:
+  - Sensitivity now a 4-card matrix (downside / conservative / base / upside) traceable to the new CSV
+  - North-vs-South now shows a build-for-build comparable table with the $638k 5-yr EBITDA delta dollar figure and the cost-structure driver call-out
+  - §30C slide rewritten to be definitive: $0 credit in capital plan; counterfactual quantified ($210k credit forfeit); 4 substitute paths listed
+- Files: `presentations/investor/volt-go-south-lincoln/index.html`, `models/south_lincoln_revised_3dcfc_annual_ebitda.csv` (new), `models/south_lincoln_revised_3dcfc_sensitivity.csv` (new), `doc/DAILY_LOG.md`
+- Result: Deck v0.3.1 has 16 slides; every dollar figure on the deck now traces to a CSV in `models/` or the audit memo in `reports/south_lincoln_location_optimization_report.md` §11.
+- Next concrete step: Owner reviews the new Demand-math and Capital-recovery slides for narrative fit before any external use; then validates the three biggest demand-math inputs (1% EV share of passing traffic, 30% no-home-charging, 60% member conversion) through field discovery.
+
 ## 2026-05-14 - South Lincoln scenario audit + map (v0.3 research)
 
 - Commit: `035998a`

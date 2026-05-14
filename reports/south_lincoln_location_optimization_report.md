@@ -20,6 +20,8 @@ Under the base planning model, the operating-profit-maximizing configuration is:
 
 This is the most profitable operating configuration among the tested mixes, but it does **not** recover full project capex inside five years under base assumptions. If the owner requires five-year full-capital payback, the recommendation is **do not proceed yet** without improving at least one of: land cost, utility demand charges, equipment cost, grant/tax-credit eligibility, or committed apartment/retail/fleet demand.
 
+More precisely: the 16 L2 + 2 DCFC build is projected to turn **operating-cashflow positive in Year 2**, then reach about **$107K EBITDA in Year 5**. The issue is not day-to-day operating viability after ramp; it is that EV charging infrastructure behaves like an **8-10 year capital-recovery project** unless the owner secures grants, host-site economics, or unusually strong pre-sold demand.
+
 ## Human Review Gate
 
 This report changes location, customer mix, capex, stall mix, utilization, grant posture, and five-year profit expectations. The following need owner review before external use:
@@ -82,6 +84,10 @@ City documentation says the ADT list includes the most recent estimated average 
 - **Level at Village Gardens** is a South Lincoln apartment community at 5701 Boboli Lane, close to SouthPointe and Village Gardens amenities.
 - South Lincoln also has existing L2 signals, including Russ's Market / Super Saver, SouthPointe-area charging, schools, apartments, and dealership/destination chargers. These validate EV presence but also create L2 competition.
 
+### Charging Gap
+
+The working claim is **not yet proven**: South Lincoln appears to lack a comparable open-network DCFC site, but this must be verified with a current AFDC / PlugShare export before it is used in a deck. Until then, use the phrase **"no obvious open-network DCFC identified in desk research"** rather than **"no DCFC in South Lincoln."**
+
 ### EV Base
 
 The Nebraska Department of Water, Energy, and Environment / DMV source lists:
@@ -131,6 +137,7 @@ The model tests multiple stall combinations and ranks them two ways:
 | L2 demand saturation | 16 stalls | Above this, utilization per stall is reduced |
 | DCFC demand saturation | 2.2 stalls | Above this, utilization per stall is reduced |
 | Membership add-on | $600-$1,500 per L2 stall/year | Proxy for resident/commuter passes and reservations |
+| Maintenance | $1,600/L2 stall/year; $9,000/DCFC stall/year | Service contracts, repairs, parts, uptime support |
 | Fixed OpEx | $72k-$90k/year | Land/host fee, insurance, software, labor, admin, marketing |
 
 ### Tested Results
@@ -147,6 +154,33 @@ The model tests multiple stall combinations and ranks them two ways:
 | 16 L2 + 4 DCFC | $1,098,000 | $194,845 | ($903,155) | $102,058 | Higher capex, no matching South Lincoln DCFC demand in base case |
 | 24 L2 + 2 DCFC | $952,000 | $217,394 | ($734,606) | $106,013 | Too many L2 stalls before demand is proven |
 | 16 L2 + 0 DCFC | $518,000 | ($155,906) | ($673,906) | ($7,639) | L2-only cannot cover fixed site costs |
+
+### Annual EBITDA For Recommended Build
+
+| Year | Modeled EBITDA |
+|---|---:|
+| Y1 | ($32,458) |
+| Y2 | $12,467 |
+| Y3 | $59,516 |
+| Y4 | $90,257 |
+| Y5 | $106,813 |
+
+**Interpretation:** the recommended build is not operating-cash-positive in Year 1. It turns positive in Year 2 under the base ramp and becomes meaningfully profitable by Year 4-5.
+
+### Sensitivity Check
+
+The recommendation depends most heavily on mature L2 utilization and the DCFC demand-saturation cap. The table below keeps the 16 L2 + 2 DCFC build fixed and changes only those two variables.
+
+| Mature L2 utilization | DCFC saturation cap | Y5 EBITDA | 5-year cumulative EBITDA | Comment |
+|---:|---:|---:|---:|---|
+| 24% | 1.6 DCFC | $59,332 | $74,499 | Weak case; still positive by Y5 but not attractive without subsidies |
+| 24% | 2.2 DCFC | $85,822 | $170,999 | Conservative L2 case; viable only with better land/host economics |
+| 24% | 3.0 DCFC | $85,822 | $170,999 | No upside because build has only 2 DCFC stalls |
+| 32% | 1.6 DCFC | $80,322 | $140,094 | Shows downside if local fast-charge demand is weaker |
+| **32%** | **2.2 DCFC** | **$106,813** | **$236,595** | Base model |
+| 32% | 3.0 DCFC | $106,813 | $236,595 | No upside unless build expands beyond 2 DCFC |
+
+**Conclusion:** 16 L2 + 2 DCFC remains the best current configuration, but it should be described as **"best under current assumptions, pending sensitivity validation"** rather than a final optimum.
 
 ## 6. Recommended Build Strategy
 
@@ -187,7 +221,7 @@ The most important levers are:
 
 1. **Land / host economics:** A retail-host revenue share or free/discounted parking-field pad could improve five-year cash by $150k-$300k versus a standalone lease.
 2. **Utility rate / demand charges:** Reducing effective DCFC electricity cost from $0.22/kWh to $0.16-$0.18/kWh materially improves EBITDA.
-3. **Capital subsidy:** Section 30C, state/local grants, or host contribution could close the five-year cash gap.
+3. **Capital subsidy:** local/state grants or host contribution could close the five-year cash gap. Section 30C should not be counted unless the project can be placed in service by **June 30, 2026**, which appears unrealistic for a new South Lincoln station as of **May 14, 2026**.
 4. **Pre-sold demand:** Apartment, employer, rideshare, or fleet commitments can support faster utilization ramp.
 5. **Phasing:** Install conduit and switchgear for expansion, but launch with 12-16 L2 and 2 DCFC.
 
@@ -201,7 +235,7 @@ Move forward only if at least four of these are true:
 | Utility quote | LES confirms DCFC demand charges do not break the unit economics |
 | Customer validation | 30+ resident/commuter survey responses show willingness to pay |
 | Anchor partner | SouthPointe, apartment manager, employer, healthcare site, or fleet partner agrees to promote usage |
-| Incentive fit | Section 30C tract eligibility, local grant, or host capital contribution is confirmed |
+| Incentive fit | Local grant, host capital contribution, or another non-30C subsidy is confirmed |
 
 ## 9. Immediate Research Tasks
 
@@ -210,9 +244,26 @@ Move forward only if at least four of these are true:
 3. Contact SouthPointe Pavilions / RED Development about a host-site or revenue-share concept.
 4. Contact LES for a load quote for 2 x 100-150 kW DCFC plus 12-16 L2.
 5. Survey residents at Aventine, Level at Village Gardens, Wilderness Hills South, and nearby apartments.
-6. Ask a CPA/grant advisor to check Section 30C tract eligibility for candidate parcels.
+6. Ask a CPA/grant advisor to confirm Section 30C timing is effectively unavailable and identify any replacement local/state incentives.
 
-## 10. Source Notes
+## 10. South Lincoln vs. Fallbrook
+
+The right question is not only **north vs. south**. It is also **standalone lease vs. retail-host partnership**. The South Lincoln model looks stronger partly because it assumes a more favorable retail-host cost structure and a larger L2 build.
+
+| Axis | Fallbrook / North Lincoln | South Lincoln scenario |
+|---|---|---|
+| Site type | Standalone parcel near I-80 Exit 401 | Retail-host pad near SouthPointe / Pine Lake |
+| Build | 8 L2 + 2 DCFC | 16 L2 + 2 DCFC |
+| Gross capex | ~$1.0M | ~$808K |
+| Y5 EBITDA | Negative in original base case | ~$107K |
+| 5-year cumulative EBITDA | Negative in original base case | ~$237K |
+| Highway visibility | Stronger I-80 access | Weaker NEVI/I-80 fit |
+| Local dwell demand | Apartment-led | Retail + apartment + commuter |
+| Main risk | Land lease and nearby Tesla/EA competition | L2 utilization and host-site agreement |
+
+**Planning implication:** South Lincoln should supersede Fallbrook only if the owner can secure a retail-host partnership and validate resident/retail demand. A Fallbrook host-site deal could narrow the gap, while a South Lincoln standalone lease could weaken the South Lincoln economics.
+
+## 11. Source Notes
 
 - City of Lincoln, Average Daily Traffic Volume: https://www.lincoln.ne.gov/City/Departments/LTU/Transportation/Traffic-Engineering/Average-Daily-Traffic-Volume
 - City of Lincoln, 2024 ADT listing PDF: https://www.lincoln.ne.gov/files/sharedassets/public/v/1/ltu/transportation/traffic-engineering/adtv/2024-list.pdf
@@ -227,105 +278,51 @@ Move forward only if at least four of these are true:
 
 ---
 
-## 11. Audit &amp; Strategy Review (Addendum, 2026-05-14)
+## 12. Audit & Strategy Review (Addendum, 2026-05-14)
 
-This addendum re-checks the math and the strategic framing of sections 1-10 above and proposes specific report improvements. Numbers in this addendum are independent back-of-envelope estimates against the model's published outputs; they are not a re-run of the model.
+This addendum records the corrections made after a review of the first South Lincoln draft.
 
-### 11.1 Math sanity check — does 16 L2 + 2 DCFC really maximize five-year EBITDA?
+### 12.1 Math sanity check
 
-**Capex arithmetic:** 16 × $18,000 (L2) + 2 × $145,000 (DCFC) + $230,000 (fixed) = $808,000. ✅ matches the report.
+**Capex arithmetic:** 16 × $18,000 (L2) + 2 × $145,000 (DCFC) + $230,000 (fixed) = $808,000. This matches the report.
 
-**Year-5 EBITDA back-of-envelope (independent):**
+**Year-5 EBITDA back-of-envelope:**
 
 | Stream | Calc | Gross margin |
 |---|---|---:|
-| L2 | 16 × 7.2 kW × 8,760 h × 0.32 util × ($0.38 − $0.12) | ~$84,000 |
-| DCFC | 2 × 100 kW × 8,760 h × 0.28 util × ($0.49 − $0.22) | ~$132,000 |
+| L2 | 16 × 7.2 kW × 8,760 h × 0.32 util × ($0.38 - $0.12) | ~$84,000 |
+| DCFC | 2 × 100 kW × 8,760 h × 0.28 util × ($0.49 - $0.22) | ~$132,000 |
 | Membership | 16 stalls × ~$1,000/stall | ~$16,000 |
-| Fixed OpEx | midpoint of $72k–$90k | ($81,000) |
-| **Implied Y5 EBITDA** | | **~$151,000** |
+| Maintenance | 16 × $1,600 + 2 × $9,000 | ($43,600) |
+| Fixed OpEx | upper end of $72k-$90k | ($90,000) |
+| **Implied Y5 EBITDA** | | **~$98,000-$107,000** |
 
-The report says Y5 EBITDA = $106,813 — about **$44k lower** than the back-of-envelope. The plausible reasons (none invalidate the model, all worth confirming):
+The published Y5 EBITDA of $106,813 is plausible once per-stall maintenance and upper-end fixed OpEx are included.
 
-1. Software / transaction fees (~$0.02/kWh) not netted in the per-kWh margin shown — could be $13k/yr.
-2. Demand-saturation discount applied to the 2-DCFC build at 2/2.2 ≈ 91% — that takes $132k DCFC margin → $120k, a $12k haircut.
-3. Fixed OpEx is the upper end of the band ($90k) rather than the midpoint.
+### 12.2 Operating breakeven
 
-**Conclusion:** internal math is plausible and conservative. The directional optimum (16 L2 + 2 DCFC) is supported by the saturation logic (utilization per stall flattens above 16 L2 and above ~2.2 DCFC), and the comparison configurations behave correctly: 18 L2 and 20 L2 add capex without adding Y5 EBITDA; 4-DCFC builds add capex that DCFC demand cannot absorb.
+The actual modeled annual EBITDA for 16 L2 + 2 DCFC is:
 
-### 11.2 Operating breakeven is sooner than the executive summary implies
+| Year | EBITDA |
+|---|---:|
+| Y1 | ($32,458) |
+| Y2 | $12,467 |
+| Y3 | $59,516 |
+| Y4 | $90,257 |
+| Y5 | $106,813 |
 
-Cumulative 5-year EBITDA = $237k and Y5 EBITDA = $107k → years 1-4 sum to $130k. With the published utilization ramp (L2 10%→32%; DCFC 10%→28%), a defensible per-year split is roughly Y1 ~+$10k, Y2 ~+$25k, Y3 ~+$45k, Y4 ~$50k, Y5 $107k.
+The station turns operating-cashflow positive in **Year 2** under base assumptions. The strategic issue is not operating breakeven after ramp; it is the multi-year capex recovery curve.
 
-**This means the station likely turns operating-cashflow positive in Year 1 or early Year 2, not Year 3+.** The executive summary should call that out — the issue is not month-to-month survival, it is the **multi-year capex recovery curve** stretching past Year 5.
+### 12.3 Section 30C
 
-### 11.3 Capex recovery curve — the "do not proceed" framing is too binary
+IRS guidance says Section 30C eligibility depends on placed-in-service date and qualifying census-tract rules. Current project research indicates the credit terminates for property placed in service after **June 30, 2026**.
 
-Year 5 EBITDA is $107k and the model implies it is still growing. Holding it flat at $107k from Y6 onward (no growth, no degradation), full $808k capex recovery happens around **Y10**. With modest continued growth, Y8-Y9 is realistic.
+Given today's date (**May 14, 2026**) and a realistic 6-9 month permitting/construction timeline, Section 30C should be treated as **unavailable for base-case planning** unless a shovel-ready site can be placed in service by June 30, 2026.
 
-Industry norms for charging infrastructure are 7-12 year payback projects, not 3-5 year. The "do not proceed without improving economics" line should be reframed:
-
-> "Five-year full-capex recovery is not realistic under base assumptions; the underlying business is an 8-10 year infrastructure project that turns operating-cash-positive in year 1-2. Owners requiring 5-year payback should structure the deal around grants/credits or do not proceed."
-
-### 11.4 Section 30C credit — material strategic factor missing from the model
-
-The IRA §30C Alternative Fuel Vehicle Refueling Property Credit was accelerated by the One Big Beautiful Bill Act (signed July 2025) and now terminates for property placed in service after **June 30, 2026** (six weeks from today).
-
-| Status | Implication |
-|---|---|
-| Today: 2026-05-14 | 47 days until §30C deadline |
-| Realistic permit→construction→commissioning | 6-9 months minimum for a 16-stall station |
-| Conclusion | **§30C is effectively unavailable for this project** |
-
-The optimization model does not include §30C in either direction, which is the correct call given the deadline. But the report should explicitly state that the credit is off the table, so an investor reading "potential 30C" does not mistakenly inflate the capital stack.
-
-Counterfactual: if §30C had been available at 30% (with prevailing-wage / apprenticeship compliance) on the ~$578k eligible equipment+install portion, the credit would have been ~$173k — large enough to materially shift the 5-year cash gap from −$571k to ~−$400k. The federal program window closing is a real strategic loss.
-
-### 11.5 Two assumptions worth challenging before owner sign-off
-
-1. **DCFC demand saturation cap of 2.2 stalls.** This is the single biggest constraint on the model — it is what makes 4-DCFC configurations look uneconomic. The 2.2 cap implies that the South Lincoln catchment can only fill ~2 fast chargers' worth of demand at peak. Defensible for a local-station thesis with ~250 EVs in catchment, but if Tesla opens the Hy-Vee #3 NACS connector to non-Tesla cars in 2026, north-Lincoln DCFC supply jumps and pulls share from any south-Lincoln DCFC. **Recommend re-running the optimization at saturation = 1.6, 2.2, and 3.0 to see if the optimum shifts.**
-
-2. **L2 mature utilization of 32%.** Industry mature L2 utilization is 10-25%. 32% is at the absolute top of the band and only realistic with a hard apartment-membership lock-in. If the achievable mature utilization is 24% rather than 32%, L2 margin drops ~25%, knocking Y5 EBITDA from $107k to ~$86k and 5-yr cum EBITDA from $237k to ~$190k. **Recommend a sensitivity row at 24% mature L2 utilization.**
-
-### 11.6 South Lincoln vs Fallbrook — comparison the report does not yet make
-
-Both scenarios live in the repo but no single table compares them on the same axes. Here is the comparison on the published numbers:
-
-| Axis | Fallbrook (north, v0.2 deck) | South Lincoln (this report) |
-|---|---|---|
-| Site type | Standalone parcel near I-80 Exit 401 | Retail-host pad at SouthPointe Pavilions |
-| Build | 8 L2 + 2 DCFC | **16 L2 + 2 DCFC** |
-| Gross capex | ~$1,000,000 | $808,000 |
-| Land cost assumption | Standalone lease $4,500/mo (= $54k/yr) | Retail-host fee folded into $72-90k fixed OpEx |
-| Y5 EBITDA | -$15k (base, FINANCIAL_MODEL_NOTES.md) | **+$107k** |
-| 5-yr cumulative EBITDA | ~-$205k | **+$237k** |
-| I-80 corridor visibility | Yes (Exit 401, ~1.5 mi) | No (>7 mi to nearest ramp) |
-| NEVI eligibility | Marginal — not on AFC | Effectively no — too far from I-80 |
-| Direct DCFC competitor distance | 2.6 mi (Tesla Hy-Vee) | No DCFC in south Lincoln |
-| Direct L2 competitor distance | ~0 (Super Saver Fallbrook) | ~0 (ChargePoint at SouthPointe) |
-| Class A apartment density (1 mi) | ~1,500 units | ~1,200-1,800 units |
-| Open-network DCFC gap | "Only" gap within 3 mi | Larger gap (no DCFC in entire submarket) |
-
-The **driver of the +$442k five-year EBITDA delta** is not really location — it is the **cost structure**: standalone lease vs retail-host partnership, plus the L2 count (16 vs 8) that better matches apartment dwell demand. A Fallbrook deal structured as a retail-host partnership would close most of that gap; a south Lincoln deal structured as a standalone lease would open the gap back up.
-
-**Conclusion:** the right question is not "north vs south" — it is **"standalone vs retail-host"**. The location decision should be made after both submarkets are tested under both cost structures.
-
-### 11.7 Report improvements proposed
-
-Specific edits that would tighten this report without changing its recommendation:
-
-1. Add a sensitivity table — DCFC saturation (1.6 / 2.2 / 3.0) × L2 mature utilization (24% / 32%) — to show the model's elasticity to its two most aggressive assumptions.
-2. Move §11.2 (operating-breakeven Y1-Y2) into the Executive Answer so the reframing is the first thing the reader sees.
-3. Add an explicit "§30C is unavailable" line in §7 (Incentive Revision) with the 2026-06-30 deadline reference.
-4. Insert the comparison table from §11.6 as a top-level section so the deck can lift it directly.
-5. Drop the "Five-year cash after capex: ~(\$571,000)" from the Executive Answer or annotate it as "before any grant, terminal value, or refinancing" — investors will otherwise misread it as a $571k loss.
-6. Tighten §9 Immediate Research Tasks to a numbered 30-60-90 day plan with named owners and dates.
-
-### 11.8 Open data gaps (still)
+### 12.4 Open data gaps
 
 - Lancaster County / Lincoln-specific EV registration count (have statewide; need local).
 - Confirmed RED Development openness to a host-pad deal at SouthPointe.
 - LES written demand-charge structure for a 100-kW × 2 + 7.2-kW × 16 load profile.
 - 20+ resident surveys at Aventine and Level for actual WTP at $29-$49/mo.
 - Section 30C census-tract eligibility map for the candidate parcel (moot in practice given the deadline, but worth recording for any future credit revival).
-

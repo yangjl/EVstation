@@ -1,0 +1,7 @@
+mature_l2_utilization,dcfc_saturation_cap,year_5_ebitda_usd,five_year_cumulative_ebitda_usd,comment
+24%,1.6,59332,74499,"Weak case; still positive by Y5 but not attractive without subsidies"
+24%,2.2,85822,170999,"Conservative L2 case; viable only with better land/host economics"
+24%,3.0,85822,170999,"No upside because build has only 2 DCFC stalls"
+32%,1.6,80322,140094,"Shows downside if local fast-charge demand is weaker"
+32%,2.2,106813,236595,"Base model"
+32%,3.0,106813,236595,"No upside unless build expands beyond 2 DCFC"

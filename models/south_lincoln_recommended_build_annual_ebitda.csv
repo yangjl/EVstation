@@ -1,0 +1,6 @@
+year,modeled_ebitda_usd,interpretation
+Y1,-32458,"Ramp year; not operating-cashflow positive"
+Y2,12467,"Operating-cashflow positive under base assumptions"
+Y3,59516,"Utilization ramp begins to cover fixed site costs"
+Y4,90257,"Meaningful operating profit if L2 and DCFC assumptions hold"
+Y5,106813,"Mature base-case Year 5 EBITDA"

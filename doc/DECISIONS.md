@@ -235,3 +235,24 @@ Record important project decisions and the reasoning behind them. Keep entries s
 - Why: this is a solo template repo with no review pipeline; the destructive deletion step gets its review at the working-tree level (step 9 of the Implementation Order) rather than via PR. Direct commits keep the daily-log pairing simple.
 - Alternatives considered: a `refactor/business-plan-template` branch with a PR for the review gate. Would be the right call in a multi-contributor repo; overkill here.
 - Status: active
+
+## 2026-05-14 — South Lincoln Alternative Scenario
+
+### South Lincoln research scenario opened, not yet adopted
+
+- Decision: create a South Lincoln alternative scenario centered on the SouthPointe / Pine Lake / South 27th corridor, with Wilderness Hills and Village Gardens as secondary demand anchors.
+- Why: owner requested a different location and a data-first reassessment with flexible stall count and capital investment. South Lincoln has stronger local retail/apartment/commuter demand than the Fallbrook I-80-access concept, but weaker direct NEVI corridor fit.
+- Model result: base-case optimization favors 16 Level 2 stalls + 2 DCFC stalls for maximum five-year cumulative operating EBITDA, estimated at ~$237K. None of the tested configurations recovers full capex within five years under base assumptions.
+- Status: draft — human review required before changing the active deck, business plan, site recommendation, or funding narrative.
+
+### South Lincoln deck started as separate diligence track
+
+- Decision: start a separate South Lincoln diligence deck at `presentations/investor/volt-go-south-lincoln/` instead of overwriting the existing Fallbrook/North Lincoln investor deck.
+- Why: South Lincoln has a different thesis: retail/apartment/commuter charging with likely host-site economics, not I-80/NEVI corridor positioning. Keeping decks separate prevents the active Fallbrook narrative from being accidentally replaced before owner review.
+- Status: active draft — use only for internal review until site control, utility pricing, and customer demand are validated.
+
+### South Lincoln deck revised to 16 L2 + 3 DCFC
+
+- Decision: revise the South Lincoln deck recommendation to 16 Level 2 stalls + 3 DC fast charging stalls.
+- Why: owner confirmed there is no DCFC around the South Lincoln region, so the deck now uses a revised 3.0 effective DCFC-stall demand case instead of the earlier 2.2-stall demand cap. Under that revised case, the third DCFC improves five-year operating EBITDA while the fourth DCFC remains premature.
+- Status: active draft — validate with AFDC/PlugShare exports, LES demand-charge quote, host-site economics, and customer surveys before external investor or lender use.

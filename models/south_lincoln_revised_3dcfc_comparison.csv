@@ -1,0 +1,5 @@
+configuration,l2_stalls,dcfc_stalls,gross_capex_usd,five_year_cumulative_ebitda_usd,five_year_cash_after_capex_usd,year_5_ebitda_usd,interpretation
+"12 L2 + 2 DCFC",12,2,736000,174696,-561304,86222,"Lower-capex phased option; still undersized if South Lincoln DCFC gap is confirmed"
+"16 L2 + 2 DCFC",16,2,808000,236594,-571406,106813,"Prior base-case winner under 2.2 effective DCFC-stall demand"
+"16 L2 + 3 DCFC",16,3,953000,432844,-520156,164039,"Revised deck recommendation if confirmed South Lincoln DCFC gap supports 3.0 effective DCFC-stall demand"
+"16 L2 + 4 DCFC",16,4,1098000,387844,-710156,155039,"Fourth DCFC adds capex and maintenance before local fast-charge demand is proven"

@@ -1,0 +1,11 @@
+year,modeled_ebitda_usd,cumulative_ebitda_usd,cumulative_cash_after_capex_usd,interpretation
+Y1,-18000,-18000,-971000,"Ramp year; partial utilization; not operating-cashflow positive yet"
+Y2,41000,23000,-930000,"Operating-cashflow positive under base 32% L2 + 3.0 effective DCFC saturation"
+Y3,103000,126000,-827000,"Utilization ramp covers fixed site costs; meaningful operating profit"
+Y4,143000,269000,-684000,"L2 + DCFC mature toward saturation; membership stack contributes"
+Y5,164000,433000,-520000,"Mature revised base-case Year 5 EBITDA; matches comparison CSV"
+Y6,170000,603000,-350000,"Post-ramp flat-to-modest-growth assumption; no model input change"
+Y7,170000,773000,-180000,"Continued mature operation; ~$170k stable EBITDA"
+Y8,170000,943000,-10000,"Capex effectively recovered by Y8 under base assumptions"
+Y9,170000,1113000,160000,"Cumulative cash positive; project pays back initial $953k capex"
+Y10,170000,1283000,330000,"Year 10 cumulative cash; refinance or terminal-value window"
