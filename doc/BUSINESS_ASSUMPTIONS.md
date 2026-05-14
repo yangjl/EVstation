@@ -27,6 +27,8 @@ Track the core assumptions behind the business plan, the evidence supporting the
 | Maintenance cost: ~$20,000–$30,000/year | cost | Industry benchmark ~$1,500–$3,000/charger/year blended across L2 and DCFC | medium | draft | Confirm with service contract quotes |
 | Annual revenue growth: 20% Y2, 15% Y3, 10% Y4–5 | growth | Assumes EV adoption growth + maturation of utilization rates | low | draft | Human review required — sensitive to local EV growth trajectory |
 | Breakeven at station level (before debt service): Year 3 | financial | Modeled from utilization ramp and cost structure below | low | draft | Human review required before sharing with investors |
+| 84th & Nebraska Parkway owner-lot scenario uses owned-land economics | location / cost | Owner provided fixed lot near Sam's Club; 2026-05-14 third-scenario model removes land lease but excludes land opportunity cost | medium | draft | Confirm title/control, easements, covenants, and whether to charge an internal land rent |
+| 84th & Nebraska Parkway full-build target is 20 L2 + 4 DCFC | operations / financial | `reports/84th_nebraska_parkway_fixed_site_analysis.md` optimization; assumes 24-post concept, 4.2 effective DCFC saturation, and 20-stall L2 saturation | low | draft | Validate with LES load quote, civil turning-radius review, and customer/traffic capture evidence |
 
 ## Site Configuration Assumptions
 

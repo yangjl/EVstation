@@ -1,0 +1,12 @@
+configuration,l2_stalls,dcfc_stalls,total_posts,gross_capex_usd,five_year_cumulative_ebitda_usd,five_year_cash_after_capex_usd,year_5_ebitda_usd,interpretation
+"0 L2 + 4 DCFC",0,4,4,790000,808825,18825,271510,"Best five-year cash-after-capex case, but underuses the owned lot and loses local dwell-time/member product"
+"4 L2 + 4 DCFC",4,4,8,862000,856196,-5804,288069,"Near five-year payback; limited L2 usefulness"
+"8 L2 + 4 DCFC",8,4,12,934000,903565,-30435,304627,"Capital-efficient balanced phase"
+"12 L2 + 4 DCFC",12,4,16,1006000,950935,-55065,321185,"Recommended Phase 1 if owner wants lower execution risk"
+"16 L2 + 4 DCFC",16,4,20,1078000,998304,-79696,337743,"Strong full build with good L2 coverage"
+"20 L2 + 4 DCFC",20,4,24,1150000,1045674,-104326,354301,"Highest five-year cumulative EBITDA within the 24-post site concept"
+"24 L2 + 0 DCFC",24,0,24,642000,-55151,-697151,24391,"L2-only fails to cover fixed standalone costs"
+"16 L2 + 3 DCFC",16,3,19,933000,731099,-201901,256866,"Lower capex than 4 DCFC, but leaves fast-charge gap under-monetized"
+"20 L2 + 3 DCFC",20,3,23,1005000,778467,-226533,273424,"More L2 does not replace the value of the fourth DCFC"
+"18 L2 + 5 DCFC",18,5,23,1334000,1039431,-294569,354998,"Similar operating EBITDA but materially worse capital recovery due to fifth DCFC and utility upgrade"
+"22 L2 + 2 DCFC",22,2,24,896000,495262,-400738,189346,"Overweights L2 and underserves confirmed DCFC gap"

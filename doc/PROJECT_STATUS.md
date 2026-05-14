@@ -6,8 +6,8 @@ Check here first to understand where the business plan stands. This file tracks 
 
 ## Current Project: Volt & Go Lincoln — EV Charging Station
 
-**As of:** 2026-05-14 (v0.3 research scenario)
-**Phase:** Initial planning — Fallbrook v0.2 plus South Lincoln alternative scenario; awaiting human review
+**As of:** 2026-05-14 (v0.4 fixed owner-lot scenario)
+**Phase:** Initial planning — Fallbrook, South Lincoln, and 84th/Nebraska Parkway scenarios; awaiting human review
 
 ## Completed
 
@@ -26,6 +26,7 @@ Check here first to understand where the business plan stands. This file tracks 
 - **v0.3 research scenario (2026-05-14):** Created `reports/south_lincoln_location_optimization_report.md` and `models/south_lincoln_optimization_summary.csv` comparing South Lincoln stall mixes. Draft conclusion: SouthPointe / Pine Lake / S 27th is the strongest South Lincoln candidate zone; 16 L2 + 2 DCFC maximizes modeled five-year operating EBITDA, but no tested build recovers full capex inside five years under base assumptions.
 - **v0.3 deck start (2026-05-14):** Started a separate South Lincoln diligence deck at `presentations/investor/volt-go-south-lincoln/index.html` with the same visual system as the North/Fallbrook deck. Added annual EBITDA and sensitivity CSVs, plus a demand-stack slide and embedded South Lincoln planning map. Owner feedback revised the deck recommendation from 16 L2 + 2 DCFC to 16 L2 + 3 DCFC after confirming no DCFC around the South Lincoln region.
 - **v0.3 audit (2026-05-14):** Built `presentations/investor/volt-go-lincoln/south_lincoln_map.html` (Leaflet map: SouthPointe candidate, ChargePoint competitor, Aventine / Level apartments, Pine Lake / S 27th / Hwy 2 / US-77 with AADT). Appended §11 audit/improvement memo to `reports/south_lincoln_location_optimization_report.md` covering: math sanity check (Y5 EBITDA back-of-envelope = ~$151k vs report's $107k, gap explained), operating breakeven Y1-Y2 (sooner than executive summary implies), capex recovery curve at Y8-Y10 (reframe of "do not proceed"), Section 30C unavailable (47 days to deadline → effectively zero), two assumptions worth challenging (DCFC saturation cap; 32% mature L2 utilization), north-vs-south comparison table on a single set of axes. Fixed DECISIONS.md (removed Brookside/Northbrook leftover from south Lincoln entry; added §30C-unavailable decision).
+- **v0.4 fixed owner-lot scenario (2026-05-14):** Created `reports/84th_nebraska_parkway_fixed_site_analysis.md` and model CSVs for the owner-controlled lot near Sam's Club at 84th / Nebraska Parkway. Draft model recommends 20 L2 + 4 DCFC for maximum five-year operating profit, with 12 L2 + 4 DCFC as a lower-risk Phase 1.
 
 ## In Progress
 
@@ -34,7 +35,7 @@ Check here first to understand where the business plan stands. This file tracks 
   2. NEVI/IRA grant eligibility confirmation with Nebraska DOT
   3. Customer discovery fieldwork (apartment residents, property managers, EV drivers)
   4. Choice between the current 8 L2 + 2 DCFC mixed-use design and a 4+ DCFC corridor-oriented design.
-  5. Whether South Lincoln should supersede Fallbrook as the active site strategy.
+  5. Whether the 84th / Nebraska Parkway owner-lot scenario should supersede Fallbrook and South Lincoln as the active site strategy.
 
 ## Next Steps (Prioritized)
 
@@ -45,7 +46,8 @@ Check here first to understand where the business plan stands. This file tracks 
 5. **Customer discovery:** Survey 20–30 apartment EV owners in target area; interview 3–5 property managers
 6. **Equipment quotes:** Solicit charger hardware quotes (ChargePoint, ABB, BTC Power) and installation contractor bids
 7. **Build pitch deck:** Once key assumptions are human-reviewed, build HTML-PPT investor deck per `doc/PITCH_DECK_PLAN.md`
-8. **South Lincoln validation:** If owner prefers South Lincoln, contact SouthPointe/RED Development and LES, verify map pins/traffic counts with source exports, then validate the 16 L2 + 2 DCFC operating model before revising the live investor deck.
+8. **South Lincoln validation:** If owner prefers South Lincoln, contact SouthPointe/RED Development and LES, verify map pins/traffic counts with source exports, then validate the revised 16 L2 + 3 DCFC operating model before revising the live investor deck.
+9. **84th / Nebraska Parkway validation:** If owner prefers the fixed lot, order LES load quote, civil/turning review, and parking/covenant check for the 20 L2 + 4 DCFC full build and 12 L2 + 4 DCFC Phase 1 fallback.
 
 ## Open Questions — Require Human Decision
 

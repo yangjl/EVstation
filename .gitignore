@@ -20,6 +20,7 @@ reports/*
 !reports/.gitkeep
 !reports/revised_ev_charging_station_business_plan_report.md
 !reports/south_lincoln_location_optimization_report.md
+!reports/84th_nebraska_parkway_fixed_site_analysis.md
 
 # Local exports and temporary files.
 *.tmp

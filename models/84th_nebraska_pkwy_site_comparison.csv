@@ -1,0 +1,4 @@
+scenario,site_strategy,recommended_build,gross_capex_usd,year_5_ebitda_usd,five_year_cumulative_ebitda_usd,five_year_cash_after_capex_usd,main_advantage,main_risk
+"Fallbrook / North Lincoln","Standalone lease near I-80 / apartments","8 L2 + 2 DCFC",1000000,-14690,-206150,-1206150,"I-80 access and apartment cluster","Lease drag and nearby Tesla/EA competition"
+"SouthPointe / South Lincoln revised","Retail-host / South Lincoln DCFC gap","16 L2 + 3 DCFC",953000,164000,433000,-520000,"Local dwell demand and confirmed South Lincoln DCFC gap","Host-site terms and LES demand-charge quote still unvalidated"
+"84th & Nebraska Parkway fixed owner lot","Owned lot near Sam's Club / Walmart / Menards retail node","20 L2 + 4 DCFC",1150000,354301,1045674,-104326,"Owned land, 24-post fit, strong retail anchors, highest modeled EBITDA","Civil/turning review, transformer capacity, and Sam's/Walmart traffic capture must be verified"

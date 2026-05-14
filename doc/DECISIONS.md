@@ -256,3 +256,10 @@ Record important project decisions and the reasoning behind them. Keep entries s
 - Decision: revise the South Lincoln deck recommendation to 16 Level 2 stalls + 3 DC fast charging stalls.
 - Why: owner confirmed there is no DCFC around the South Lincoln region, so the deck now uses a revised 3.0 effective DCFC-stall demand case instead of the earlier 2.2-stall demand cap. Under that revised case, the third DCFC improves five-year operating EBITDA while the fourth DCFC remains premature.
 - Status: active draft — validate with AFDC/PlugShare exports, LES demand-charge quote, host-site economics, and customer surveys before external investor or lender use.
+
+### 84th & Nebraska Parkway owner-lot scenario opened
+
+- Decision: create a third fixed-location scenario for the owner-controlled lot near Sam's Club at 84th Street / Nebraska Parkway, and compare it directly with Fallbrook/North Lincoln and SouthPointe/South Lincoln.
+- Why: owner confirmed a specific lot and ownership/control of the land. That materially changes the economics because the model no longer carries the land lease drag that weakened the Fallbrook scenario, and the site appears physically capable of a dense 24-post concept.
+- Model result: draft optimization favors 20 Level 2 stalls + 4 DCFC stalls for maximum five-year cumulative operating EBITDA, estimated at about $1.05M. A smaller 12 L2 + 4 DCFC build is the recommended phase-one fallback if the owner wants lower execution risk.
+- Status: active draft — requires LES utility quote, civil/turning review, parking/covenant check, and competitor export before becoming the active site strategy.
