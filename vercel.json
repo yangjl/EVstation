@@ -7,6 +7,8 @@
     { "source": "/north/(.*)", "destination": "/presentations/investor/volt-go-lincoln/$1" },
     { "source": "/south", "destination": "/presentations/investor/volt-go-south-lincoln/index.html" },
     { "source": "/south/map", "destination": "/presentations/investor/volt-go-south-lincoln/map.html" },
-    { "source": "/south/(.*)", "destination": "/presentations/investor/volt-go-south-lincoln/$1" }
+    { "source": "/south/(.*)", "destination": "/presentations/investor/volt-go-south-lincoln/$1" },
+    { "source": "/corridor", "destination": "/presentations/investor/volt-go-lincoln/corridor/index.html" },
+    { "source": "/corridor/(.*)", "destination": "/presentations/investor/volt-go-lincoln/corridor/$1" }
   ]
 }
