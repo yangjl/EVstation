@@ -14,6 +14,14 @@ Each entry should include:
 - result or impact
 - next concrete step
 
+## 2026-06-13 - v0.5: I-80 corridor systematic site analysis + mobile fix + dashboard link
+
+- Commit: pending
+- Summary: Built a full 14-slide HTML-PPT corridor analysis (`presentations/internal/us80-corridor/index.html`) and deployed copy (`presentations/investor/volt-go-lincoln/corridor/index.html`). Green highway theme. Defines a 5-factor scoring model (traffic, DCFC gap, EV density, amenity anchor, grant eligibility) and scores 8 I-80 sites. Top-ranked: Rock Springs WY and Elko NV (both 18/25); Lincoln NE / Volt&Go (17/25) and Iowa City IA (17/25) as mixed-model anchors. Fixed mobile overflow on corridor deck (`overflow-x:hidden !important; overflow-y:auto !important` to beat base.css shorthand; `.table-scroll` wrappers for state table and score grid). Added `/corridor` Vercel rewrite and "I-80 Corridor Site Analysis →" link on the investor deck cover.
+- Files: `presentations/internal/us80-corridor/index.html`, `presentations/internal/us80-corridor/style.css`, `presentations/investor/volt-go-lincoln/corridor/index.html`, `presentations/investor/volt-go-lincoln/corridor/style.css`, `presentations/investor/volt-go-lincoln/vercel.json`, `presentations/investor/volt-go-lincoln/index.html`, `reports/us80-corridor-ev-analysis.html`, `doc/PROJECT_STATUS.md`
+- Result: Lincoln confirmed as #3 corridor site — compensates lower DCFC gap score with higher local EV density and amenity anchor; the only site with a viable membership revenue model. Corridor deck accessible at /corridor from investor deck Vercel deployment.
+- Next concrete step: Human review of corridor scores and decision on whether to pursue Rock Springs or Elko diligence in parallel with Lincoln.
+
 ## 2026-05-14 - Mobile nav on all 3 decks + Fallbrook financials slide fix + landing rounding
 
 - Commit: `5dcbe11`

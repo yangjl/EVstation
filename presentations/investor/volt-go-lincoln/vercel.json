@@ -9,6 +9,10 @@
     {
       "source": "/map",
       "destination": "/map.html"
+    },
+    {
+      "source": "/corridor",
+      "destination": "/corridor/index.html"
     }
   ]
 }
