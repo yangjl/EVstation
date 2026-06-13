@@ -29,6 +29,7 @@ Track the core assumptions behind the business plan, the evidence supporting the
 | Breakeven at station level (before debt service): Year 3 | financial | Modeled from utilization ramp and cost structure below | low | draft | Human review required before sharing with investors |
 | 84th & Nebraska Parkway owner-lot scenario uses owned-land economics | location / cost | Owner provided fixed lot near Sam's Club; 2026-05-14 third-scenario model removes land lease but excludes land opportunity cost | medium | draft | Confirm title/control, easements, covenants, and whether to charge an internal land rent |
 | 84th & Nebraska Parkway full-build target is 20 L2 + 4 DCFC | operations / financial | `reports/84th_nebraska_parkway_fixed_site_analysis.md` optimization; assumes 24-post concept, 4.2 effective DCFC saturation, and 20-stall L2 saturation | low | draft | Validate with LES load quote, civil turning-radius review, and customer/traffic capture evidence |
+| I-80 corridor expansion should prioritize Rock Springs WY and Elko NV first | location / strategy | v0.5.1 corridor deck revision; both are high-scoring gap-play sites, while Lincoln remains the mixed-model benchmark | low | draft | Human review required before site-owner, utility, or NEVI outreach |
 
 ## Site Configuration Assumptions
 
@@ -59,7 +60,7 @@ Track the core assumptions behind the business plan, the evidence supporting the
 | Working capital / contingency (12%) | $108,000 |
 | **Total** | **~$820,000–$1,000,000** |
 
-> Note: NEVI grants (if secured) could reduce capital needed from equity/debt by $100,000–$200,000.
+> Note: NEVI grants (if secured) could reduce capital needed from equity/debt by $100,000–$200,000 or more depending on project scope and state award terms. §30C is not included in base-case planning for new sites because the current placed-in-service deadline is June 30, 2026.
 
 ## Review Notes
 

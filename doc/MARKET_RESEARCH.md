@@ -79,6 +79,22 @@ Track market evidence, sources, sizing logic, trends, and open gaps for the Linc
 
 > **HUMAN REVIEW REQUIRED:** Market sizing uses blended benchmarks from comparable markets. Local Lincoln data has not been independently validated. Do not use these figures in investor materials without human review.
 
+## I-80 Corridor Screen Addendum (v0.5.1 — 2026-06-13)
+
+The I-80 corridor analysis now treats the 5-factor score as a **diligence-priority screen**, not a capital recommendation or return forecast. The scoring dimensions remain traffic exposure, DCFC gap, local EV density, amenity anchor, and grant / corridor-program fit.
+
+**Current interpretation:** Rock Springs, WY and Elko, NV should be the first two new corridor-gap diligence targets. Lincoln remains the active mixed-model benchmark because it has local recurring demand and an existing site-strategy deck. Iowa City, IA and Evanston, WY stay on the watchlist unless a university / hospital partner, travel-plaza partner, parcel-control path, or active state funding window changes the risk profile.
+
+**Capital-stack note:** §30C is excluded from base-case corridor planning for new sites because the current placed-in-service deadline is June 30, 2026. Any exception requires tax counsel and proof that the site can realistically be placed in service before the deadline.
+
+**Required checks before using the corridor screen externally:**
+
+1. Verify open-network DCFC gaps in AFDC, PlugShare, Tesla/NACS access status, and field calls.
+2. Pull state DOT AADT counts for the exact interchange, not only the corridor segment.
+3. Request utility demand-charge and service-upgrade guidance for each candidate exit.
+4. Confirm the live NEVI / state RFP status and eligible-cost rules with WYDOT, Nevada DOT, and Nebraska DOT.
+5. Get site-control terms before advancing any parcel as more than a screen.
+
 ## Candidate Site (v0.2 recommendation — DRAFT, owner must validate)
 
 - **Submarket:** Fallbrook neighborhood, north Lincoln.

@@ -30,3 +30,11 @@ Keep short dated notes so a business planner or AI assistant can resume work qui
 - Created a third fixed owner-lot scenario at 84th & Nebraska Parkway near Sam's Club. Added `reports/84th_nebraska_parkway_fixed_site_analysis.md`, `models/84th_nebraska_pkwy_optimization_summary.csv`, `models/84th_nebraska_pkwy_recommended_build_annual_ebitda.csv`, and `models/84th_nebraska_pkwy_site_comparison.csv`. Draft result: 20 L2 + 4 DCFC maximizes five-year operating EBITDA; 12 L2 + 4 DCFC is the lower-risk phase-one fallback.
 - Added a separate owner-lot deck at `presentations/investor/volt-go-84th-nebraska-pkwy/` with `index.html`, `map.html`, Vercel routing, and copied HTML-PPT runtime/theme assets from the South Lincoln deck.
 - Recalculated and clarified the 84th deck headline metrics: exact derisk-launch 5-year cumulative EBITDA is $903,565, displayed as $904K; five-year cash after capex is ($30,435), displayed as ($30K). Updated cover/front slide, build ladder, comparison, map sidebar, report summary, and supporting CSVs to keep EBITDA separate from after-capex cash.
+
+## 2026-06-13
+
+- Reviewed and revised the I-80 corridor analysis deck in both source locations: `presentations/internal/us80-corridor/index.html` and deployed copy `presentations/investor/volt-go-lincoln/corridor/index.html`.
+- Kept the existing green highway HTML-PPT style, but softened overconfident investment language: the score is now a diligence-priority screen, not a forecast or capital recommendation.
+- Revised the recommendation from "four top-ranked sites" to "Rock Springs + Elko first; Lincoln remains the mixed-model benchmark; Iowa City and Evanston are watchlist unless partner/grant timing improves."
+- Corrected the capital-stack story by excluding §30C from the I-80 corridor base case because the placed-in-service deadline is June 30, 2026.
+- Updated the landing page card, `doc/PROJECT_STATUS.md`, `doc/DECISIONS.md`, `doc/BUSINESS_ASSUMPTIONS.md`, and `doc/MARKET_RESEARCH.md` so future review sees the same corridor interpretation.

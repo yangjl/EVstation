@@ -135,9 +135,10 @@
   .tpl-pitch-deck .section-num{display:none !important}
 
   /* Typography */
-  .tpl-pitch-deck .h1{font-size:28px;line-height:1.1}
-  .tpl-pitch-deck .h2{font-size:22px;line-height:1.18}
-  .tpl-pitch-deck .h2 br,.tpl-pitch-deck .h1 br{display:none}
+  .tpl-pitch-deck .h1{font-size:28px !important;line-height:1.1}
+  .tpl-pitch-deck .h2{font-size:22px !important;line-height:1.18}
+  .tpl-pitch-deck .h1 br{display:none}
+  .tpl-pitch-deck .h2 br{display:block}
   .tpl-pitch-deck .lede{font-size:14px;line-height:1.5}
   .tpl-pitch-deck .kicker,.tpl-pitch-deck .num-tag{font-size:11px;letter-spacing:.06em}
 

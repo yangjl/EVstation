@@ -6,7 +6,7 @@ Check here first to understand where the business plan stands. This file tracks 
 
 ## Current Project: Volt & Go Lincoln — EV Charging Station
 
-**As of:** 2026-06-13 (v0.5)
+**As of:** 2026-06-13 (v0.5.1)
 **Phase:** Three candidate sites modeled (Fallbrook, South Lincoln, 84th/Nebraska Pkwy); I-80 corridor analysis added; all awaiting human review
 
 ## Completed
@@ -28,7 +28,8 @@ Check here first to understand where the business plan stands. This file tracks 
 - **v0.3 audit (2026-05-14):** Built `presentations/investor/volt-go-lincoln/south_lincoln_map.html`. Appended §11 audit/improvement memo to `reports/south_lincoln_location_optimization_report.md`. Fixed DECISIONS.md.
 - **v0.4 fixed owner-lot scenario (2026-05-14):** Created `reports/84th_nebraska_parkway_fixed_site_analysis.md` and model CSVs for the owner-controlled lot near Sam's Club at 84th / Nebraska Parkway. Draft model recommends 8 L2 + 4 DCFC derisk launch with ~$904K five-year cumulative EBITDA.
 - **v0.4 deck (2026-05-14):** Added separate HTML-PPT deck at `presentations/investor/volt-go-84th-nebraska-pkwy/index.html` with embedded planning map, optimization graph, phase strategy, annual EBITDA, three-site comparison, and risk/diligence slides.
-- **v0.5 corridor analysis (2026-06-13):** Built full I-80 corridor systematic analysis (`presentations/internal/us80-corridor/index.html`, deployed as `presentations/investor/volt-go-lincoln/corridor/index.html`). 14-slide HTML-PPT deck scores 8 sites across 5 criteria (traffic, DCFC gap, EV density, amenity anchor, grant eligibility). Top sites: Rock Springs WY (18/25), Elko NV (18/25), Lincoln NE / Volt&Go (17/25), Iowa City IA (17/25). Fixed mobile overflow on the corridor deck. Added `/corridor` Vercel route and "I-80 Corridor Site Analysis →" link on the investor deck cover.
+- **v0.5 corridor analysis (2026-06-13):** Built full I-80 corridor systematic analysis (`presentations/internal/us80-corridor/index.html`, deployed as `presentations/investor/volt-go-lincoln/corridor/index.html`). 14-slide HTML-PPT deck scores 8 sites across 5 criteria (traffic, DCFC gap, EV density, amenity anchor, grant eligibility). Top scored sites: Rock Springs WY (18/25), Elko NV (18/25), Lincoln NE / Volt&Go (17/25), Iowa City IA (17/25). Fixed mobile overflow on the corridor deck. Added `/corridor` Vercel route and "I-80 Corridor Site Analysis →" link on the investor deck cover.
+- **v0.5.1 corridor revision (2026-06-13):** Revised the I-80 analysis narrative and deployed/internal decks while preserving the green highway visual style. The deck now treats scores as diligence priority, not investability; moves Rock Springs + Elko forward as the two immediate corridor-gap checks; keeps Lincoln as the mixed-model benchmark; moves Iowa City/Evanston to watchlist; and removes §30C from base-case corridor capital planning because the June 30, 2026 placed-in-service deadline is too near for new sites.
 
 ## In Progress
 
@@ -38,7 +39,7 @@ Check here first to understand where the business plan stands. This file tracks 
   3. Customer discovery fieldwork (apartment residents, property managers, EV drivers)
   4. Choice between the current 8 L2 + 2 DCFC mixed-use design and a 4+ DCFC corridor-oriented design.
   5. Whether the 84th / Nebraska Parkway owner-lot scenario should supersede Fallbrook and South Lincoln as the active site strategy.
-- Corridor analysis complete but all scores are preliminary estimates — human review required before using to direct capital.
+- Corridor analysis complete but all scores and the revised Rock Springs + Elko prioritization are preliminary estimates — human review required before using to direct capital.
 
 ## Next Steps (Prioritized)
 
@@ -50,7 +51,7 @@ Check here first to understand where the business plan stands. This file tracks 
 6. **Equipment quotes:** Solicit charger hardware quotes (ChargePoint, ABB, BTC Power) and installation contractor bids.
 7. **South Lincoln validation:** If owner prefers South Lincoln, contact SouthPointe/RED Development and LES, verify map pins/traffic counts with source exports, then validate the revised 16 L2 + 3 DCFC operating model.
 8. **84th / Nebraska Parkway validation:** If owner prefers the fixed lot, order LES load quote, civil/turning review, and parking/covenant check for the 8 L2 + 4 DCFC derisk launch.
-9. **Corridor expansion (optional):** If owner decides to pursue Rock Springs or Elko, initiate parcel inquiry and NEVI pre-application contact with WYDOT / NDOT.
+9. **Corridor expansion (optional):** If owner decides to pursue Rock Springs or Elko, initiate parcel inquiry, utility demand-charge request, and NEVI pre-application contact with WYDOT / Nevada DOT.
 
 ## Open Questions — Require Human Decision
 

@@ -126,7 +126,23 @@ Record important project decisions and the reasoning behind them. Keep entries s
 - **Decision:** Include potential NEVI grant ($100K–$200K) and IRA Section 30C tax credit (30% of equipment, up to $100K/item) in the capital stack model.
 - **Why:** These are substantial offsets to the capital requirement and are accessible to this type of station.
 - **Next action (human):** Confirm Nebraska NEVI application timeline with Nebraska DOT before relying on grant in investor deck.
-- **Status:** Draft — requires human verification before including in investor materials.
+- **Status:** Superseded for new work by the 2026-05-14 §30C-unavailable decision and the 2026-06-13 I-80 corridor revision. Keep NEVI as potential competitive grant funding; do not include §30C in base-case capital planning for new sites.
+
+## 2026-06-13 — I-80 Corridor Revision
+
+### Corridor screen prioritizes Rock Springs and Elko for first diligence
+
+- **Decision:** Revise the I-80 corridor screen so the immediate new-site diligence list is Rock Springs, WY and Elko, NV. Keep Lincoln active as the mixed-model benchmark. Treat Iowa City, IA and Evanston, WY as watchlist opportunities unless a partner, site-control path, or live state funding window appears.
+- **Why:** Rock Springs and Elko best match the corridor-gap thesis: high gap urgency plus plausible amenity anchors and NEVI corridor fit. Lincoln remains strategically important but is a mixed local-demand model rather than a pure highway gap play. Iowa City and Evanston score well but need an anchor partner or clearer grant timing before they should compete for owner attention.
+- **Alternatives considered:** Pursue all four highlighted sites equally; rejected because it would dilute diligence effort and overstate the meaning of a preliminary 17+ score.
+- **Status:** Draft — human review required before contacting site owners, utilities, or state NEVI offices.
+
+### §30C excluded from I-80 corridor base case
+
+- **Decision:** The revised I-80 corridor deck excludes IRA §30C from base-case capital planning for new sites screened in June 2026.
+- **Why:** IRS guidance shows business charging property must be placed in service by June 30, 2026 to qualify under current rules. A new site starting diligence in June 2026 is unlikely to complete site control, engineering, permitting, construction, energization, and placed-in-service steps before the deadline.
+- **Alternatives considered:** Keep §30C as a possible upside item; rejected because it would make the capital stack look materially easier than the current timeline supports.
+- **Status:** Active assumption for corridor analysis; tax counsel should review any site-specific exception.
 
 
 - Alternatives considered: documenting the rule only in Markdown, but that leaves too much room for accidental misuse.
