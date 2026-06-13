@@ -146,3 +146,11 @@ Each entry should include:
 - Files: `doc/WORKLOG.md`, `presentations/investor/volt-go-lincoln/index.html`, `presentations/investor/volt-go-lincoln/map.html`, `presentations/investor/volt-go-lincoln/style.css`
 - Results or impact: The deck now better supports its conclusions with visible assumptions and source notes while keeping the Fallbrook recommendation in human-review/diligence status.
 - Next: Redeploy Vercel from main and review the live deck for slide fit, map rendering, and source wording before external sharing.
+
+## 2026-06-13 - v0.5.1: revise I-80 corridor analysis
+
+- Commit: `eaaef8d`
+- Summary: Revised the I-80 corridor deck and landing-page/memory files to treat scores as diligence priorities, move Rock Springs and Elko forward first, keep Lincoln as the mixed-model benchmark, and remove §30C from base-case corridor capital planning.
+- Files: `doc/BUSINESS_ASSUMPTIONS.md`, `doc/DECISIONS.md`, `doc/MARKET_RESEARCH.md`, `doc/PROJECT_STATUS.md`, `doc/WORKLOG.md`, `index.html`, `presentations/internal/us80-corridor/index.html`, `presentations/internal/us80-corridor/style.css`, `presentations/investor/volt-go-lincoln/corridor/index.html`, `presentations/investor/volt-go-lincoln/corridor/style.css`
+- Results or impact: The corridor analysis is more defensible for human review: it separates screening from investment recommendation and keeps grant assumptions conservative.
+- Next: Owner should decide whether to open Rock Springs and Elko parcel, utility, and NEVI pre-application diligence.
