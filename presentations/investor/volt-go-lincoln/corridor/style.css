@@ -125,13 +125,10 @@
 
 /* Mobile overrides */
 @media (max-width: 820px){
-  /* Critical: !important beats base.css overflow:hidden so the slide can scroll */
   .tpl-pitch-deck .deck{height:100dvh}
   .tpl-pitch-deck .slide{
-    padding:52px 16px 96px;
-    overflow-x:hidden !important;
-    overflow-y:auto !important;
-    -webkit-overflow-scrolling:touch;
+    padding:48px 14px 80px;
+    overflow:hidden !important;
     justify-content:flex-start;
   }
   /* Watermark just eats space on mobile — hide it */
